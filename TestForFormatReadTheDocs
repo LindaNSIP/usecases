@@ -1,11 +1,5 @@
 This file is designed to test various formatting outcomes when processed through ReadTheDocs.
-{|
-|Orange
-|Apple
-|-
-|Bread
-|Pie
-|-
-|Butter
-|Ice cream 
-|}
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
