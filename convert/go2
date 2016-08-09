@@ -1,0 +1,6 @@
+pandoc basic_financial_transactions_2.html -o basic_financial_transactions.md
+pandoc daily_attendance_2.html -o daily_attendance.md
+pandoc enrollment_2.html -o enrollment.md
+pandoc gradebook_2.html -o gradebook.md
+pandoc naplan_registration_2.html -o naplan_registration.md
+pandoc timetable_2.html -o timetable.md

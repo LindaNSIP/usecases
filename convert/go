@@ -1,0 +1,6 @@
+perl fix.pl < basic_financial_transactions.html > basic_financial_transactions_2.html
+perl fix.pl < daily_attendance.html > daily_attendance_2.html
+perl fix.pl < enrollment.html > enrollment_2.html
+perl fix.pl < gradebook.html > gradebook_2.html
+perl fix.pl < naplan_registration.html > naplan_registration_2.html
+perl fix.pl < timetable.html > timetable_2.html

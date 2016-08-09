@@ -1,0 +1,6 @@
+sh convert.sh basic_financial_transactions.md basic_financial_transactions_test.html
+sh convert.sh daily_attendance.md daily_attendance_test.html
+sh convert.sh enrollment.md enrollment_test.html
+sh convert.sh gradebook.md gradebook_test.html
+sh convert.sh naplan_registration.md naplan_registration_test.html
+sh convert.sh timetable.md timetable_test.html

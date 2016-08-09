@@ -1,4 +1,7 @@
-# What you need before you start: {#DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart}
+\
+
+What you need before you start: {#DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart}
+===============================
 
 -   Apply for a HITS testing account at <info@nsip.edu.au>
 -   This will give you access to your own testing environment 
@@ -21,9 +24,11 @@ If you get stuck: drop us a line at <info@nsip.edu.au>
 
  
 
-# 3^rd^ Party Timetable Provision
+3^rd^ Party Timetable Provision
+===============================
 
-# 1. What's the business problem?
+1. What's the business problem?
+-------------------------------
 
 Allow schools to securely provide SIS information to the Timetabling
 product of their choice, and also to allow timetable records (including
@@ -32,19 +37,20 @@ jurisdictional data hub. **[More...](#businessdriver)**
 
  
 
-# 2. Usecase description & pre-conditions
+2. Usecase description & pre-conditions
+---------------------------------------
 
 A 3rd Party Timetabling application connects to HITS as a jurisdiction
 hub, collecting the relevant information and publishing back timetable
 records to the centralised system.
 
-## Assumptions: {#Timetablehow-toHITS-Assumptions}
+#### Assumptions: {#Timetablehow-toHITS-Assumptions}
 
 3^rd^ Party Vendor is a current supplier of a Timetabling product in
 schools or has knowledge of Timetabling and scheduling processes in K-12
 Schools.  <span> </span>
 
-## <span style="color: rgb(51,51,51);">Pre-Conditions:</span> {#Timetablehow-toHITS-Pre-Conditions}
+#### <span style="color: rgb(51,51,51);">Pre-Conditions:</span> {#Timetablehow-toHITS-Pre-Conditions}
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
@@ -64,7 +70,7 @@ Schools.  <span> </span>
 (Here is more information on the **[Timetable Baseline
 Profile](http://kb.nsip.edu.au/download/attachments/13960399/Timetable+Baseline+Profile+v011.pdf)**.)
 
-## <span style="color: rgb(51,51,51);">Usecase workflow summary:</span> {#Timetablehow-toHITS-Usecaseworkflowsummary}
+#### <span style="color: rgb(51,51,51);">Usecase workflow summary:</span> {#Timetablehow-toHITS-Usecaseworkflowsummary}
 
 1.  Join
 
@@ -76,7 +82,7 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960399/Timetable+Baseline+
 
 5.  Assurance
 
-## <span style="color: rgb(51,51,51);">Assurance:</span> {#Timetablehow-toHITS-Assurance}
+#### <span style="color: rgb(51,51,51);">Assurance:</span> {#Timetablehow-toHITS-Assurance}
 
 The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
@@ -106,10 +112,13 @@ TimeTablingApplication (and in fact they relate to scheduling rather
 than timetabling); <span>application developers should check with the
 School Authority on whether they need to provide it.</span>
 
-**<span>[More...](#usecasepreconditions)</span>**
+<span>[More...](#usecasepreconditions)</span>
+---------------------------------------------
 
  
-# 3. Join school zone.
+
+3. Join school zone.
+--------------------
 
 <span>Join:</span>
 
@@ -122,7 +131,8 @@ School Authority on whether they need to provide it.</span>
 
  
 
-# 4. Consume base data from HITS.
+4. Consume base data from HITS.
+-------------------------------
 
 <span>Vendor-facing (pull); HITS represents the Jurisdiction and is the
 data source for seed information.</span>
@@ -173,7 +183,8 @@ guidance on queries.
 
  
 
-# 5. Process in 3^rd^ party application.
+5. Process in 3^rd^ party application.
+--------------------------------------
 
 3rd Party App uses the consumed data to produce a timetable. The
 definition and automation of this process is out of scope of HITs.\
@@ -185,7 +196,7 @@ Steps:
 
  
 
-## tl-forced-newline"&gt;6. Provide authoritative data
+**6. Provide authoritative data**
 
 Prior to providing:<span> </span>
 
@@ -205,7 +216,8 @@ Prior to providing:<span> </span>
 
  
 
-# 7. Self – confirm  usecase support
+7. Self – confirm  usecase support
+----------------------------------
 
 1.  1.  Validate <span>TimeTable records</span>
     2.  Validate <span>TimeTableCell records </span>
@@ -214,11 +226,12 @@ Prior to providing:<span> </span>
 
  
 
-### More information {#Timetablehow-toHITS-Moreinformation}
+More information {#Timetablehow-toHITS-Moreinformation}
+================
 
 #### What is the business problem this usecase is trying to solve? {#businessdriver}
 
-##### In brief: {#Timetablehow-toHITS-Inbrief}
+###### In brief: {#Timetablehow-toHITS-Inbrief}
 
 -   Allow schools secure access to SIS information
 -   Allow schools to use the Timetabling product of their choice
@@ -295,11 +308,7 @@ well-formed if it satisfies the following requirements:
     TeachingGroupPeriodList, then the entire list affected must be
     included in the object representation in the update request.</span>
 
-</div>
-
  
-
-</div>
 
  
 
