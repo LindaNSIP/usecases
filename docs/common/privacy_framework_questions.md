@@ -8,34 +8,33 @@
 
 ### Data storage and access
 
-Where is the information stored? Is the information stored in the same State/Territory as it was sourced/generated? Is it stored within Australia?
+1. Where is the information stored? Is the information stored in the same State/Territory as it was sourced/generated? Is it stored within Australia?
 
-How is data protected “at rest”?
+2. How is data protected “at rest”?
 
-1.  Is all or some data at rest encrypted (e.g. just passwords, passwords and sensitive data, all data)
+ a.  Is all or some data at rest encrypted (e.g. just passwords, passwords and sensitive data, all data)
 
-2.  What encryption method is used?
+ b.  What encryption method is used?
 
- a. How will the information be stored? 
- b. If the cloud application is multi-tenanted (several authorities’ data on one server/instance) hosting, how is data and access separated from other customers?
+3. How will the information be stored? If the cloud application is multi-tenanted (several authorities’ data on one server/instance) hosting, how is data and access separated from other customers?
 
-Are the physical server(s) in a secured, locked and monitored environment to prevent unauthorized entry and/or theft?
+4. Are the physical server(s) in a secured, locked and monitored environment to prevent unauthorized entry and/or theft?
 
-How is the data protected in transit? e.g. SSL, hashing? (SIF messaging generally use SSL/TLS)
+5. How is the data protected in transit? e.g. SSL, hashing? (SIF messaging generally use SSL/TLS)
 
-Who has access to information stored or processed by the provider?
+6. Who has access to information stored or processed by the provider?
 
-1.  Is access logged?
+ a.  Is access logged?
 
-2.  Is access provided only to employees of the agency receiving the data or others?
+ b.  Is access provided only to employees of the agency receiving the data or others?
 
-3.  When and how is access made available?
+ c.  When and how is access made available?
 
-4.  Are background checks or other vetting procedures performed on those with access (eg working with children checks)?
+ d.  Are background checks or other vetting procedures performed on those with access (eg working with children checks)?
 
-5.  Does the provider subcontract any functions, such as analytics?
+ e.  Does the provider subcontract any functions, such as analytics?
 
-6.  What is the provider’s process for authenticating callers and resetting access controls, as well as establishing and deleting accounts?
+ f.  What is the provider’s process for authenticating callers and resetting access controls, as well as establishing and deleting accounts?
 
 ### Data and Metadata Retention
 
