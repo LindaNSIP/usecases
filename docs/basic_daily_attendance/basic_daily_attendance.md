@@ -9,7 +9,7 @@ What you need before you start:
 A basic knowledge of SIF REST.
 
 -   Here is [some information from the SIF
-    Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx){.external-link}.
+    Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx).
 -   Here is [a short (1-day) course in developing with SIF 3
     REST](http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online).
 
