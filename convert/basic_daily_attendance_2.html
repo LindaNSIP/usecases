@@ -1,0 +1,263 @@
+﻿
+	<h1 id="DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart">What you need before you start:</h1>
+	
+		<ul>
+			<li>Apply for a HITS testing account at <a class="external-link" href="mailto:info@nsip.edu.au" rel="nofollow">info@nsip.edu.au</a></li>
+			<li>This will give you access to your own testing environment&nbsp;</li>
+			<li>Your testing environment will provide you with all necessary authentication and access tokens to work with the HITS API.</li>
+		</ul>
+	
+	<p>A basic knowledge of SIF REST.</p>
+	<ul>
+		<li>Here is <a class="external-link" href="https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx" rel="nofollow">some information from the SIF Association</a>.</li>
+		<li>Here is <a href="http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online">a short (1-day) course in developing with SIF 3 REST</a>.</li>
+	</ul>
+	<p>You need to know <a href="working-use-case-hits">how to work with a usecase in HITS</a></p>
+	<p>You need to know <a href="working-use-case-hits">how to access the HITS API</a></p>
+	<p>If you get stuck: drop us a line at <a class="external-link" href="mailto:info@nsip.edu.au" rel="nofollow">info@nsip.edu.au</a></p>
+	<h1>3rd party Daily Attendance Recording</h1>
+	
+		<table align="left" border="0" cellpadding="5" cellspacing="5" class="confluenceTable">
+			
+				
+					
+						
+<h2>1. What&#39;s the business problem?</h2>
+
+					
+					
+						<p>Allow schools to securely provide SIS information to the Attendance product of their choice, and also to allow school attendance records to be published to a jurisdictional data hub. <strong><a href="#businessdriver">More...</a></strong></p>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						
+<h2>2. Use Case Description &amp; Pre-Conditions</h2>
+
+					
+					
+						<p>A 3rd Party Daily Attendance application connects to HITS as a jurisdiction hub, collecting the relevant information and publishing back attendance records to the centralised system.</p>
+						<h4 id="DailyAttendancehow-toHITS-Assumptions">Assumptions:</h4>
+						<p>3<sup>rd</sup> Party Vendor is a current supplier of a Student Attendance product in schools or has knowledge of Student attendance reporting processes in K-12 Schools.&nbsp; <span style="color: rgb(51,51,51);">&nbsp;</span></p>
+						<h4 id="DailyAttendancehow-toHITS-Pre-Conditions"><span style="color: rgb(51,51,51);">Pre-Conditions:</span></h4>
+						<ul>
+							<li>Vendor has access to HITs</li>
+							<li>HITs has been provisioned with School Data</li>
+							<li>Vendor has mapped the relevant SIF Objects to their systems:<br />
+								StudentPersonal<br />
+								StudentSchoolEnrolment<br />
+								CalendarDate<br />
+								CalendarSummary<br />
+								StudentDailyAttendance<br />
+								StudentAttendanceSummary<span style="color: rgb(51,51,51);"> </span><br />
+								StudentAttendanceTimeList</li>
+						</ul>
+						<p>(Note that some of these objects are proposed for SIF 1.4 and are therefore not in the SIF 1.3 schema.<br />
+							Here is <a href="http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip"><strong>a draft XSD schema for SIF 1.4</strong></a>, further information on <strong><a href="http://kb.nsip.edu.au/download/attachments/13960401/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf">StudentAttendanceTimeList</a></strong>, and a detailed description of the <strong><a href="http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Baseline+Profile+v09.pdf">Attendance Baseline Profile</a></strong>.)</p>
+						<h4 id="DailyAttendancehow-toHITS-Usecaseworkflowsummary"><span style="color: rgb(51,51,51);">Usecase workflow summary:</span></h4>
+						<ol>
+							<li>
+								<p>Join</p>
+							</li>
+							<li>
+								<p>Consume</p>
+							</li>
+							<li>
+								<p>Process</p>
+							</li>
+							<li>
+								<p>Provide</p>
+							</li>
+							<li>Assurance</li>
+						</ol>
+						<h4 id="DailyAttendancehow-toHITS-Assurance"><span style="color: rgb(51,51,51);">Assurance:</span></h4>
+						<p>The SIF/XML data sent by the 3<sup>rd</sup> Party app to the Jurisdiction Zone for the app must satisfy the following conditions:</p>
+						<ul>
+							<li>
+								<p>Must be able to respond to requests for all StudentDailyAttendance records within a School</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentDailyAttendance records within a School and a nominated date range</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentDailyAttendance records for a nominated Student</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentDailyAttendance records for a nominated Student and a nominated date range</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceSummary records within a School</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceSummary records for a nominated Student and a nominated date range</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceTimeList records within a School</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceTimeList records within a School and a nominated date range</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceTimeList records for a nominated Student</p>
+							</li>
+							<li>
+								<p>Must be able to respond to requests for all StudentAttendanceTimeList records for a nominated Student and a nominated date range</p>
+							</li>
+						</ul>
+						<p>Note that in some deployments, only StudentDailyAttendance records, only StudentAttendanceSummary records, or only StudentAttendanceTimeList records may be required.</p>
+						
+<h2><a href="#assurance">More... </a></h2>
+
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						
+<h2>3. Join required School Zone.</h2>
+
+					
+					
+						<ul>
+							<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;)</li>
+							<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;)</li>
+							<li>Jurisdiction Zone authorises read access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;)</li>
+						</ul>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						
+<h2>4. Consume Base Data from HITS.</h2>
+
+					
+					
+						<p><span style="color: rgb(51,51,51);">Vendor-facing (pull); HITS represents the Jurisdiction and is the data source for seed information.</span></p>
+						<p><span style="color: rgb(51,51,51);">Consume:</span></p>
+						<ul>
+							<li>on the Jurisdiction-established Zone for the App, <span>Third party app</span> accesses all StudentPersonal records which are in a StudentSchoolEnrollment relationship with the given School RefId.</li>
+							<li><span>on the Jurisdiction-established Zone for the App, </span><span>Third party app</span><span> accesses </span>all CalendarSummary objects linked to the given School RefId, and all CalendarDate objects linked to the given CalendarSummary objects. (In some deployments, calendar information about schools is already held centrally. For those deployments, this step is skipped.)</li>
+							<li>Third party app ingests the relevant SIF Objects.</li>
+						</ul>
+						<p>The following is a list of calls that need to be made to consume the required information:</p>
+						<ol>
+							<li>Get SchoolInfos - http://.../SchoolInfos&nbsp; (HITS should determine the URLs eg <span class="external-link">http://hits.nsip.edu.au/SchoolInfos</span> - access this information from your Dashboard.)</li>
+							<li>Get StudentSchoolEnrollments - <span style="color: rgb(51,51,51);"><span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentSchoolEnrollments</span></li>
+							<li>Get StudentPersonals <span style="color: rgb(51,51,51);">-&nbsp;<span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentPersonals (linked to school via StudentSchoolEnrollment; eg: equivalent to&nbsp;<span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../SchoolInfo/\{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals)</span></li>
+							<li>Get CalendarDates <span style="color: rgb(51,51,51);">-</span> <span class="external-link"><span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../CalendarDates</span></li>
+							<li>Get CalendarSummarys <span style="color: rgb(51,51,51);">-&nbsp;<span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../CalendarSummarys</span></li>
+						</ol>
+						<p>Endpoints may support additional queries for retreiving data - refer to <b><a href="qbe-or-service-paths">Query-by-example or service paths?</a></b> for HITS guidance on queries.</p>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						
+<h2>5. Process in 3<sup>rd</sup> Party Application.</h2>
+
+					
+					
+						<p>3rd Party App uses the consumed data to produce a schedule. The definition and automation of this process is out of scope of HITs.<br class="atl-forced-newline" />
+							Steps:</p>
+						<ul>
+							<li>Third party app processes information and gathers Student Attendance Information</li>
+							<li>Third party application creates return Student Daily Attendance objects specific to the School</li>
+						</ul>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						<p class="atl-forced-newline"><strong>6. Provide Authoritative Data</strong></p>
+					
+					
+						<p>Prior to providing:<span style="color: rgb(51,51,51);">&nbsp;</span></p>
+						<p><span style="color: rgb(51,51,51);">&nbsp;</span>Third party expresses return information in SIF/XML:</p>
+						<ul>
+							<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;)</li>
+							<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;)</li>
+							<li>Jurisdiction-established Zone authorises write access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;)</li>
+							<li>Following is provided by the 3<sup>rd</sup> Party App back to HITs;
+								<ol>
+									<li>Post StudentDailyAttendance to&nbsp;<span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentDailyAttendances</li>
+									<li>Post StudentAttendanceSummary to&nbsp;<span style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentAttendanceSummarys</li>
+									<li>Post StudentAttendanceTimeList to http://.../StudentAttendanceTimeLists</li>
+								</ol>
+							</li>
+						</ul>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+				
+					
+						
+<h2>7. Assurance: Self &ndash; Confirmation of Use Case Support</h2>
+
+					
+					
+						<ol>
+							<li>Validate StudentDailyAttendance records</li>
+							<li>Validate StudentAttendanceSummary records</li>
+							<li>Validate StudentAttendanceTimeList records</li>
+						</ol>
+					
+					
+						<p>&nbsp;</p>
+					
+				
+			
+		</table>
+	
+	<h2>&nbsp;</h2>
+	<h2>&nbsp;</h2>
+	<hr />
+	<h2 id="DailyAttendancehow-toHITS-Moreinformation">More information...</h2>
+	<h4 id="businessdriver">What is the business problem this Use Case is trying to solve?</h4>
+	<p>In brief:</p>
+	<ul>
+		<li>Allow schools secure access to SIS information</li>
+		<li>Allow schools to use the Attendance product of their choice</li>
+		<li>Allow <span>3rd</span>&nbsp;Party Daily Attendance apps automated access to base information</li>
+		<li>Allow <span>3rd</span>&nbsp;Party Daily Attendance apps to publish school attendance records to a jurisdictional hub.</li>
+	</ul>
+	<p>Schools currently use third-party attendance applications locally to supplement their Student Information System (SIS). The seed information for recording of attendance is held in the School&#39;s SIS and usually exported locally with little security.</p>
+	<p>As jurisdictions centralise systems, 3rd Party Vendors have the opportunity to seed their product/s from a quality assured data hub using automated feeds, rather than manual updates from the school. <span>3rd</span>&nbsp;Party Vendors are also expected to provide information directly back to the centralised system through an automated feed, rather than having the information mediated through the school.&nbsp;</p>
+	<p>This use case shows how <span>3rd</span>&nbsp;party attendance vendors can connect to a centralised data hub to securely access to the required information and publish back the Daily Attendance records to the centralised data hub.</p>
+	<h4><a name="assurance"></a>Assurance - Usecase preconditions</h4>
+	<p><span style="color: rgb(0,0,0);">The following conditions also must be met:</span></p>
+	<p><span style="color: rgb(0,0,0);">&nbsp;</span><span style="color: rgb(0,0,0);font-size: 10.0pt;line-height: 13.0pt;">Must be able to post to the Zone an update to a well-formed StudentDailyAttendance object, as defined below.</span></p>
+	<ul>
+		<li><span style="color: rgb(0,0,0);font-size: 10.0pt;line-height: 13.0pt;">Any SIF object published by the App must be valid against the SIF-AU 1.3 schema</span></li>
+		<li><span style="color: rgb(0,0,0);">All SIF objects posted by the Attendance App must have referential integrity. Any RefId contained in the SIF object must refer to a SIF object provisioned to the App&mdash;e.g. SchoolInfo, StudentPersonal, CalendarDate).This condition applies recursively to all additional SIF objects posted by the App. The test of this condition is done only when the App indicates that it has finished publishing to the Zone the objects required for the test.</span></li>
+	</ul>
+	<p><span style="color: rgb(0,0,0);font-size: 10.0pt;line-height: 13.0pt;background-color: transparent;">For the purposes of validation, a new StudentDailyAttendance object is well-formed if:</span></p>
+	<ul>
+		<li><span style="color: rgb(0,0,0);">If the provided CalendarDate object indicates that a date is not counted toward student attendance (CalendarDate/StudentAttendance/CountsTowardsAttendance), then either no StudentDailyAttendance record is generated for that date, or else the StudentDailyAttendance/AttendanceStatus value in the object is &quot;NA&quot; (not applicable)</span></li>
+		<li><span style="color: rgb(0,0,0);">All mandatory elements of the StudentDailyAttendance object are provided</span></li>
+		<li><span style="color: rgb(0,0,0);">The StudentDailyAttendance object points to a valid StudentPersonal and SchoolInfo object</span></li>
+	</ul>
+	<p><span style="color: rgb(0,0,0);">For the purposes of validation, a new StudentAttendanceSummary object is well-formed if it satisfies the following requirements:</span></p>
+	<ul>
+		<li><span style="color: rgb(0,0,0);">All mandatory elements of the StudentAttendanceSummary object are provided.</span></li>
+	</ul>
+
+<p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">For the purposes of validation, a new StudentAttendanceTimeList object is well-formed if it satisfies the following requirements:</p>
+<ul style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">
+	<li>All mandatory elements of the&nbsp;<span style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">StudentAttendanceTimeList</span>&nbsp;object are provided.</li>
+	<li>The&nbsp;<span style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">StudentAttendanceTimeList</span>&nbsp;object points to a valid StudentPersonal and SchoolInfo object</li>
+</ul>
