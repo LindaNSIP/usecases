@@ -38,15 +38,15 @@
 
 ### Data and Metadata Retention
 
-How does the provider assure the proper management and disposal of data?
+1. How does the provider assure the proper management and disposal of data?
 
-How will the provider delete data?
+2. How will the provider delete data?
 
-1.  Is data deleted on a specific schedule or only on termination of contract? Can the school/jurisdiction request that information be deleted? What is the protocol for such a request?
+ a.  Is data deleted on a specific schedule or only on termination of contract? Can the school/jurisdiction request that information be deleted? What is the protocol for such a request?
 
-Can a copy of the information (including individual records) maintained by the provider be supplied at any time? How will this be provided?
+3. Can a copy of the information (including individual records) maintained by the provider be supplied at any time? How will this be provided?
 
-Upon termination of contract/s, will the provider should return all records or data and properly delete any copies still in its possession?
+4. Upon termination of contract/s, will the provider should return all records or data and properly delete any copies still in its possession?
 
 ### Development and Change Management Process
 
