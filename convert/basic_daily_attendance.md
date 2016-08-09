@@ -1,4 +1,4 @@
-What you need before you start: {#DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart}
+What you need before you start: 
 ===============================
 
 -   Apply for a HITS testing account at <info@nsip.edu.au>
