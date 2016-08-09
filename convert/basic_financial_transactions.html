@@ -1,0 +1,223 @@
+﻿<h3>What you need before you start:</h3>
+<div class="media-body">
+	<ul>
+		<li>Apply for a HITS testing account at&nbsp;<a data-mce-="" href="mailto:info@nsip.edu.au">info@nsip.edu.au</a></li>
+		<li>This will give you access to your own testing environment&nbsp;</li>
+		<li>Your testing environment will provide you with all necessary authentication and access tokens to work with the HITS API.</li>
+	</ul>
+</div>
+<p>A basic knowledge of SIF REST.</p>
+<ul>
+	<li>Here is&nbsp;<a data-mce-="" href="https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx">some information from the SIF Association</a>.</li>
+	<li>Here is&nbsp;<a class="confluence-link" data-base-url="http://kb.nsip.edu.au" data-linked-resource-default-alias="SIF 3 Bootcamp online" data-linked-resource-id="13239570" data-linked-resource-type="page" data-mce-="" href="http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online">a short (1-day) course in developing with SIF 3 REST</a>.</li>
+</ul>
+<p>You need to know<span class="confluence-link">&nbsp;<a data-mce-="" href="http://hits.dev.nsip.edu.au/site/working-use-case-hits">how to work with a usecase in HITS</a></span></p>
+<p>You need to know<span class="confluence-link">&nbsp;<a data-mce-="" href="http://hits.dev.nsip.edu.au/site/working-use-case-hits">how to access the HITS API</a></span></p>
+<p>If you get stuck: drop us a line at&nbsp;<a data-mce-="" href="mailto:info@nsip.edu.au">info@nsip.edu.au</a></p>
+<h3>Financial processing</h3>
+<table class="confluenceTable">
+	<tbody>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>1. What&#39;s the business problem?</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p>Allow schools to carry out financial transactions using draft SIF Financial objects, including purchase orders, receipts, invoices, journalling, and payments. <strong><a href="#businessdriver">More...</a></strong></p>
+				<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>2. Usecase description &amp; pre-conditions</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p>A 3rd Party Finance application connects to HITS as a jurisdiction hub, collecting the relevant information and publishing back finances records to the centralised system.</p>
+				<h4>Assumptions:</h4>
+				<p>3<sup>rd</sup> Party Vendor is a current supplier of a Finances product in schools or has knowledge of finances reporting processes in K-12 Schools.&nbsp; <span>&nbsp;</span></p>
+				<h4><span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-conditions:</span></h4>
+				<ul>
+					<li>Vendor has access to HITS</li>
+					<li>HITS has been provisioned with School Data</li>
+					<li>Vendor has mapped the relevant SIF Objects to their systems:</li>
+					<li>&nbsp;
+						<ul>
+							<li>Invoice</li>
+							<li>FinancialAccount</li>
+							<li>FinancialClassification</li>
+							<li>ChargedLocationInfo</li>
+							<li>PaymentReceipt</li>
+							<li>PurchaseOrder</li>
+							<li>VendorInfo</li>
+							<li>Journal</li>
+							<li>Debtor</li>
+							<li>EquipmentInfo<span>&nbsp;</span></li>
+							<li><span>StaffPersonal</span></li>
+							<li><span>StudentContactPersonal</span></li>
+						</ul>
+					</li>
+				</ul>
+				<p>(Note that some or all of these objects are proposed for SIF 1.4 and are therefore not in the SIF 1.3 schema.<br />
+					Here is <a href="http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip"><strong>a draft XSD schema for SIF 1.4</strong></a>, and here is the <strong><a href="http://kb.nsip.edu.au/download/attachments/13960404/DSWG_V1.4_ChangeProposal_Financial_0.6.pdf">draft specification details </a></strong>for the above objects.)</p>
+				<h4><span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span></h4>
+				<ol>
+					<li>
+						<p>Join</p>
+					</li>
+					<li>
+						<p>Consume</p>
+					</li>
+					<li>
+						<p>Process</p>
+					</li>
+					<li>
+						<p>Provide</p>
+					</li>
+					<li>Assurance</li>
+				</ol>
+				<h4><span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Assurance:</span></h4>
+				<p>The SIF/XML data sent by the 3<sup>rd</sup> Party app to the Jurisdiction Zone for the app must satisfy the following conditions:</p>
+				<ul>
+					<li data-mce-style="list-style-type: none;" style="list-style-type: none;">
+						<ul>
+							<li><span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">Any SIF object published by the App must be valid against the SIF-AU 1.5draft1 schema (available on request)</span></li>
+							<li><span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">All mandatory elements of the submitted SIF objects are provided</span></li>
+							<li><span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">All SIF objects posted by the App must have referential integrity. Any RefId contained in the SIF object must refer to a SIF object provisioned to the App&mdash;e.g. AccountingPeriod, FinancialAccount&mdash;or to another SIF object posted by the App (e.g. Payment referring to Billing).This condition applies recursively to all additional SIF objects posted by the App. The test of this condition is done only when the App indicates that it has finished publishing to the Zone the objects required for the test.</span></li>
+						</ul>
+					</li>
+				</ul>
+				<p><strong><span><a href="#usecasepreconditions">More...</a></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>3. Join school zone</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p><span>Join:</span></p>
+				<ul>
+					<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;)</li>
+					<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;)</li>
+					<li>Jurisdiction Zone authorises read access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;)</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>4. Consume base data from HITS</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p><span>Vendor-facing (pull); HITS represents the Jurisdiction and is the data source for seed information.</span></p>
+				<ul>
+					<li><span>Consume:</span></li>
+					<li>on the Jurisdiction-established Zone for the App, Third party app accesses all available AccountingPeriod, FinancialAccount, VendorInfo, and Debtor objects</li>
+					<li>Third party app ingests the relevant SIF Objects.</li>
+				</ul>
+				<p><br class="atl-forced-newline" />
+					[The following is a list of calls that need to be made to consume the required information]</p>
+				<ol>
+					<li>Get FinancialAccount: <span data-mce-style="color: #0000ff;" style="color: rgb(0,0,255);"><a>http://.../</a></span><a>FinancialAccounts</a></li>
+					<li>(Optional) <a>http://.../FinancialClassifications,</a> http://.../FinancialClassifications/{REFID}/FinancialAccounts (to retrieve all accounts in a ledger)</li>
+					<li>Get VendorInfo: <a>http://.../</a><a>VendorInfos</a></li>
+					<li>Get Debtor:<span> <a>http://.../Debtors</a></span></li>
+					<li>Get LocationInfo: <a>http://.../LocationInfos</a></li>
+					<li>Get StaffPersonal: <a>http://.../StaffPersonals</a></li>
+					<li>Get StudentContactPersonal: <a>http://.../StudentContactPersonals</a></li>
+				</ol>
+				<p>Endpoints may support additional queries for retreiving data - refer to <b><a href="qbe-or-service-paths">Query-by-example or service paths?</a></b> for HITS guidance on queries.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>5. Process in 3<sup>rd</sup> Party Application</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p>3rd Party App uses the consumed data to generate appropriate transaction information. The definition and automation of this process is out of scope of HITs.<br class="atl-forced-newline" />
+					Steps:</p>
+				<ul>
+					<li>Third party app processes information and gathers financials Information</li>
+					<li>Third party application creates return <span>financials</span> objects specific to the School</li>
+					<li>The transaction information generated by the App is represented by the following financials objects:
+						<ul>
+							<li>PurchaseOrder</li>
+							<li>Invoice</li>
+							<li>PaymentReceipt</li>
+							<li>Journal (transfer from one account to another)</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p class="atl-forced-newline"><strong>6. Provide authoritative data</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<p>Prior to providing:<span>&nbsp;</span></p>
+				<p><span>&nbsp;</span>Third party expresses return information in SIF/XML:</p>
+				<ul>
+					<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;)</li>
+					<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;)</li>
+					<li>Jurisdiction-established Zone authorises write access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;)</li>
+					<li>Following is provided by the 3<sup>rd</sup> Party App back to HITs:
+						<ol>
+							<li>Post Invoice to URL <a>http://.../Invoices</a></li>
+							<li>Post PaymentReceipt to URL <a>http://../PaymentReceipts</a></li>
+							<li>Post PurchaseOrders to URL <a>http://../PuchaseOrders</a></li>
+							<li>Post Journal to URL <a>http://../Journals</a></li>
+						</ol>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="confluenceTd" style="vertical-align:top;&quot;">
+				<p><strong>7. Self &ndash; confirm usecase support</strong></p>
+			</td>
+			<td class="confluenceTd">
+				<ol>
+					<li data-mce-style="list-style-type: none;" style="list-style-type: none;">
+						<ol>
+							<li>Validate Invoice records</li>
+							<li>Validate PaymentReceipts records</li>
+							<li>Validate <span>PurchaseOrder</span> records</li>
+							<li><span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;" style="line-height: 13.0pt;font-size: 10.0pt;">Validate </span><span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;" style="line-height: 13.0pt;font-size: 10.0pt;">Journal</span><span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;" style="line-height: 13.0pt;font-size: 10.0pt;"> records</span></li>
+						</ol>
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3>More information</h3>
+<h4 id="businessdriver">Business driver - what problem is this usecase is trying to solve?</h4>
+<h6>In brief:</h6>
+<ul>
+	<li>Allow schools secure access to finance information</li>
+	<li>Allow schools to use the financials product of their choice</li>
+	<li>Allow&nbsp;3rd&nbsp;Party Financials apps automated access to base information</li>
+	<li>Allow&nbsp;3rd&nbsp;Party Financials apps to publish financial data (including ledger updates) to a jurisdiction hub.</li>
+</ul>
+<p>This use case responds to the growing interest in using SIF AU to exchange financial data, and specifically to the ACT&#39;s integration project. The objects proposed for use in this use case are tentative, and will need to be further reviewed by the SIF AU Data Standards Working Group (SIF AU DSWG), &nbsp;to be included in SIF AU 1.4: they are subject to change, and this use case will be the first time they are used. Anyone seeking to engage with this use case is encouraged to familiarise themselves with the proposed SIF AU financials objects, available on request from NSIP.</p>
+<p>This use case assumes that SIF is required only to exchange information about individual transactions (e.g. purchase orders, invoices, receipts, journals), and that reporting will be done out of existing applications&mdash;although those reports may be based on the transactional information received through SIF.&nbsp;</p>
+<p>This use case assumes that payroll transactions are out of scope.</p>
+<p>This use case presupposes that there are processes in place for transactions to take place with external parties (debtors and creditors); it does not specify any mechanisms outside of SIF. A purchase order for example may be transmitted to a vendor as a SIF Purchasing object, or as a printed document drawing on information included in the SIF Purchasing object. The mechanisms for generating and sending such a printed document are outside the scope of this use case, and would be provided by existing financial applications.&nbsp;</p>
+<p>The following lists the priority areas of interest to the ACT in finance:</p>
+<ol>
+	<li class="p1">Receipting &ndash; the ability to produce receipts for (1a) Families/ Debtors and (1b) General Ledgers.</li>
+	<li class="p1">Purchase Orders &ndash; the ability to (2a) produce commitments into ledgers for purchases and (2b) send these to creditors as an approval method for purchases. We also need to be able to (2c) draw down the purchase order at time of payment to enable the commitment to be used.</li>
+	<li class="p1">Invoices &ndash; The ability to produce invoice for Debtors, recovery of hire costs in particular.</li>
+	<li class="p1">At present we enter into our system invoices to get these approved before the payment is produced and sent off.</li>
+	<li class="p1">Payments &ndash; we need to be able to produce a file to be imported into the bank as majority of our payments are made through EFT but we need to be able to produce cheques also.</li>
+	<li class="p1">We need to be able to run an end of period process including (6a) a bank reconciliation and (6b) produce reports that go to the Principal, school board, provides the basis of producing the monthly BAS and gives reports to various teachers, faculty or as requested.</li>
+	<li class="p1">We need to be able to run end of year as schools operate on a calendar year rather than financial year.</li>
+	<li class="p1">We also need to be able to do (8a) journals to correct ledger errors, GST errors and (8b) need to be able to make adjustments to the schools budget, also (8c) produce the schools budget prior to presentation and approval of the budget.</li>
+</ol>
+<p class="p1">The following three workflows are SIF-based exchanges which realise most of the ACT priority areas:</p>
+<p class="p1"><img data-base-url="http://kb.nsip.edu.au" data-image-="" data-linked-resource-container-id="13959975" data-linked-resource-default-alias="Financial HITS1.png" data-linked-resource-id="14058045" data-linked-resource-type="attachment" data-mce-="" src="http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS1.png" style="width: 500px;" title="Financial HITS1.png" /></p>
+<p class="p1"><img data-base-url="http://kb.nsip.edu.au" data-image-="" data-linked-resource-container-id="13959975" data-linked-resource-default-alias="Financial HITS2.png" data-linked-resource-id="14058046" data-linked-resource-type="attachment" data-mce-="" src="http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS2.png" style="width: 500px;" title="Financial HITS2.png" /></p>
+<p class="p1"><img data-base-url="http://kb.nsip.edu.au" data-image-="" data-linked-resource-container-id="13959975" data-linked-resource-default-alias="Financial HITS3.png" data-linked-resource-id="14058047" data-linked-resource-type="attachment" data-mce-="" src="http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS3.png" style="width: 500px;" title="Financial HITS3.png" /></p>
+<p class="p1">The following two workflows represent reporting processes which do not require SIF support, as they are already provided within applications:</p>
+<p class="p1"><img data-base-url="http://kb.nsip.edu.au" data-image-="" data-linked-resource-container-id="13959975" data-linked-resource-default-alias="Financial HITS4.png" data-linked-resource-id="14058048" data-linked-resource-type="attachment" data-mce-="" src="http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS4.png" style="width: 500px;" title="Financial HITS4.png" /></p>
+<p class="p1"><img data-base-url="http://kb.nsip.edu.au" data-image-="" data-linked-resource-container-id="13959975" data-linked-resource-default-alias="Financial HITS5.png" data-linked-resource-id="14058050" data-linked-resource-type="attachment" data-mce-="" src="http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS5.png" style="width: 500px;" title="Financial HITS5.png" /></p>
+<h4 id="usecasepreconditions">Usecase preconditions (assurance)</h4>
+<p>None.</p>
