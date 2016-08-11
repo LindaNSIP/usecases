@@ -13,7 +13,7 @@ suggestion as to how to proceed through them:
 
 The use case lists the kinds of objects involved in the exchange, the
 anticipated choreographies, and how the objects will be validated. [Here
-is an example usecase...](basic-daily-attendance)
+is an example usecase...](/docs/basic_daily_attendance/basic_daily_attendance.md)
 
 **2.  Set up a client to use HITS.**
 
