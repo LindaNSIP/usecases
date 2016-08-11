@@ -5,16 +5,16 @@ Query-by-example or service paths?
 The following considerations apply in choosing whether to implement
 queries as Query By Example (QBE) or Service Paths (SP):
 
-**1.**
+**Part of SIF standard and SIF Common framework**
 
-1. QBE is not yet part of the SIF standard, but it will be included in the
+QBE is not yet part of the SIF standard, but it will be included in the
 next release of the SIF Infrastructure specification, scheduled for
 January 2016, and is already included in the SIF Framework. Service
 paths are already part of the SIF standard.
 
-**2.**
+**Service paths are not predefined in SIF**
 
-2. Service Paths are not predefined in the SIF specification: every
+Service Paths are not predefined in the SIF specification: every
 instance of a SIF server needs to define the Service Paths it will
 support, through a SIF binding document, and advertise their
 availability through SIF Infrastructure services.
@@ -23,9 +23,9 @@ QBE is defined as a template capability, but is also not supported by
 default in SIF servers: a QBE mapping needs to be realised for each
 object.
 
-**3.**
+**Service paths best as a join query**
 
-3. The semantics of Service Paths is potentially opaque, and needs to be
+The semantics of Service Paths is potentially opaque, and needs to be
 defined in the SIF binding.
 
 Best practice is to treat the Service Path X/{ID}/Y as a join query
@@ -50,9 +50,9 @@ based information. For example the service path
 /SchoolInfo/{ID}/StudentPersonal in a "current" context could mean only
 currently enrolled students at the given school.
 
-**4.**
+**Use Service Paths if implicit ID**
 
-4. If a Service Path query X/{ID}/Y involves an ID which is not an explicit
+If a Service Path query X/{ID}/Y involves an ID which is not an explicit
 and mandatory element of Y, then Service Paths are the only way to
 realise the query: QBE is not applicable.
 
@@ -67,16 +67,16 @@ realise the query: QBE is not applicable.
     non-empty TimeTable can always be recovered. For that reason, the
     query should be realised through SP rather than QBE.
 
-**5.**
+**Use either if explicit ID...**
 
-5. If a Service Path query X/{ID}/Y involves ID which is an explicit and
+If a Service Path query X/{ID}/Y involves ID which is an explicit and
 mandatory element of Y, then it can be realised as either a service
 path, or as a QBE on Y against ID, and not involving X at all. For
 example, a query for StudentPersonal/{ID}/PersonPicture can be replaced
 by a QBE on PersonPicture/ParentObjectRefId = ID and
 PersonPicture/ParentObjectRefId@SIF\_RefObject = StudentPersonal.
 
-**6.**
+**...but consider this...**
 
 6. In case the query can be realised as either SP or QBE, the following
 considerations apply:
@@ -91,7 +91,7 @@ considerations apply:
     to be implemented, to managed access to elements at a
     separate layer.
 
-**7.**
+**HITS does QBE by default**
 
 7. The HITS default where a query can be realised as either SP or QBE is to
 realise it as a QBE, as this involves less resources for the HITS team
