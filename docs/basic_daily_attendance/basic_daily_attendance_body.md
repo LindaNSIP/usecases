@@ -23,8 +23,8 @@ back attendance records to the centralised system.
 3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
 K-12 Schools.
-
-#### Pre-Conditions: {#DailyAttendancehow-toHITS-Pre-Conditions}
+{#DailyAttendancehow-toHITS-Pre-Conditions}
+#### Pre-Conditions: 
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
@@ -52,8 +52,8 @@ further information on
 **[StudentAttendanceTimeList](http://kb.nsip.edu.au/download/attachments/13960401/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
 Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Baseline+Profile+v09.pdf)**.)
-
-#### Usecase workflow summary: {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
+{#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
+#### Usecase workflow summary: 
 
 1.  Join
 
@@ -64,8 +64,8 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Ba
 4.  Provide
 
 5.  Assurance
-
-#### Assurance: {#DailyAttendancehow-toHITS-Assurance}
+{#DailyAttendancehow-toHITS-Assurance}
+#### Assurance: 
 
 The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
@@ -147,12 +147,9 @@ The following is a list of calls that need to be made to consume the
 required information:
 
 1.  Get SchoolInfos - http://.../SchoolInfos  (HITS should determine the
-    URLs eg <span
-    class="external-link">http://hits.nsip.edu.au/SchoolInfos</span> -
+    URLs eg http://hits.nsip.edu.au/SchoolInfos -
     access this information from your Dashboard.)
-2.  Get StudentSchoolEnrollments - <span
-    style="color: rgb(51,51,51);"><span
-    style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentSchoolEnrollments</span>
+2.  Get StudentSchoolEnrollments - http://.../StudentSchoolEnrollments
 3.  Get StudentPersonals <span style="color: rgb(51,51,51);">- <span
     style="font-size: 12.006383895874px; line-height: 20.0063037872314px;">http://</span>.../StudentPersonals
     (linked to school via StudentSchoolEnrollment; eg: equivalent
@@ -174,7 +171,8 @@ guidance on queries.
 --------------------------------------
 
 3rd Party App uses the consumed data to produce a schedule. The
-definition and automation of this process is out of scope of HITs.\
+definition and automation of this process is out of scope of HITs.
+
 Steps:
 
 -   Third party app processes information and gathers Student Attendance
