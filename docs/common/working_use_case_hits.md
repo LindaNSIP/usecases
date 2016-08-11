@@ -1,4 +1,8 @@
-﻿There are several assurance use cases supported by HITS. All involve SIF
+==============================
+Working with use cases in HITS
+==============================
+
+There are several assurance use cases supported by HITS. All involve SIF
 CRUD operations over REST, and can confirm your ability to provide a hub
 provisioning data through SIF.
 
