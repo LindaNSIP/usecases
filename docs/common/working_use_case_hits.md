@@ -1,4 +1,4 @@
-There are several assurance use cases supported by HITS. All involve SIF
+﻿There are several assurance use cases supported by HITS. All involve SIF
 CRUD operations over REST, and can confirm your ability to provide a hub
 provisioning data through SIF.
 
@@ -19,8 +19,8 @@ with a personalised and data-populated environment for testing, accessed
 via a URL, which takes you to your personalised dashboard (example
 pictured below):
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_38_52.png?version=1&modificationDate=1427171933000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_38_52.png?version=1&modificationDate=1427171933000) 
+
 
 When a client is set up, an instance of the HITS database is populated
 just for you. HITS acts as a proxy for the hub you will be integrating
@@ -29,13 +29,13 @@ representative of the information stored on a hub. To simplify testing,
 your client is assigned to one dummy school: all objects on the database
 are associated with that school.
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_48_6.png?version=1&modificationDate=1427172486000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_48_6.png?version=1&modificationDate=1427172486000) 
+  
 
  
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_37_20.png?version=1&modificationDate=1427171840000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_37_20.png?version=1&modificationDate=1427171840000) 
+  
 
 **3.  Get some objects from HITS**
 
@@ -46,23 +46,23 @@ distinct endpoint, named by appending "s" to the object class; you fetch
 instances of ScheduledActivity, for example, from the endpoint ending in
 /ScheduledActivitys.
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_42_22.png?version=1&modificationDate=1427172143000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_42_22.png?version=1&modificationDate=1427172143000) 
+  
 
  
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_43_10.png?version=1&modificationDate=1427172192000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_43_10.png?version=1&modificationDate=1427172192000) 
+  
 
  
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_43_56.png?version=1&modificationDate=1427172237000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_43_56.png?version=1&modificationDate=1427172237000) 
+  
 
  
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_47_17.png?version=1&modificationDate=1427172437000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_47_17.png?version=1&modificationDate=1427172437000) 
+  
 
 ** 4.  Based on those objects, generate some new objects**
 
@@ -99,11 +99,11 @@ same class into a single message.)
 
 If the message is not well-formed XML, the message will be rejected:
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_56_59.png?version=1&modificationDate=1427173019000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_56_59.png?version=1&modificationDate=1427173019000) 
+  
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_57_26.png?version=1&modificationDate=1427173047000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_57_26.png?version=1&modificationDate=1427173047000) 
+  
 
 **NOTE 2:**
 
@@ -129,8 +129,8 @@ the objects make sense in the context of the use case. As a result of
 validation, a report is generated which indicates whether your objects
 satisfy the use case requirements:
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_51_57.png?version=1&modificationDate=1427172718000){.confluence-embedded-image
-width="500"}
+![](http://kb.nsip.edu.au/download/attachments/13960423/image2015-3-24+15_51_57.png?version=1&modificationDate=1427172718000) 
+  
 
 The main things checked for are:
 
