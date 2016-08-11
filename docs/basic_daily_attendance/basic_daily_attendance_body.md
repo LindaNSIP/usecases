@@ -17,8 +17,8 @@ be published to a jurisdictional data hub.
 A 3rd Party Daily Attendance application connects to HITS as a
 jurisdiction hub, collecting the relevant information and publishing
 back attendance records to the centralised system.
-
-#### Assumptions: {#DailyAttendancehow-toHITS-Assumptions}
+{#DailyAttendancehow-toHITS-Assumptions}
+#### Assumptions: 
 
 3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
