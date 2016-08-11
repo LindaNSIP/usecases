@@ -1,3 +1,7 @@
+==================================
+Query-by-example or service paths?
+==================================
+
 The following considerations apply in choosing whether to implement
 queries as Query By Example (QBE) or Service Paths (SP):
 
