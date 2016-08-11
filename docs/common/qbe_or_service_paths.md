@@ -1,5 +1,5 @@
 ==================================
-Query-by-example or service paths?
+Query-by-example or Service Paths?
 ==================================
 
 The following considerations apply in choosing whether to implement
@@ -12,7 +12,7 @@ next release of the SIF Infrastructure specification, scheduled for
 January 2016, and is already included in the SIF Framework. Service
 paths are already part of the SIF standard.
 
-**Service paths are not predefined in SIF**
+**Service Paths are not predefined in SIF**
 
 Service Paths are not predefined in the SIF specification: every
 instance of a SIF server needs to define the Service Paths it will
@@ -23,7 +23,7 @@ QBE is defined as a template capability, but is also not supported by
 default in SIF servers: a QBE mapping needs to be realised for each
 object.
 
-**Service paths best as a join query**
+**Service Paths best as a query joined on ID**
 
 The semantics of Service Paths is potentially opaque, and needs to be
 defined in the SIF binding.
@@ -35,18 +35,18 @@ the specific RefIDs need to be made explicit and agreed between users.
 
 Best practice is not to include other query constraints in the query,
 explicitly or implicitly. This is to reduce guesswork from external
-users about what the service path query means. For example, it is not
-best practice to include in a service path
+users about what the Service Path query means. For example, it is not
+best practice to include in a Service Path
 /SchoolInfo/{ID}/StudentPersonal the constraint that school enrolments
 must be current, that school enrolments apply to the current school
 year, or that the schools are active. Naive users cannot anticipate
 these additional constraints on the query. While such added constraints
-can be added to service path queries, best practice is to use Query By
+can be added to Service Path queries, best practice is to use Query By
 Example instead.
 
 Potential and valid exceptions are through the use of contexts where a
 "current", "past" or "future" context could be used to define temporally
-based information. For example the service path
+based information. For example the Service Path
 /SchoolInfo/{ID}/StudentPersonal in a "current" context could mean only
 currently enrolled students at the given school.
 
@@ -70,8 +70,8 @@ realise the query: QBE is not applicable.
 **Use either if explicit ID...**
 
 If a Service Path query X/{ID}/Y involves ID which is an explicit and
-mandatory element of Y, then it can be realised as either a service
-path, or as a QBE on Y against ID, and not involving X at all. For
+mandatory element of Y, then it can be realised as either a Service
+Path, or as a QBE on Y against ID, and not involving X at all. For
 example, a query for StudentPersonal/{ID}/PersonPicture can be replaced
 by a QBE on PersonPicture/ParentObjectRefId = ID and
 PersonPicture/ParentObjectRefId@SIF\_RefObject = StudentPersonal.
@@ -81,11 +81,11 @@ PersonPicture/ParentObjectRefId@SIF\_RefObject = StudentPersonal.
 6. In case the query can be realised as either SP or QBE, the following
 considerations apply:
 
--   Each service path needs to be implemented separately. The QBE for an
+-   Each Service Path needs to be implemented separately. The QBE for an
     object needs to be implemented only once. So if there are multiple
-    service paths for an object X, QBE involves less resources to
+    Service Paths for an object X, QBE involves less resources to
     be managed.
--   Each service path has its own ACL. The QBE for an object involves a
+-   Each Service Path has its own ACL. The QBE for an object involves a
     single ACL. So if there needs to be differential authorisation for
     different elements n the object, the QBE needs additional resources
     to be implemented, to managed access to elements at a
