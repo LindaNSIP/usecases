@@ -7,14 +7,14 @@ queries as Query By Example (QBE) or Service Paths (SP):
 
 **1.**
 
-QBE is not yet part of the SIF standard, but it will be included in the
+1. QBE is not yet part of the SIF standard, but it will be included in the
 next release of the SIF Infrastructure specification, scheduled for
 January 2016, and is already included in the SIF Framework. Service
 paths are already part of the SIF standard.
 
 **2.**
 
-Service Paths are not predefined in the SIF specification: every
+2. Service Paths are not predefined in the SIF specification: every
 instance of a SIF server needs to define the Service Paths it will
 support, through a SIF binding document, and advertise their
 availability through SIF Infrastructure services.
@@ -25,7 +25,7 @@ object.
 
 **3.**
 
-The semantics of Service Paths is potentially opaque, and needs to be
+3. The semantics of Service Paths is potentially opaque, and needs to be
 defined in the SIF binding.
 
 Best practice is to treat the Service Path X/{ID}/Y as a join query
@@ -52,7 +52,7 @@ currently enrolled students at the given school.
 
 **4.**
 
-If a Service Path query X/{ID}/Y involves an ID which is not an explicit
+4. If a Service Path query X/{ID}/Y involves an ID which is not an explicit
 and mandatory element of Y, then Service Paths are the only way to
 realise the query: QBE is not applicable.
 
@@ -69,7 +69,7 @@ realise the query: QBE is not applicable.
 
 **5.**
 
-If a Service Path query X/{ID}/Y involves ID which is an explicit and
+5. If a Service Path query X/{ID}/Y involves ID which is an explicit and
 mandatory element of Y, then it can be realised as either a service
 path, or as a QBE on Y against ID, and not involving X at all. For
 example, a query for StudentPersonal/{ID}/PersonPicture can be replaced
@@ -78,7 +78,7 @@ PersonPicture/ParentObjectRefId@SIF\_RefObject = StudentPersonal.
 
 **6.**
 
-In case the query can be realised as either SP or QBE, the following
+6. In case the query can be realised as either SP or QBE, the following
 considerations apply:
 
 -   Each service path needs to be implemented separately. The QBE for an
@@ -93,7 +93,7 @@ considerations apply:
 
 **7.**
 
-The HITS default where a query can be realised as either SP or QBE is to
+7. The HITS default where a query can be realised as either SP or QBE is to
 realise it as a QBE, as this involves less resources for the HITS team
 to manage. This may be overridden depending on implementation
 considerations for particular queries. SIF implementations will need to
