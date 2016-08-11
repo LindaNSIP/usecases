@@ -28,13 +28,20 @@ K-12 Schools.
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
--   Vendor has mapped the relevant SIF Objects to their systems:\
-    StudentPersonal\
-    StudentSchoolEnrolment\
-    CalendarDate\
-    CalendarSummary\
-    StudentDailyAttendance\
-    StudentAttendanceSummary\
+-   Vendor has mapped the relevant SIF Objects to their systems:
+-   
+    StudentPersonal
+
+    StudentSchoolEnrolment
+    
+    CalendarDate
+    
+    CalendarSummary
+    
+    StudentDailyAttendance
+    
+    StudentAttendanceSummary
+    
     StudentAttendanceTimeList
 
 (Note that some of these objects are proposed for SIF 1.4 and are
