@@ -157,7 +157,7 @@ required information:
 5.  Get CalendarSummarys  -  http:// .../CalendarSummarys
 
 Endpoints may support additional queries for retreiving data - refer to
-**[Query-by-example or service paths?](/docs/common/qbe_or_service_paths)** for HITS
+**[Query-by-example or service paths?](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
  
