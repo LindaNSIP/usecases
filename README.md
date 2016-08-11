@@ -1,2 +1,2 @@
 # usecases
-Contains draft usecases not yet ready to go public
+Contains the source elements for use cases
