@@ -20,11 +20,11 @@ back attendance records to the centralised system.
 
 #### Assumptions: {#DailyAttendancehow-toHITS-Assumptions}
 
-3^rd^ Party Vendor is a current supplier of a Student Attendance product
+3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
-K-12 Schools.  <span style="color: rgb(51,51,51);"> </span>
+K-12 Schools.
 
-#### <span style="color: rgb(51,51,51);">Pre-Conditions:</span> {#DailyAttendancehow-toHITS-Pre-Conditions}
+#### Pre-Conditions: {#DailyAttendancehow-toHITS-Pre-Conditions}
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
@@ -34,8 +34,7 @@ K-12 Schools.  <span style="color: rgb(51,51,51);"> </span>
     CalendarDate\
     CalendarSummary\
     StudentDailyAttendance\
-    StudentAttendanceSummary<span style="color: rgb(51,51,51);">
-    </span>\
+    StudentAttendanceSummary\
     StudentAttendanceTimeList
 
 (Note that some of these objects are proposed for SIF 1.4 and are
@@ -47,7 +46,7 @@ further information on
 and a detailed description of the **[Attendance Baseline
 Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Baseline+Profile+v09.pdf)**.)
 
-#### <span style="color: rgb(51,51,51);">Usecase workflow summary:</span> {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
+#### Usecase workflow summary: {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
 
 1.  Join
 
@@ -59,9 +58,9 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Ba
 
 5.  Assurance
 
-#### <span style="color: rgb(51,51,51);">Assurance:</span> {#DailyAttendancehow-toHITS-Assurance}
+#### Assurance: {#DailyAttendancehow-toHITS-Assurance}
 
-The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
+The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
 -   Must be able to respond to requests for all StudentDailyAttendance
@@ -120,13 +119,13 @@ records may be required.
 4. Consume Base Data from HITS.
 -------------------------------
 
-<span style="color: rgb(51,51,51);">Vendor-facing (pull); HITS
+Vendor-facing (pull); HITS
 represents the Jurisdiction and is the data source for seed
-information.</span>
+information.
 
-<span style="color: rgb(51,51,51);">Consume:</span>
+Consume:
 
--   on the Jurisdiction-established Zone for the App, <span>Third party
+-   on the Jurisdiction-established Zone for the App, Third party
     app</span> accesses all StudentPersonal records which are in a
     StudentSchoolEnrollment relationship with the given School RefId.
 -   <span>on the Jurisdiction-established Zone for the App,
