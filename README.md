@@ -12,6 +12,9 @@ NOTES: Building (Scott & Peter)
 	* Master files can contain markdown, but mostly just includes
 	* TODO: What include format (custom, pandoc-include, gcc, other)
 * Version Control
+	* master branch = Alpha version being worked on
+	* release branch = Current released version
+	* tags v1, v2, ... for release versions (allows diff)
 * Building / Automation
 	* URL (low or no protection required) to build Alpha HTML files on hits
 	* URL (slight protection) to build release files onto site
@@ -20,6 +23,7 @@ NOTES: Building (Scott & Peter)
 		* Choose master (alpha) or release (released version)
 		* Run update.sh to build files
 		* Commit new files back to dist/
+		* Automatic generate diff (from master to release for now)
 * File Formats
 	* Original Partials
 		* Standard Markdown
