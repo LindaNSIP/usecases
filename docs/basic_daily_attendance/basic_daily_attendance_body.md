@@ -18,12 +18,14 @@ A 3rd Party Daily Attendance application connects to HITS as a
 jurisdiction hub, collecting the relevant information and publishing
 back attendance records to the centralised system.
 {#DailyAttendancehow-toHITS-Assumptions}
+
 #### Assumptions:
 
 3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
 K-12 Schools.
 {#DailyAttendancehow-toHITS-Pre-Conditions}
+
 #### Pre-Conditions:
 
 -   Vendor has access to HITs
@@ -45,14 +47,17 @@ K-12 Schools.
     StudentAttendanceTimeList
 
 (Note that some of these objects are proposed for SIF 1.4 and are
-therefore not in the SIF 1.3 schema.\
+therefore not in the SIF 1.3 schema.)
+
 Here is [**a draft XSD schema for SIF
 1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
 further information on
 **[StudentAttendanceTimeList](http://kb.nsip.edu.au/download/attachments/13960401/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
 Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Baseline+Profile+v09.pdf)**.)
+
 {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
+
 #### Usecase workflow summary:
 
 1.  Join
