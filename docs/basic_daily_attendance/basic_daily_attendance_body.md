@@ -68,6 +68,7 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Ba
 
 5.  Assurance
 {#DailyAttendancehow-toHITS-Assurance}
+
 #### Assurance:
 
 The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
@@ -137,7 +138,7 @@ Consume:
     app  accesses all StudentPersonal records which are in a
     StudentSchoolEnrollment relationship with the given School RefId.
 -    on the Jurisdiction-established Zone for the App,
-      Third party app   accesses  all
+    Third party app accesses all
     CalendarSummary objects linked to the given School RefId, and all
     CalendarDate objects linked to the given CalendarSummary objects.
     (In some deployments, calendar information about schools is already
@@ -163,7 +164,7 @@ guidance on queries.
 
  
 
-5. Process in 3^rd^ Party Application.
+5. Process in 3rd Party Application.
 --------------------------------------
 
 3rd Party App uses the consumed data to produce a schedule. The
