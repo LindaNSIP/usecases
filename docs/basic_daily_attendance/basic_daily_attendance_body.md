@@ -9,8 +9,6 @@ product of their choice, and also to allow school attendance records to
 be published to a jurisdictional data hub.
 **[More...](#businessdriver)**
 
- 
-
 2. Use Case Description & Pre-Conditions
 ----------------------------------------
 
@@ -123,8 +121,6 @@ records may be required.
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
- 
-
 4. Consume Base Data from HITS.
 -------------------------------
 
@@ -162,8 +158,6 @@ Endpoints may support additional queries for retreiving data - refer to
 **[Query-by-example or service paths?](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
- 
-
 5. Process in 3rd Party Application.
 --------------------------------------
 
@@ -176,8 +170,6 @@ Steps:
     Information
 -   Third party application creates return Student Daily Attendance
     objects specific to the School
-
- 
 
 6. Provide Authoritative Data
 -----------------------------
@@ -199,8 +191,6 @@ information in SIF/XML:
     3.  Post StudentAttendanceTimeList to
         http://.../StudentAttendanceTimeLists
 
- 
-
 7. Assurance: Self – Confirmation of Use Case Support
 -----------------------------------------------------
 
@@ -208,15 +198,7 @@ information in SIF/XML:
 2.  Validate StudentAttendanceSummary records
 3.  Validate StudentAttendanceTimeList records
 
- 
 
- 
--
-
- 
--
-
-------------------------------------------------------------------------
 
 More information... {#DailyAttendancehow-toHITS-Moreinformation}
 -------------------
