@@ -110,9 +110,7 @@ StudentAttendanceSummary records, or only StudentAttendanceTimeList
 records may be required.
 
 [More...](#assurance)
----------------------
 
- 
 
 3. Join required School Zone.
 -----------------------------
