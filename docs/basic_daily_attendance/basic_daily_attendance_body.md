@@ -55,7 +55,6 @@ further information on
 **[StudentAttendanceTimeList](http://kb.nsip.edu.au/download/attachments/13960401/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
 Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Baseline+Profile+v09.pdf)**.)
-
 {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
 
 #### Usecase workflow summary:
