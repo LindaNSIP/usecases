@@ -1,11 +1,18 @@
 # What you need before you start: {#DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart}
 
--   Apply for a HITS testing account at <info@nsip.edu.au>
+##
+
+###
+
+
+-   **Apply** for a _HITS_ testing account at <info@nsip.edu.au>
 -   This will give you access to your own testing environment 
 -   Your testing environment will provide you with all necessary
     authentication and access tokens to work with the HITS API.
 
-A basic knowledge of SIF REST.
+> A basic knowledge of SIF REST.
+
+- Hello World
 
 -   Here is [some information from the SIF
     Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx){.external-link}.
@@ -300,7 +307,3 @@ well-formed if it satisfies the following requirements:
  
 
 </div>
-
- 
-
- 
