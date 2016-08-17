@@ -23,8 +23,7 @@ back attendance records to the centralised system.
 
 3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
-K-12 Schools.
-{#DailyAttendancehow-toHITS-Pre-Conditions}
+K-12 Schools. {#DailyAttendancehow-toHITS-Pre-Conditions}
 
 #### Pre-Conditions:
 
