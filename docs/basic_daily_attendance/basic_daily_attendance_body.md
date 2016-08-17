@@ -179,7 +179,8 @@ Steps:
 
  
 
-**6. Provide Authoritative Data**
+6. Provide Authoritative Data
+-----------------------------
 
 Prior to providing:  
 
