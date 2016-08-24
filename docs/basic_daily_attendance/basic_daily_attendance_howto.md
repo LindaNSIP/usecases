@@ -51,7 +51,7 @@ therefore not in the SIF 1.3 schema.)
 Here is [**a draft XSD schema for SIF
 1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
 further information on
-**[StudentAttendanceTimeList](http://kb.nsip.edu.au/download/attachments/13960401/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
+**[StudentAttendanceTimeList](DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
 Profile](Daily Attendance Baseline Profile v09.pdf)**.)
 {#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
