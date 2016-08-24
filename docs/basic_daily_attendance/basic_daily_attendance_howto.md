@@ -49,7 +49,7 @@ K-12 Schools. {#DailyAttendancehow-toHITS-Pre-Conditions}
 therefore not in the SIF 1.3 schema.)
 
 Here is [**a draft XSD schema for SIF
-1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
+1.4**](SIF_Message1.4_3.x_current.zip),
 further information on
 **[StudentAttendanceTimeList](DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
@@ -200,12 +200,10 @@ information in SIF/XML:
 2.  Validate StudentAttendanceSummary records
 3.  Validate StudentAttendanceTimeList records
 
+{#DailyAttendancehow-toHITS-Moreinformation}
 
-
-More information... {#DailyAttendancehow-toHITS-Moreinformation}
+More information... 
 -------------------
-
-{#businessdriver}
 
 #### What is the business problem this Use Case is trying to solve? 
 
