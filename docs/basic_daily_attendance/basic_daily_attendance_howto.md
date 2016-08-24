@@ -1,7 +1,6 @@
 3rd party Daily Attendance Recording
 ====================================
-## heading2
-### heading3
+
 
 1. What's the business problem?
 -------------------------------
