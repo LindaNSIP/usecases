@@ -187,7 +187,7 @@ information in SIF/XML:
     the School ("HITS Zone 1 Authz")
 -   Jurisdiction-established Zone authorises write access to objects in
     the Jurisdiction Zone for the School ("HITS Zone 1 Authn")
--   Following is provided by the 3^rd^ Party App back to HITs;
+-   Following is provided by the 3rd Party App back to HITs;
     1.  Post StudentDailyAttendance to http:// .../StudentDailyAttendances
     2.  Post StudentAttendanceSummary to http:// .../StudentAttendanceSummarys
     3.  Post StudentAttendanceTimeList to
