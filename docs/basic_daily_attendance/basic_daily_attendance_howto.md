@@ -17,13 +17,13 @@ be published to a jurisdictional data hub.
 A 3rd Party Daily Attendance application connects to HITS as a
 jurisdiction hub, collecting the relevant information and publishing
 back attendance records to the centralised system.
-{#DailyAttendancehow-toHITS-Assumptions}
+
 
 #### Assumptions:
 
 3rd Party Vendor is a current supplier of a Student Attendance product
 in schools or has knowledge of Student attendance reporting processes in
-K-12 Schools. {#DailyAttendancehow-toHITS-Pre-Conditions}
+K-12 Schools.
 
 #### Pre-Conditions:
 
@@ -54,7 +54,7 @@ further information on
 **[StudentAttendanceTimeList](DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
 Profile](Daily Attendance Baseline Profile v09.pdf)**.)
-{#DailyAttendancehow-toHITS-Usecaseworkflowsummary}
+
 
 #### Usecase workflow summary:
 
@@ -200,7 +200,7 @@ information in SIF/XML:
 2.  Validate StudentAttendanceSummary records
 3.  Validate StudentAttendanceTimeList records
 
-{#DailyAttendancehow-toHITS-Moreinformation}
+
 
 More information... 
 -------------------
