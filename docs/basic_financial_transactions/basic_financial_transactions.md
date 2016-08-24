@@ -19,7 +19,7 @@ to the centralised system.
 
 #### Assumptions:
 
-3^rd^ Party Vendor is a current supplier of a Finances product in
+3rd Party Vendor is a current supplier of a Finances product in
 schools or has knowledge of finances reporting processes in K-12
 Schools.  <span> </span>
 
