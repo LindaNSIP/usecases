@@ -14,9 +14,9 @@ A basic knowledge of SIF REST.
     REST](http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online).
 
 You need to know [how to work with a usecase in
-HITS](working-use-case-hits)
+HITS](working_use_case_hits)
 
-You need to know [how to access the HITS API](working-use-case-hits)
+You need to know [how to access the HITS API](working_use_case_hits)
 
 If you get stuck: drop us a line at <info@nsip.edu.au>
 
