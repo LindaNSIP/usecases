@@ -8,7 +8,6 @@
 Allow schools to securely provide SIS information to the Attendance
 product of their choice, and also to allow school attendance records to
 be published to a jurisdictional data hub.
-**[More...](#businessdriver)**
 
 **[More...](#what-is-the-business-problem-this-use-case-is-trying-to-solve)**
 
@@ -68,7 +67,7 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960401/Daily+Attendance+Ba
 4.  Provide
 
 5.  Assurance
-{#DailyAttendancehow-toHITS-Assurance}
+
 
 #### Assurance:
 
@@ -111,7 +110,7 @@ Note that in some deployments, only StudentDailyAttendance records, only
 StudentAttendanceSummary records, or only StudentAttendanceTimeList
 records may be required.
 
-**[More...](#assurance)**
+**[More...](#Usecase-preconditions-for-assurance)**
 
 
 3. Join required School Zone.
@@ -236,7 +235,7 @@ connect to a centralised data hub to securely access to the required
 information and publish back the Daily Attendance records to the
 centralised data hub.
 
-#### []()Assurance - Usecase preconditions
+#### Usecase preconditions for assurance
 
  The following conditions also must be
 met:
