@@ -255,16 +255,16 @@ of the ACT priority areas:
 
 ![](Financial+HITS1.png "Financial HITS1.png")
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS2.png "Financial HITS2.png")
+![](Financial+HITS2.png "Financial HITS2.png")
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS3.png "Financial HITS3.png")
+![](Financial+HITS3.png "Financial HITS3.png")
 
 The following two workflows represent reporting processes which do not
 require SIF support, as they are already provided within applications:
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS4.png "Financial HITS4.png")
+![](Financial+HITS4.png "Financial HITS4.png")
 
-![](http://kb.nsip.edu.au/download/attachments/13960423/Financial+HITS5.png "Financial HITS5.png")
+![](Financial+HITS5.png "Financial HITS5.png")
 
 #### Usecase preconditions (assurance) {#usecasepreconditions}
 
