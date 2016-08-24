@@ -255,16 +255,16 @@ of the ACT priority areas:
 
 ![](financial_hits1.png)
 
-![](Financial+HITS2.png "Financial HITS2.png")
+![](Financial HITS2.png "Financial HITS2.png")
 
-![](Financial+HITS3.png "Financial HITS3.png")
+![](Financial HITS3.png "Financial HITS3.png")
 
 The following two workflows represent reporting processes which do not
 require SIF support, as they are already provided within applications:
 
-![](Financial+HITS4.png "Financial HITS4.png")
+![](Financial HITS4.png "Financial HITS4.png")
 
-![](Financial+HITS5.png "Financial HITS5.png")
+![](Financial HITS5.png "Financial HITS5.png")
 
 #### Usecase preconditions (assurance) {#usecasepreconditions}
 
