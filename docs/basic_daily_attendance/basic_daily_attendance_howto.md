@@ -10,6 +10,8 @@ product of their choice, and also to allow school attendance records to
 be published to a jurisdictional data hub.
 **[More...](#businessdriver)**
 
+**[More...](#what-is-the-business-problem-this-use-case-is-trying-to-solve)**
+
 2. Use Case Description & Pre-Conditions
 ----------------------------------------
 
@@ -204,7 +206,9 @@ information in SIF/XML:
 More information... {#DailyAttendancehow-toHITS-Moreinformation}
 -------------------
 
-#### What is the business problem this Use Case is trying to solve? {#businessdriver}
+{#businessdriver}
+
+#### What is the business problem this Use Case is trying to solve? 
 
 In brief:
 
