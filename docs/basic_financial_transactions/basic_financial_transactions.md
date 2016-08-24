@@ -253,7 +253,7 @@ finance:
 The following three workflows are SIF-based exchanges which realise most
 of the ACT priority areas:
 
-![](docs/basic_financial_transactions/Financial+HITS1.png "Financial HITS1.png")
+![](financial_hits1.png)
 
 ![](Financial+HITS2.png "Financial HITS2.png")
 
