@@ -110,7 +110,7 @@ Note that in some deployments, only StudentDailyAttendance records, only
 StudentAttendanceSummary records, or only StudentAttendanceTimeList
 records may be required.
 
-**[More...](#Usecase-preconditions-for-assurance)**
+**[More...](#usecase-preconditions-for-assurance)**
 
 
 3. Join required School Zone.
