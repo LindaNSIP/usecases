@@ -49,7 +49,7 @@ K-12 Schools.
 therefore not in the SIF 1.3 schema.)
 
 Here is [**a draft XSD schema for SIF
-1.4**](SIF_Message1.4_3.x_current.zip),
+1.4**](/docs/common/resources/SIF_Message1.4_3.x_current.zip),
 further information on
 **[StudentAttendanceTimeList](resources/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
