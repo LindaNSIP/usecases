@@ -53,7 +53,7 @@ Here is [**a draft XSD schema for SIF
 further information on
 **[StudentAttendanceTimeList](resources/DSWG_V1.4_ChangeProposal_StudentAttendanceTimeList_0.5.pdf)**,
 and a detailed description of the **[Attendance Baseline
-Profile](Daily Attendance Baseline Profile v09.pdf)**.)
+Profile](resources/Daily Attendance Baseline Profile v09.pdf)**.)
 
 
 #### Usecase workflow summary:
