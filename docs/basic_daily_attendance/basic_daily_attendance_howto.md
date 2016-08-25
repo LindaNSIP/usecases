@@ -1,8 +1,8 @@
-# 3rd party Daily Attendance Recording
+## 3rd party Daily Attendance Recording
 
 
 
-## 1. What's the business problem?
+### 1. What's the business problem?
 
 
 Allow schools to securely provide SIS information to the Attendance
@@ -11,7 +11,7 @@ be published to a jurisdictional data hub.
 
 **[More...](#what-business-problem-does-this-use-case-address)**
 
-## 2. Use Case Description & Pre-Conditions
+### 2. Use Case Description & Pre-Conditions
 
 
 A 3rd Party Daily Attendance application connects to HITS as a
@@ -113,7 +113,7 @@ records may be required.
 **[More...](#usecase-preconditions-for-assurance)**
 
 
-## 3. Join required School Zone.
+### 3. Join required School Zone.
 
 
 -   Third party app connects to Jurisdiction-established Zone for the
@@ -123,7 +123,7 @@ records may be required.
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
-## 4. Consume Base Data from HITS.
+### 4. Consume Base Data from HITS.
 
 
 Vendor-facing (pull); HITS
@@ -160,7 +160,7 @@ Endpoints may support additional queries for retreiving data - refer to
 **[Query-by-example or service paths?](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
-## 5. Process in 3rd Party Application.
+### 5. Process in 3rd Party Application.
 
 3rd Party App uses the consumed data to produce a schedule. The
 definition and automation of this process is out of scope of HITs.
@@ -172,7 +172,7 @@ Steps:
 -   Third party application creates return Student Daily Attendance
     objects specific to the School
 
-## 6. Provide Authoritative Data
+### 6. Provide Authoritative Data
 
 Prior to providing:  
 
@@ -191,7 +191,7 @@ information in SIF/XML:
     3.  Post StudentAttendanceTimeList to
         http://.../StudentAttendanceTimeLists
 
-## 7. Assurance: Self – Confirmation of Use Case Support
+### 7. Assurance: Self – Confirmation of Use Case Support
 
 1.  Validate StudentDailyAttendance records
 2.  Validate StudentAttendanceSummary records
@@ -199,7 +199,7 @@ information in SIF/XML:
 
 
 
-## More information... 
+### More information... 
 
 #### What business problem does this Use Case address? 
 
