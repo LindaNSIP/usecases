@@ -250,32 +250,22 @@ StudentDailyAttendance object, as defined below.
     indicates that it has finished publishing to the Zone the objects
     required for the test.
 
-For
-the purposes of validation, a new StudentDailyAttendance object is
-well-formed if:
+For the purposes of validation, a new StudentDailyAttendance object is well-formed if:
 
--    If the provided CalendarDate object
-    indicates that a date is not counted toward student attendance
-    (CalendarDate/StudentAttendance/CountsTowardsAttendance), then
-    either no StudentDailyAttendance record is generated for that date,
-    or else the StudentDailyAttendance/AttendanceStatus value in the
+-    the provided CalendarDate object indicates that a date is not counted toward student attendance
+    (CalendarDate/StudentAttendance/CountsTowardsAttendance), then either no StudentDailyAttendance 
+    record is generated for that date, or else the StudentDailyAttendance/AttendanceStatus value in the
     object is "NA" (not applicable)
--    All mandatory elements of the
+-    all mandatory elements of the
     StudentDailyAttendance object are provided
--    The StudentDailyAttendance object
-    points to a valid StudentPersonal and SchoolInfo object
+-    the StudentDailyAttendance object points to a valid StudentPersonal and SchoolInfo object
 
- For the purposes of validation, a new
-StudentAttendanceSummary object is well-formed if it satisfies the
+ For the purposes of validation, a new StudentAttendanceSummary object is well-formed if it satisfies the
 following requirements:
 
--    All mandatory elements of the
-    StudentAttendanceSummary object are provided.
+-    All mandatory elements of the StudentAttendanceSummary object are provided.
 
-For the purposes of validation, a new StudentAttendanceTimeList object
-is well-formed if it satisfies the following requirements:
+For the purposes of validation, a new StudentAttendanceTimeList object is well-formed if it satisfies the following requirements:
 
--   All mandatory elements of the StudentAttendanceTimeList  object
-    are provided.
--   The StudentAttendanceTimeList  object
-    points to a valid StudentPersonal and SchoolInfo object
+-   All mandatory elements of the StudentAttendanceTimeList object are provided.
+-   The StudentAttendanceTimeList  object points to a valid StudentPersonal and SchoolInfo object.
