@@ -1,41 +1,16 @@
-What you need before you start:
-===============================
 
--   Apply for a HITS testing account at <info@nsip.edu.au>
--   This will give you access to your own testing environment 
--   Your testing environment will provide you with all necessary
-    authentication and access tokens to work with the HITS API.
+# Enrollment
 
-A basic knowledge of SIF REST.
 
--   Here is [some information from the SIF
-    Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx).
--   Here is [a short (1-day) course in developing with SIF 3
-    REST](http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online){.confluence-link}.
+## 1. What's the business problem?
 
-You need to know<span class="confluence-link"> [how to work with a
-usecase in
-HITS](http://hits.dev.nsip.edu.au/site/working-use-case-hits)</span>
-
-You need to know<span class="confluence-link"> [how to access the HITS
-API](http://hits.dev.nsip.edu.au/site/working-use-case-hits)</span>
-
-If you get stuck: drop us a line at <info@nsip.edu.au>
-
- 
-
-Enrollment
-==========
-
-1. What's the business problem?
--------------------------------
 
 Allow schools in a school system to enrol students, saving the required
 information about the students to a jurisdictional data hub.
-**[More...](#businessdriver)**
+**[More...](#what-business-problem-does-this-use-case-address)**
 
-2. Use Case Description & Pre-Conditions
-----------------------------------------
+## 2. Use Case Description & Pre-Conditions
+
 
 A 3rd Party SIS application connects to HITS as a jurisdiction hub,
 collecting the relevant information and publishing back student records
@@ -43,19 +18,24 @@ to the centralised system.
 
 #### Assumptions:
 
-3^rd^ Party Vendor is a current supplier of a SIS product in schools or
-has knowledge of student administration processes in K-12 Schools.   
+3rd Party Vendor is a current supplier of a SIS product in schools or
+has knowledge of student administration processes in K-12 Schools.
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-Conditions:</span>
+#### Pre-Conditions:
 
--   Vendor has access to HITs
--   HITs has been provisioned with School Data
--   Vendor has mapped the relevant SIF Objects to their systems:\
-    <span>StudentPersonal</span>\
-    SchoolInfo\
-    StudentSchoolEnrolment\
-    StudentContactPersonal\
-    StudentContactRelationship 
+-   Vendor has access to HITS
+-   HITS has been provisioned with School Data
+-   Vendor has mapped the relevant SIF Objects to their systems:
+-   
+    StudentPersonal
+
+    SchoolInfo
+    
+    StudentSchoolEnrolment
+    
+    StudentContactPersonal
+    
+    StudentContactRelationship
 
 (Here is a
 **[summary](http://kb.nsip.edu.au/download/attachments/13960390/SIS+Baseline+Profile+1+3+Draft+-+Summary.pdf)**and
@@ -76,7 +56,7 @@ enrollment.)
 
 5.  Assurance
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Assurance:</span>
+#### Assurance:
 
 The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
@@ -91,13 +71,12 @@ for the app must satisfy the following conditions:
     StudentContactRelationship records within a School
 
 -   Must be able to respond to requests for all StudentSchoolEnrollment
-    records within a School 
+    records within a School.
 
-    <span>[More...](#usecasepreconditions)</span>
-    ---------------------------------------------
+    [More...](#usecase-preconditions-for-assurance)
+    
 
-3. Join required to School Zone.
---------------------------------
+## 3. Join required to School Zone.
 
 Join:
 
@@ -108,7 +87,7 @@ Join:
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
-**4. Consume Base Data from HITS**.
+## 4. Consume Base Data from HITS.
 
 Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
@@ -179,7 +158,7 @@ Prior to providing: 
 More information
 ================
 
-#### Business driver - what is the problem this Use Case is trying to solve? {#businessdriver}
+#### What business problem does this Use Case address?
 
 ###### In brief:
 
@@ -260,7 +239,7 @@ satisfy the following scenarios in the SBP:</span>
     Remove a StudentContact from a student: delete
     StudentContactRelationship record</span></span></span></span></span>
 
-#### Usecase preconditions (assurance) {#usecasepreconditions}
+#### Usecase preconditions for assurance 
 
 <span data-mce-style="color: #000000;"
 style="color: rgb(0,0,0);"><span>As this use case applies to school
