@@ -112,7 +112,7 @@ data source for seed information.
 (The following is a list of calls that need to be made to consume the
 required information)
 
-1.  Get FinancialAccount: http://.../]()</span>[FinancialAccounts]
+1.  Get FinancialAccount: http://.../FinancialAccounts
 2.  (Optional) http://.../FinancialClassifications,
     http://.../FinancialClassifications/{REFID}/FinancialAccounts (to
     retrieve all accounts in a ledger)
@@ -123,7 +123,7 @@ required information)
 7.  Get StudentContactPersonal: http://.../StudentContactPersonals
 
 Endpoints may support additional queries for retreiving data - refer to
-**[Query-by-example or service paths?](qbe-or-service-paths)** for HITS
+**[Query-by-example or service paths?](/docs/common/qbe-or-service-paths.md)** for HITS
 guidance on queries.
 
 ### 5. Process in 3rd Party Application
