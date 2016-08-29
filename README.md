@@ -1,6 +1,8 @@
 # usecases
 Contains the source elements for use cases
 
+** Please read the [style guide](https://github.com/nsip/usecases/wiki/Style-guide) before making any changes to the publishable content of these files **
+
 
 NOTES: Building (Scott & Peter)
 
