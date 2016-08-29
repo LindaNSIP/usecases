@@ -1,8 +1,8 @@
 ## Financial processing
 
 
-1. What's the business problem?
--------------------------------
+### 1. What's the business problem?
+
 
 Allow schools to carry out financial transactions using draft SIF
 Financial objects, including purchase orders, receipts, invoices,
