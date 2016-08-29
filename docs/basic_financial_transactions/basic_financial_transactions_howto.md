@@ -6,12 +6,11 @@
 
 Allow schools to carry out financial transactions using draft SIF
 Financial objects, including purchase orders, receipts, invoices,
-journalling, and payments. **[More...](#businessdriver)**
+journalling, and payments. **[More...](#what-business-problem-does-this-usecase-address)**
 
- 
 
-2. Usecase description & pre-conditions
----------------------------------------
+### 2. Usecase description & pre-conditions
+
 
 A 3rd Party Finance application connects to HITS as a jurisdiction hub,
 collecting the relevant information and publishing back finances records
@@ -21,14 +20,14 @@ to the centralised system.
 
 3rd Party Vendor is a current supplier of a Finances product in
 schools or has knowledge of finances reporting processes in K-12
-Schools.  <span> </span>
+Schools.
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-conditions:</span>
+#### Pre-conditions:
 
 -   Vendor has access to HITS
 -   HITS has been provisioned with School Data
 -   Vendor has mapped the relevant SIF Objects to their systems:
--    
+-   
     -   Invoice
     -   FinancialAccount
     -   FinancialClassification
@@ -38,19 +37,19 @@ Schools.  <span> </span>
     -   VendorInfo
     -   Journal
     -   Debtor
-    -   EquipmentInfo<span> </span>
-    -   <span>StaffPersonal</span>
-    -   <span>StudentContactPersonal</span>
+    -   EquipmentInfo
+    -   StaffPersonal
+    -   StudentContactPersonal
 
 (Note that some or all of these objects are proposed for SIF 1.4 and are
-therefore not in the SIF 1.3 schema.\
+therefore not in the SIF 1.3 schema.
 Here is [**a draft XSD schema for SIF
 1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
-and here is the **[draft specification
-details](http://kb.nsip.edu.au/download/attachments/13960404/DSWG_V1.4_ChangeProposal_Financial_0.6.pdf)**for
+and here are the **[draft specification
+details](http://kb.nsip.edu.au/download/attachments/13960404/DSWG_V1.4_ChangeProposal_Financial_0.6.pdf)** for
 the above objects.)
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span>
+#### Usecase workflow summary:
 
 1.  Join
 
@@ -62,20 +61,17 @@ the above objects.)
 
 5.  Assurance
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Assurance:</span>
+#### Assurance:
 
-The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
+The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
--   -   <span data-mce-style="color: #000000;"
-        style="color: rgb(0,0,0);">Any SIF object published by the App
+-   -   Any SIF object published by the App
         must be valid against the SIF-AU 1.5draft1 schema (available
-        on request)</span>
-    -   <span data-mce-style="color: #000000;"
-        style="color: rgb(0,0,0);">All mandatory elements of the
-        submitted SIF objects are provided</span>
-    -   <span data-mce-style="color: #000000;"
-        style="color: rgb(0,0,0);">All SIF objects posted by the App
+        on request)
+    -   All mandatory elements of the
+        submitted SIF objects are provided
+    -   All SIF objects posted by the App
         must have referential integrity. Any RefId contained in the SIF
         object must refer to a SIF object provisioned to the App—e.g.
         AccountingPeriod, FinancialAccount—or to another SIF object
@@ -83,15 +79,15 @@ for the app must satisfy the following conditions:
         condition applies recursively to all additional SIF objects
         posted by the App. The test of this condition is done only when
         the App indicates that it has finished publishing to the Zone
-        the objects required for the test.</span>
+        the objects required for the test.
 
-<span>[More...](#usecasepreconditions)</span>
+[More...](#usecase-preconditions-for-assurance)
 ---------------------------------------------
 
-3. Join school zone
--------------------
+### 3. Join school zone
 
-<span>Join:</span>
+
+Join:
 
 -   Third party app connects to Jurisdiction-established Zone for the
     School ("HITS Zone 1")
@@ -100,48 +96,48 @@ for the app must satisfy the following conditions:
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
-4. Consume base data from HITS
-------------------------------
+### 4. Consume base data from HITS
 
-<span>Vendor-facing (pull); HITS represents the Jurisdiction and is the
-data source for seed information.</span>
 
--   <span>Consume:</span>
+Vendor-facing (pull); HITS represents the Jurisdiction and is the
+data source for seed information.
+
+-   Consume:
 -   on the Jurisdiction-established Zone for the App, Third party app
     accesses all available AccountingPeriod, FinancialAccount,
     VendorInfo, and Debtor objects
 -   Third party app ingests the relevant SIF Objects.
 
-\
-\[The following is a list of calls that need to be made to consume the
-required information\]
 
-1.  Get FinancialAccount: <span data-mce-style="color: #0000ff;"
-    style="color: rgb(0,0,255);">[http://.../]()</span>[FinancialAccounts]()
-2.  (Optional) [http://.../FinancialClassifications,]()
+(The following is a list of calls that need to be made to consume the
+required information)
+
+1.  Get FinancialAccount: http://.../]()</span>[FinancialAccounts]
+2.  (Optional) http://.../FinancialClassifications,
     http://.../FinancialClassifications/{REFID}/FinancialAccounts (to
     retrieve all accounts in a ledger)
-3.  Get VendorInfo: [http://.../]()[VendorInfos]()
-4.  Get Debtor:<span> [http://.../Debtors]()</span>
-5.  Get LocationInfo: [http://.../LocationInfos]()
-6.  Get StaffPersonal: [http://.../StaffPersonals]()
-7.  Get StudentContactPersonal: [http://.../StudentContactPersonals]()
+3.  Get VendorInfo: http://.../VendorInfos
+4.  Get Debtor: http://.../Debtors
+5.  Get LocationInfo: http://.../LocationInfos
+6.  Get StaffPersonal: http://.../StaffPersonals
+7.  Get StudentContactPersonal: http://.../StudentContactPersonals
 
 Endpoints may support additional queries for retreiving data - refer to
 **[Query-by-example or service paths?](qbe-or-service-paths)** for HITS
 guidance on queries.
 
-5. Process in 3^rd^ Party Application
--------------------------------------
+### 5. Process in 3rd Party Application
+
 
 3rd Party App uses the consumed data to generate appropriate transaction
 information. The definition and automation of this process is out of
-scope of HITs.\
+scope of HITs.
+
 Steps:
 
 -   Third party app processes information and gathers financials
     Information
--   Third party application creates return <span>financials</span>
+-   Third party application creates return financials
     objects specific to the School
 -   The transaction information generated by the App is represented by
     the following financials objects:
@@ -152,9 +148,9 @@ Steps:
 
 **6. Provide authoritative data**
 
-Prior to providing:<span> </span>
+Prior to providing:
 
-<span> </span>Third party expresses return information in SIF/XML:
+Third party expresses return information in SIF/XML:
 
 -   Third party app connects to Jurisdiction-established Zone for the
     School ("HITS Zone 1")
@@ -163,10 +159,10 @@ Prior to providing:<span> </span>
 -   Jurisdiction-established Zone authorises write access to objects in
     the Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 -   Following is provided by the 3^rd^ Party App back to HITs:
-    1.  Post Invoice to URL [http://.../Invoices]()
-    2.  Post PaymentReceipt to URL [http://../PaymentReceipts]()
-    3.  Post PurchaseOrders to URL [http://../PuchaseOrders]()
-    4.  Post Journal to URL [http://../Journals]()
+    1.  Post Invoice to URL http://.../Invoices
+    2.  Post PaymentReceipt to URL http://../PaymentReceipts
+    3.  Post PurchaseOrders to URL http://../PuchaseOrders
+    4.  Post Journal to URL http://../Journals
 
 7. Self – confirm usecase support
 ---------------------------------
@@ -185,7 +181,7 @@ Prior to providing:<span> </span>
 More information
 ================
 
-#### Business driver - what problem is this usecase is trying to solve? {#businessdriver}
+#### What business problem does this usecase address?
 
 ###### In brief:
 
@@ -266,6 +262,6 @@ require SIF support, as they are already provided within applications:
 
 ![](Financial HITS5.png "Financial HITS5.png")
 
-#### Usecase preconditions (assurance) {#usecasepreconditions}
+#### Usecase preconditions for assurance
 
 None.
