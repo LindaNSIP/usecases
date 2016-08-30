@@ -43,9 +43,9 @@ Schools.
 (Note that some or all of these objects are proposed for SIF 1.4 and are
 therefore not in the SIF 1.3 schema.
 Here is [**a draft XSD schema for SIF
-1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
+1.4**](/docs/common/resources/SIF_Message1.4_3.x_current.zip),
 and here are the **[draft specification
-details](http://kb.nsip.edu.au/download/attachments/13960404/DSWG_V1.4_ChangeProposal_Financial_0.6.pdf)** for
+details](resources/DSWG_V1.4_ChangeProposal_Financial_0.6.pdf)** for
 the above objects.)
 
 #### Usecase workflow summary:
