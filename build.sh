@@ -21,3 +21,5 @@ for line in `find build -name '*.md'`; do
 done
 
 git add output
+git commit -am 'Automatic build output files'
+git push
