@@ -40,3 +40,89 @@ NOTES: Building (Scott & Peter)
 		* Generate clean Word Versions for use in other places
 		* Should be clean (style names) for applying alternative style sheets
 
+
+
+Directory Structure
+
+
+	docs/*
+		Master documents
+			Master document, pulls in Fragments
+		Fragments
+			No processing or output
+		Resources (images, CSV, PDF)
+			Some processing - e.g. convert size/format of image
+
+		docs/timetable/
+			business.mdx
+			hits-developer.mdx
+			images/flowchart.png
+		docs/common/
+			tech_preamble.md
+		docs/common/images/
+			logo.png
+		docs/common/resources/
+			license.pdf
+
+		Stage 1
+			docs/timetable/business.md
+			docs/timetable/hits-developer.md
+			docs/common/tech_preamble.md
+			docs/common/images/logo.png
+			docs/common/resources/license.pdf
+			docs/timetable/images/flowchart.png
+
+		Stage 2
+			output/generic/timetable/business.html
+			output/generic/timetable/hits-developer.html
+			output/generic/common/tech_preamble.html
+			output/generic/common/images/logo.png
+			output/generic/common/resources/license.pdf
+			output/generic/timetable/images/flowchart.png
+			output/hits-dashboard/timetable/business.html
+			output/hits-dashboard/timetable/hits-developer.html
+			output/hits-dashboard/common/tech_preamble.html
+			output/hits-dashboard/common/images/logo.png
+			output/hits-dashboard/common/resources/license.pdf
+			output/hits-dashboard/timetable/images/flowchart.png
+			output/word/timetable/business.doc
+			output/word/timetable/hits-developer.doc
+			output/word/common/tech_preamble.doc
+
+	templates/
+		hits-dashboard/
+		generic/
+
+	combined files/
+		Final Mark down file (combined from master document/fragments)
+		Resources
+
+	build files/ (output/build)
+		HTML via Jade/hits-dashboard
+		HTML stand alone
+		Word doc 
+			Convert to PDF
+		PDF
+
+			* commit to master
+			* URL on HITS server - pull and build
+				Pull changes from 
+				/dev/usecases/
+
+		for each Master Document
+			Generated (include) new Markdown file
+
+		for each Template
+			mkdir TemplateName
+			for each Markdown file
+				Build
+				Copy resources
+					Recursive copy all resource file types
+
+	release/
+		HTML (hits-dashboard)
+			* merge to 'release' branch
+			* URL on HITS server to pull files and rebuild
+				/usecases/
+		Manual - PDF etc
+
