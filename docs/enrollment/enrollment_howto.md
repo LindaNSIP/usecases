@@ -138,10 +138,10 @@ Prior to providing: 
 
 ### 7. Assurance: Self – Confirmation of Use Case Support
 
-    1.  Validate StudentPersonal records
-    2.  Validate StudentSchoolEnrollment records
-    3.  Validate StudentContactPersonal records
-    4.  Validate StudentContactRelationship records
+  1.  Validate StudentPersonal records
+  2.  Validate StudentSchoolEnrollment records
+  3.  Validate StudentContactPersonal records
+  4.  Validate StudentContactRelationship records
 
 ### More information
 
@@ -226,7 +226,7 @@ must be met:
         mandatory
 -   All SIF objects posted by the App must
     have referential integrity. Any RefId contained in the SIF object
-    must refer either to a SIF object provisioned to the App—e.g.
+    must refer either to a SIF object provisioned to the App — for example
     SchoolInfo, or to a SIF object that has also been posted by the App
     to the Zone (e.g. StudentSchoolEnrollment referring to
     StudentPersonal, StudentContactRelationship referring to
