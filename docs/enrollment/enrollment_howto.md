@@ -73,7 +73,7 @@ for the app must satisfy the following conditions:
 -   Must be able to respond to requests for all StudentSchoolEnrollment
     records within a School.
 
-    [More...](#usecase-preconditions-for-assurance)
+    **[More...](#usecase-preconditions-for-assurance)**
     
 
 ### 3. Join required to School Zone
