@@ -118,7 +118,7 @@ required information)
 7.  Get StudentContactPersonal: http://.../StudentContactPersonals
 
 Endpoints may support additional queries for retreiving data - refer to
-**[Query-by-example or service paths](/docs/common/qbe-or-service-paths.md)** for HITS
+**[Query-by-example or service paths](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
 ### 5. Process in 3rd Party Application
