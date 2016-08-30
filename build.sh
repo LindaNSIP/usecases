@@ -10,7 +10,7 @@ done
 
 # Copy resources only
 mkdir -p output
-rsync -uvma --include="*/" --include="**.pdf" --include="**.png" --exclude="*" docs/* output/
+rsync -uvma --include="*/" --include="**.pdf" --include="**.png" --include="**.zip" --exclude="*" docs/* output/
 
 for line in `find build -name '*.md'`; do 
 	echo $line
