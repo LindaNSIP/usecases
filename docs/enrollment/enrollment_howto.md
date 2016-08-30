@@ -107,11 +107,11 @@ given school.
 
 Steps:
 
--   3rd party app creates StudentPersonal records
--   3rd party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved
+  1. 3rd party app creates StudentPersonal records
+  2. 3rd party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved
 from HITS.
--   3rd party app creates StudentContactPersonal records
--   3rd party app creates StudentContactRelationship records, at least
+  3. 3rd party app creates StudentContactPersonal records
+  4. 3rd party app creates StudentContactRelationship records, at least
     one for each StudentContactPersonal record, and at least one for
     each StudentPersonal record.
 
