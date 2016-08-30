@@ -1,16 +1,15 @@
 
-# Enrollment
+## Enrollment
 
 
-## 1. What's the business problem?
+### 1. What's the business problem?
 
 
 Allow schools in a school system to enrol students, saving the required
 information about the students to a jurisdictional data hub.
 **[More...](#what-business-problem-does-this-use-case-address)**
 
-## 2. Use Case Description & Pre-Conditions
-
+### 2. Use Case Description & Pre-Conditions
 
 A 3rd Party SIS application connects to HITS as a jurisdiction hub,
 collecting the relevant information and publishing back student records
@@ -26,25 +25,25 @@ has knowledge of student administration processes in K-12 Schools.
 -   Vendor has access to HITS
 -   HITS has been provisioned with School Data
 -   Vendor has mapped the relevant SIF Objects to their systems:
--   
-    StudentPersonal
+ 
+     - StudentPersonal
 
-    SchoolInfo
+     - SchoolInfo
     
-    StudentSchoolEnrolment
+     - StudentSchoolEnrolment
     
-    StudentContactPersonal
+     - StudentContactPersonal
     
-    StudentContactRelationship
+     - StudentContactRelationship
 
 (Here is a
-**[summary](http://kb.nsip.edu.au/download/attachments/13960390/SIS+Baseline+Profile+1+3+Draft+-+Summary.pdf)**and
+**[summary](/docs/common/resources/SIS Baseline Profile 1 3 Draft Summary.pdf)**and
 a **[full
-draft](http://kb.nsip.edu.au/download/attachments/13960390/SIS+Baseline+Profile+%28SBP%29+Jurisdiction+Full+Draft+v0.3.pdf)**of
+draft]**(/docs/common/resources/SIS Baseline Profile SBP Jurisdiction Full Draft v0.3.pdf) of
 the SIS Basline Profile which governs the interactions for an
 enrollment.)
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span>
+#### Usecase workflow summary:
 
 1.  Join
 
@@ -76,7 +75,7 @@ for the app must satisfy the following conditions:
     [More...](#usecase-preconditions-for-assurance)
     
 
-## 3. Join required to School Zone.
+### 3. Join required to School Zone.
 
 Join:
 
@@ -87,7 +86,7 @@ Join:
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
-## 4. Consume Base Data from HITS.
+### 4. Consume Base Data from HITS.
 
 Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
@@ -107,8 +106,7 @@ source for seed information.
         SIF query mechanisms, or else retrieve all SchoolInfo records
         from the hub and choose the the right record.
 
-**5. Process**\
-**Processes in 3^rd^ Party Application.**
+### 5. Process - Processes in 3rd Party Application.
 
 3rd Party App creates student enrollments for students enrolling in the
 given school.\
@@ -125,7 +123,7 @@ Steps:
     one for each StudentContactPersonal record, and at least one for
     each StudentPersonal record.
 
-**6. Provide Authoritative Data**
+### 6. Provide Authoritative Data
 
 Prior to providing: 
 
@@ -147,20 +145,20 @@ Prior to providing: 
         [http://../StudentContactRelationships]()\
          
 
-7. Assurance: Self – Confirmation of Use Case Support
------------------------------------------------------
+### 7. Assurance: Self – Confirmation of Use Case Support
 
-1.  1.  Validate StudentPersonal records
+
+    1.  Validate StudentPersonal records
     2.  Validate <span>StudentSchoolEnrollment</span> records
     3.  Validate StudentContactPersonal records
     4.  Validate StudentContactRelationship records
 
-More information
-================
+### More information
+
 
 #### What business problem does this Use Case address?
 
-###### In brief:
+In brief:
 
 -   Allow schools secure access to SIS information
 -   Allow schools to use the SIS product of their choice
