@@ -12,20 +12,20 @@ information about the students to a jurisdictional data hub.
 
 ### 2. Use Case Description & Pre-Conditions
 
-A thirrd party SIS application connects to HITS as a jurisdiction hub,
+A third party SIS application connects to HITS as a jurisdiction hub,
 collecting the relevant information and publishing back student records
 to the centralised system.
 
 #### Assumptions:
 
-3rd Party Vendor is a current supplier of a SIS product in schools or
+The third party vendor is a current supplier of a SIS product in schools or
 has knowledge of student administration processes in K-12 Schools.
 
 #### Pre-Conditions:
 
--   Vendor has access to HITS
+-   The vendor has access to HITS
 -   HITS has been provisioned with School Data
--   Vendor has mapped the relevant SIF Objects to their systems:
+-   The vendor has mapped the relevant SIF Objects to their systems:
  
      - StudentPersonal
 
@@ -58,7 +58,7 @@ enrollment.)
 
 #### Assurance:
 
-The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
+The SIF/XML data sent by the third party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
 -   Must be able to respond to requests for all StudentPersonal records
@@ -93,25 +93,25 @@ Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
 
 Consume:
- -   on the Jurisdiction-established Zone for the App, 3rd party app accesses the SchoolInfo object corresponding to their school.
+ -   on the Jurisdiction-established Zone for the app, third party app accesses the SchoolInfo object corresponding to their school.
  -   Third party app ingests the relevant SIF Objects.
 
 Get SchoolInfos: http://.../SchoolInfos
  -  This step may be skipped if the Third party app if the SchoolInfo RefId is already known
  - The query mechanism is specific to the hub, but retrieval is unlikely to be automatic; it is likeliest for the school to do a manual query on the school name, using one of the established SIF query mechanisms, or else retrieve all SchoolInfo records from the hub and choose the the right record.
 
-### 5. Process - Processes in 3rd Party Application.
+### 5. Process - Processes in third party application.
 
-3rd Party App creates student enrollments for students enrolling in the
+Third party app creates student enrollments for students enrolling in the
 given school.
 
 Steps:
 
-  1. 3rd party app creates StudentPersonal records
-  2. 3rd party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved
+  1. Third party app creates StudentPersonal records
+  2. Third party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved
 from HITS.
-  3. 3rd party app creates StudentContactPersonal records
-  4. 3rd party app creates StudentContactRelationship records, at least
+  3. Third party app creates StudentContactPersonal records
+  4. Third party app creates StudentContactRelationship records, at least
     one for each StudentContactPersonal record, and at least one for
     each StudentPersonal record.
 
