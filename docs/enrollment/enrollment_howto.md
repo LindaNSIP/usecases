@@ -21,7 +21,7 @@ to the centralised system.
 The third party vendor is a current supplier of a SIS product in schools or
 has knowledge of student administration processes in K-12 Schools.
 
-#### Pre-Conditions:
+#### Pre-conditions:
 
 -   The vendor has access to HITS
 -   HITS has been provisioned with School Data
@@ -87,7 +87,7 @@ Join:
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn").
 
-### 4. Consume Base Data from HITS.
+### 4. Consume base data from HITS.
 
 Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
@@ -100,7 +100,7 @@ Get SchoolInfos: http://.../SchoolInfos
  -  This step may be skipped if the Third party app if the SchoolInfo RefId is already known.
  - The query mechanism is specific to the hub, but retrieval is unlikely to be automatic; it is likeliest for the school to do a manual query on the school name, using one of the established SIF query mechanisms, or else retrieve all SchoolInfo records from the hub and choose the the right record.
 
-### 5. Process - Processes in third party application.
+### 5. Process - processes in third party application.
 
 Third party app creates student enrollments for students enrolling in the
 given school.
@@ -114,7 +114,7 @@ from HITS.
   4. Third party app creates at least one StudentContactRelationship record for each StudentContactPersonal record, and at least one for
     each StudentPersonal record.
 
-### 6. Provide Authoritative Data
+### 6. Provide authoritative data
 
 Prior to providing: 
 
@@ -136,7 +136,7 @@ Prior to providing: 
         [http://../StudentContactRelationships]()\
          
 
-### 7. Assurance: Self – Confirmation of Use Case Support
+### 7. Assurance: Self–confirmation of use case support
 
   1.  Validate StudentPersonal records
   2.  Validate StudentSchoolEnrollment records
