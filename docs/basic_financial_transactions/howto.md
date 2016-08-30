@@ -1,4 +1,4 @@
-## Financial processing
+## How to implement financial processing
 
 
 ### 1. What's the business problem?
