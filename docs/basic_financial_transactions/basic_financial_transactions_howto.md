@@ -214,7 +214,7 @@ sending such a printed document are outside the scope of this use case,
 and would be provided by existing financial applications. 
 
 The following lists the priority areas of interest to the ACT in
-finance:
+finance (numbers in parentheses refer to the diagrams below) :
 
 1.  Receipting – the ability to produce receipts for (1a) Families/
     Debtors and (1b) General Ledgers.
