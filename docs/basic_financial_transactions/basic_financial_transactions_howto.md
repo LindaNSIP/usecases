@@ -249,18 +249,18 @@ finance:
 The following three workflows are SIF-based exchanges which realise most
 of the ACT priority areas:
 
-![](financial_hits1.png)
+![](images/Financial Hits1.png)
 
-![](Financial HITS2.png "Financial HITS2.png")
+![](images/Financial HITS2.png "Financial HITS2.png")
 
-![](Financial HITS3.png "Financial HITS3.png")
+![](images/Financial HITS3.png "Financial HITS3.png")
 
 The following two workflows represent reporting processes which do not
 require SIF support, as they are already provided within applications:
 
-![](Financial HITS4.png "Financial HITS4.png")
+![](images/Financial HITS4.png "Financial HITS4.png")
 
-![](Financial HITS5.png "Financial HITS5.png")
+![](images/Financial HITS5.png "Financial HITS5.png")
 
 #### Usecase preconditions for assurance
 
