@@ -27,7 +27,6 @@ Schools.
 -   Vendor has access to HITS
 -   HITS has been provisioned with School Data
 -   Vendor has mapped the relevant SIF Objects to their systems:
--   
     -   Invoice
     -   FinancialAccount
     -   FinancialClassification
