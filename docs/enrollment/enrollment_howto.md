@@ -215,7 +215,7 @@ must be met:
     the given scenarios (including both the black elements, and the blue
     elements intended for national reporting). In particular:
     -   The use of several elements is
-        upgraded from optional to strongly recommended</span>
+        upgraded from optional to strongly recommended
     -   FamilyName, GivenName, MiddleName are
         used instead of FullName for students, and are strongly
         recommended for student contacts
