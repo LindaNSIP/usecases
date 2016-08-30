@@ -12,7 +12,7 @@ information about the students to a jurisdictional data hub.
 
 ### 2. Use Case Description & Pre-Conditions
 
-A third party SIS application connects to HITS as a jurisdiction hub,
+A thirrd party SIS application connects to HITS as a jurisdiction hub,
 collecting the relevant information and publishing back student records
 to the centralised system.
 
