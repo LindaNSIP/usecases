@@ -153,48 +153,46 @@ In brief:
 
 -   Allow schools secure access to SIS information
 -   Allow schools to use the SIS product of their choice
--   <span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;"
-    style="line-height: 13.0pt;font-size: 10.0pt;">Allow third party SIS
+-   Allow third party SIS
     apps to publish a school's student enrollments to a
-    jurisdictional hub.</span>
+    jurisdictional hub.
 
 The use case described here satisfies the following scenarios in the SIS
 Baseline Profile (SBP): 
 
--   3.1.2 Future Enrollment: StudentSchoolEnrollment/TimeFrame is set to
+-   **3.1.2 Future Enrollment:** StudentSchoolEnrollment/TimeFrame is set to
     F (future)
--   3.1.4 New Current
-    Enrollment: StudentSchoolEnrollment/TimeFrame
+-   **3.1.4 New Current Enrollment:** StudentSchoolEnrollment/TimeFrame
     is set to C (current)
--   3.3.4.1 New Student Contact and Relationship
--   3.3.4.2 New Relationship added to a Current Contact
+-   **3.3.4.1 New Student Contact and Relationship**
+-   **3.3.4.2 New Relationship added to a Current Contact**
 
 The use case described above can be straightforwardly extended with update operations to satisfy the following scenarios in the SBP:
 
--   3.1.3 Future to Current Enrollment: StudentSchoolEnrollment/TimeFrame is updated
+-   **3.1.3 Future to Current Enrollment:** StudentSchoolEnrollment/TimeFrame is updated
     from F (future) to C (current)
--   3.1.5 Year End Rollover: StudentSchoolEnrollment/TimeFrame is updated from C
+-   **3.1.5 Year End Rollover:** StudentSchoolEnrollment/TimeFrame is updated from C
     (current) to H (historical); new StudentSchoolEnrollment is created
     with StudentSchoolEnrollment/TimeFrame set to C (current)
--   3.1.6 Exit School: StudentSchoolEnrollment/TimeFrame is updated from C
+-   **3.1.6 Exit School:** StudentSchoolEnrollment/TimeFrame is updated from C
     (current) to H (historical)
--   3.1.7 Change Campus: StudentSchoolEnrollment/TimeFrame is updated from C
+-   **3.1.7 Change Campus:** StudentSchoolEnrollment/TimeFrame is updated from C
     (current) to H (historical), with RecordClosureReason set to
     CampusExit and ExitType set to "Transfer campus of the same school";
     new StudentSchoolEnrollment is created
     with StudentSchoolEnrollment/TimeFrame set to C (current) and
     EntryType set to "Transfer from a different campus of the same
     school"
--   3.1.8 Mid-year Promotion/Demotion: StudentSchoolEnrollment/YearLevel
+-   **3.1.8 Mid-year Promotion/Demotion:** StudentSchoolEnrollment/YearLevel
     and StudentSchoolEnrollment/PromotionInfo/PromotionStatus is
     updated; StudentPersonal/YearLevel is updated
--   3.1.9 Change in Personal Details: update
+-   **3.1.9 Change in Personal Details:** update
     StudentPersonal
--   3.3.4.3 Change to a StudentContact Personal information:
+-   **3.3.4.3 Change to a StudentContact Personal information:**
     update StudentContactPersonal
--   3.3.4.4 Change to StudentContact Relationship info: update
+-   **3.3.4.4 Change to StudentContact Relationship info:** update
     StudentContactRelationship
--   3.3.4.5 Remove a StudentContact from a student: delete
+-   **3.3.4.5 Remove a StudentContact from a student:** delete
     StudentContactRelationship record
 
 #### Usecase preconditions for assurance 
