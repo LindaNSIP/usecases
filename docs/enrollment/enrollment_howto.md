@@ -139,9 +139,8 @@ Prior to providing: 
 
 ### 7. Assurance: Self – Confirmation of Use Case Support
 
-
     1.  Validate StudentPersonal records
-    2.  Validate <span>StudentSchoolEnrollment</span> records
+    2.  Validate StudentSchoolEnrollment records
     3.  Validate StudentContactPersonal records
     4.  Validate StudentContactRelationship records
 
