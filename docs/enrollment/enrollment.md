@@ -37,9 +37,9 @@ has knowledge of student administration processes in K-12 Schools.
      - StudentContactRelationship
 
 (Here is a
-**[summary](/docs/common/resources/SIS Baseline Profile 1 3 Draft Summary.pdf)**and
+**[summary](/docs/common/resources/SIS Baseline Profile 1 3 Draft Summary.pdf)** and
 a **[full
-draft]**(/docs/common/resources/SIS Baseline Profile SBP Jurisdiction Full Draft v0.3.pdf) of
+draft](/docs/common/resources/SIS Baseline Profile SBP Jurisdiction Full Draft v0.3.pdf)** of
 the SIS Basline Profile which governs the interactions for an
 enrollment.)
 
