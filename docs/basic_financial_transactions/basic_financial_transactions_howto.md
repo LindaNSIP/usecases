@@ -76,7 +76,7 @@ for the app must satisfy the following conditions:
         the App indicates that it has finished publishing to the Zone
         the objects required for the test.
 
-[More...](#usecase-preconditions-for-assurance)
+**[More...](#usecase-preconditions-for-assurance)**
 
 
 ### 3. Join school zone
