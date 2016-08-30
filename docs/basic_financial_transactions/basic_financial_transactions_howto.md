@@ -64,14 +64,10 @@ the above objects.)
 
 The SIF/XML data sent by the 3rd Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
-
--   -   Any SIF object published by the App
-        must be valid against the SIF-AU 1.5draft1 schema (available
+ -   Any SIF object published by the App must be valid against the SIF-AU 1.5draft1 schema (available
         on request)
-    -   All mandatory elements of the
-        submitted SIF objects are provided
-    -   All SIF objects posted by the App
-        must have referential integrity. Any RefId contained in the SIF
+ -   All mandatory elements of the submitted SIF objects are provided
+ -   All SIF objects posted by the App must have referential integrity. Any RefId contained in the SIF
         object must refer to a SIF object provisioned to the App—e.g.
         AccountingPeriod, FinancialAccount—or to another SIF object
         posted by the App (e.g. Payment referring to Billing).This
@@ -81,7 +77,7 @@ for the app must satisfy the following conditions:
         the objects required for the test.
 
 [More...](#usecase-preconditions-for-assurance)
----------------------------------------------
+
 
 ### 3. Join school zone
 
