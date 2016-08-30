@@ -62,13 +62,13 @@ The SIF/XML data sent by the third party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
 -   Must be able to respond to requests for all StudentPersonal records
-    within a School
+    within a School.
 
 -   Must be able to respond to requests for all StudentContactPersonal
-    records within a School
+    records within a School.
 
 -   Must be able to respond to requests for all
-    StudentContactRelationship records within a School
+    StudentContactRelationship records within a School.
 
 -   Must be able to respond to requests for all StudentSchoolEnrollment
     records within a School.
@@ -76,16 +76,16 @@ for the app must satisfy the following conditions:
     [More...](#usecase-preconditions-for-assurance)
     
 
-### 3. Join required to School Zone.
+### 3. Join required to School Zone
 
 Join:
 
 -   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1")
+    School ("HITS Zone 1").
 -   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz")
+    the School ("HITS Zone 1 Authz").
 -   Jurisdiction Zone authorises read access to objects in the
-    Jurisdiction Zone for the School ("HITS Zone 1 Authn")
+    Jurisdiction Zone for the School ("HITS Zone 1 Authn").
 
 ### 4. Consume Base Data from HITS.
 
@@ -97,7 +97,7 @@ Consume:
  -   Third party app ingests the relevant SIF Objects.
 
 Get SchoolInfos: http://.../SchoolInfos
- -  This step may be skipped if the Third party app if the SchoolInfo RefId is already known
+ -  This step may be skipped if the Third party app if the SchoolInfo RefId is already known.
  - The query mechanism is specific to the hub, but retrieval is unlikely to be automatic; it is likeliest for the school to do a manual query on the school name, using one of the established SIF query mechanisms, or else retrieve all SchoolInfo records from the hub and choose the the right record.
 
 ### 5. Process - Processes in third party application.
@@ -107,12 +107,11 @@ given school.
 
 Steps:
 
-  1. Third party app creates StudentPersonal records
+  1. Third party app creates StudentPersonal records.
   2. Third party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved
 from HITS.
-  3. Third party app creates StudentContactPersonal records
-  4. Third party app creates StudentContactRelationship records, at least
-    one for each StudentContactPersonal record, and at least one for
+  3. Third party app creates StudentContactPersonal records.
+  4. Third party app creates at least one StudentContactRelationship record for each StudentContactPersonal record, and at least one for
     each StudentPersonal record.
 
 ### 6. Provide Authoritative Data
@@ -122,12 +121,12 @@ Prior to providing: 
 -   Third party expresses return information in SIF/XML:
 
 -   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1")
+    School ("HITS Zone 1").
 -   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz")
+    the School ("HITS Zone 1 Authz").
 -   Jurisdiction-established Zone authorises write access to objects in
-    the Jurisdiction Zone for the School ("HITS Zone 1 Authn")
--   Following is provided by the 3^rd^ Party App back to HITs;
+    the Jurisdiction Zone for the School ("HITS Zone 1 Authn").
+-   Following is provided by the third party app back to HITS;
     1.  Post StudentPersonal to URL [http://.../StudentPersonals]()
     2.  Post StudentSchoolEnrollment to URL
         [http://../StudentSchoolEnrollments]()
@@ -149,11 +148,11 @@ Prior to providing: 
 
 #### What business problem does this Use Case address?
 
-In brief:
+In brief, this process:
 
--   Allow schools secure access to SIS information
--   Allow schools to use the SIS product of their choice
--   Allow third party SIS
+-   Allows schools secure access to SIS information.
+-   Allows schools to use the SIS product of their choice.
+-   Allows third party SIS
     apps to publish a school's student enrollments to a
     jurisdictional hub.
 
