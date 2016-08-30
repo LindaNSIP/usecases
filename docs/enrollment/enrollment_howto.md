@@ -155,7 +155,7 @@ In brief:
 -   Allow schools secure access to SIS information
 -   Allow schools to use the SIS product of their choice
 -   <span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;"
-    style="line-height: 13.0pt;font-size: 10.0pt;">Allow 3rd Party SIS
+    style="line-height: 13.0pt;font-size: 10.0pt;">Allow third party SIS
     apps to publish a school's student enrollments to a
     jurisdictional hub.</span>
 
