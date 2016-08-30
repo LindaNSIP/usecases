@@ -1,5 +1,5 @@
 
-## Enrollment
+## How to implement enrollment
 
 
 ### 1. What's the business problem?
