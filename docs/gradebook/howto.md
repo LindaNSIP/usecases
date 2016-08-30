@@ -1,53 +1,24 @@
-What you need before you start:
-===============================
 
--   Apply for a HITS testing account at <info@nsip.edu.au>
--   This will give you access to your own testing environment 
--   Your testing environment will provide you with all necessary
-    authentication and access tokens to work with the HITS API.
+## How to implement gradebook
 
-A basic knowledge of SIF REST.
+### 1. What's the business problem?
 
--   Here is [some information from the SIF
-    Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx).
--   Here is [a short (1-day) course in developing with SIF 3
-    REST](http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online){.confluence-link}.
-
-You need to know<span class="confluence-link"> [how to work with a
-usecase in
-HITS](http://hits.dev.nsip.edu.au/site/working-use-case-hits)</span>
-
-You need to know<span class="confluence-link"> [how to access the HITS
-API](http://hits.dev.nsip.edu.au/site/working-use-case-hits)</span>
-
- 
-
-If you get stuck: drop us a line at <info@nsip.edu.au>
-
-#### Gradebook
-
-1. What's the business problem?
--------------------------------
 
 Allow schools to securely provide account information to the classroom
 assessment product of their choice, and also to allow assessment results
 records to be published to a jurisdictional data hub.
-**[More...](#businessdriver)**
+**[More...](#what-business-problem-does-this-usecase-address)**
 
- 
 
- 
+### 2. Usecase description & pre-conditions
 
-2. Usecase description & pre-conditions
----------------------------------------
-
-A 3rd Party classroom assessment application connects to HITS as a
+A third party classroom assessment application connects to HITS as a
 jurisdiction hub, collecting the relevant information and publishing
 back <span>assessment results</span> records to the centralised system.
 
 #### Assumptions:
 
-3^rd^ Party Vendor is a current supplier of a <span>classroom
+The third party vendor is a current supplier of a <span>classroom
 assessment</span> product in schools or has knowledge of <span>classroom
 assessment</span> processes in K-12 Schools.   
 
@@ -265,7 +236,7 @@ More information
 
  
 
-#### Business driver - what problem is this usecase is trying to solve? {#businessdriver}
+#### What business problem does this usecase address?
 
 ###### In brief:
 

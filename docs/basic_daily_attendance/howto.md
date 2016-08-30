@@ -1,4 +1,4 @@
-## How to implement 3rd party Daily Attendance Recording
+## How to implement third party Daily Attendance Recording
 
 
 
