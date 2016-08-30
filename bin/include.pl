@@ -39,5 +39,8 @@ $buffer =~ s/
 	getfile($1)
 /mxge;
 
+# XXX Need to fix relative root path URLs
+# $buffer =~ s|/docs/|../|g;
+
 print $OUTFILE $buffer;
 

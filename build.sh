@@ -1,4 +1,7 @@
 
+git pull
+rm -Rf build
+rm -Rf output
 
 # Copy markdown
 mkdir -p build
@@ -17,3 +20,4 @@ for line in `find build -name '*.md'`; do
 	perl bin/process.pl $line
 done
 
+git add output
