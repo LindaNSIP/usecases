@@ -103,7 +103,7 @@ source for seed information.
 There are two possible ways to obtain the base information through REST
 service path calls:
 
-##### Via single data dump
+#### Via single data dump
 
 The first assumes that all available students, staff, and classes, in
 all known schools, will be exposed to the third party application, as a
@@ -124,7 +124,7 @@ and processed, as HITS end points contain customised test data.)
 6.  Get TeachingGroups: `http://.../TeachingGroups` (linked to a
     school via SchoolInfoRefId)
 
-##### Via teaching groups
+#### Via teaching groups
 
 The second assumes, more realistically, that only certain
 teaching groups will be exposed to the application, and that any staff
