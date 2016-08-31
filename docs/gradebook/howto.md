@@ -53,7 +53,7 @@ and here are **[draft specifications for the proposed grading
 objects](resources/DSWG_V1.4_ChangeProposal_GradingAssignment_0.4.pdf)**
 listed above.)
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span>
+#### Usecase workflow summary:
 
 1.  Join
 
@@ -65,24 +65,22 @@ listed above.)
 
 5.  Assurance
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Assurance:</span>
+#### Assurance:
 
-The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
+The SIF/XML data sent by the third party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
--   Must be able to provide all <span>GradingAssignment</span> records
+-   Must be able to provide all GradingAssignment records
     within a School
 
--   Must be able provide all <span>GradingAssignmentScore</span> records
+-   Must be able provide all GradingAssignmentScore records
     within a School
 
-<span>[More...](#usecasepreconditions)</span>
----------------------------------------------
+**[More...](#usecase-preconditions-for-assurance)**
 
- 
 
-3. Join school zone.
---------------------
+### 3. Join school zone.
+
 
 Join:
 
@@ -93,9 +91,8 @@ Join:
 -   Jurisdiction Zone authorises read access to objects in the
     Jurisdiction Zone for the School ("HITS Zone 1 Authn")
 
- 
 
-**4. Consume base data from HITS**.
+### 4. Consume base data from HITS
 
 Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
@@ -103,44 +100,37 @@ source for seed information.
 -   Consume:
 -   on the Jurisdiction-established Zone for the App, Third party app
     accesses all StudentPersonal records which are in a
-    StudentSchoolEnrollment relationship with the given School RefId
+    StudentSchoolEnrollment relationship with the given School RefId.
 -   on the Jurisdiction-established Zone for the App, Third party app
     accesses all StaffPersonal records which are in a StaffAssignment
-    relationship with the given School RefId
+    relationship with the given School RefId.
 -   on the Jurisdiction-established Zone for the App, Third party app
     accesses all TeachingGroup objects linked to the given School RefId.
--   <span data-mce-style="line-height: 13.0pt; font-size: 10.0pt;"
-    style="line-height: 13.0pt;font-size: 10.0pt;">Third party app
-    ingests the relevant SIF Objects.</span>
+-   Third party app ingests the relevant SIF Objects.
 
 There are two possible ways to obtain the Base information through REST
-service path calls.
+service path calls:
 
-A. The first assumes that all available students, staff, and classes, in
+**A.** The first assumes that all available students, staff, and classes, in
 all known schools, will be exposed to the third party application, as a
 single dump of data. This is the path recommended for HITS assurance, as
 it is simpler to fetch the data and start generating objects for
 validation.  (This is useful to prove that the objects can be consumed
 and processed, as HITS end points contain customised test data.)
 
-1.  Get SchoolInfos: <span data-mce-style="color: #0000ff;"
-    style="color: rgb(0,0,255);">[http://.../SchoolInfos]()</span>
-2.  Get StudentSchoolEnrollments: <span data-mce-style="color: #0000ff;"
-    style="color: rgb(0,0,255);">[http://.../]()</span>[StudentSchoolEnrollments]()
-3.  Get StudentPersonals: [http://.../]()[StudentPersonals]() (linked to
+1.  Get SchoolInfos: `http://.../SchoolInfos`
+2.  Get StudentSchoolEnrollments: `http://.../StudentSchoolEnrollments`
+3.  Get StudentPersonals: `http://.../StudentPersonals` (linked to
     school via StudentSchoolEnrollment; equivalent to
-    [http://..../SchoolInfo/\\{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals]() )
-4.  Get StaffAssignments: [http://.../StaffAssignments]()
-5.  Get StaffPersonals:
-    [http://.../S](http://hits.nsip.edu.au/SchoolInfo/%7b%7d/CalendarDates)taffPersonals
+    `http://..../SchoolInfo/{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals`)
+4.  Get StaffAssignments: `http://.../StaffAssignments`
+5.  Get StaffPersonals: `http://.../StaffPersonals`
     (linked to school via StaffAssignment; equivalent to
-    [http://.../SchoolInfo/\\{REFID}/StaffAssignments/{REFID}/StaffPersonals]() )
-6.  Get TeachingGroups: [http://.../TeachingGroups]() (linked to a
+    `http://.../SchoolInfo/{REFID}/StaffAssignments/{REFID}/StaffPersonals`)
+6.  Get TeachingGroups: `http://.../TeachingGroups` (linked to a
     school via SchoolInfoRefId)
 
-<div>
-
-<span>B. The second assumes, more realistically, that only certain
+**B.** The second assumes, more realistically, that only certain
 teaching groups will be exposed to the application, and that any staff
 and student records exposed should be accessed via their teaching group.
 You do not need to obtain data this way for HITS assurance: you will end
@@ -285,7 +275,7 @@ connect to a centralised data hub to securely access to the required
 information and publish back the assessment result records to the
 centralised data hub.
 
-#### Usecase preconditions (assurance) {#usecasepreconditions}
+#### Usecase preconditions for assurance 
 
 <span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">The
 following conditions also must be met:</span>
