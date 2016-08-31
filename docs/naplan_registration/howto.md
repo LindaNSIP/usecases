@@ -103,7 +103,7 @@ for the app must satisfy the following conditions:
 Join:
 -   SIS client registers with AP.
 -   AP communicates to
-    SIS client out of band credentials for connecting to the AP
+    SIS client out-of-band credentials for connecting to the AP
     zone.
 
 ### 4. Provide authoritative data
