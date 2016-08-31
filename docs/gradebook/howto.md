@@ -159,16 +159,16 @@ and automation of this process is out of scope of HITs.
 
 Steps:
 
-a.  Third party app processes information and generates accounts for
+1.  Third party app processes information and generates accounts for
     staff and students, organised by teaching group.
-b.  Staff uses third party app to create classroom assessment tasks.
-c.  Staff uses third party app to assign classroom assessment
+2.  Staff uses third party app to create classroom assessment tasks.
+3.  Staff uses third party app to assign classroom assessment
     tasks to students in a teaching group.
-d.  Students use third party app to perform classroom
+4.  Students use third party app to perform classroom
     assessment tasks.
-e.  Third party app creates descriptions of the classroom
+5.  Third party app creates descriptions of the classroom
     assessment tasks created.
-f.  Third party app creates descriptions of the results that
+6.  Third party app creates descriptions of the results that
     students achieved when performing the classroom assessment
     tasks.
 
