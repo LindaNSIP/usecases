@@ -46,10 +46,9 @@ of band on the AP web site.
     is out of scope for this use case: school systems are expected to
     arrange a computer feed to the Australian School List, while
     non-systemic schools will likely query a web interface.
--   <span data-mce-style="font-size: 10.0pt; line-height: 13.0pt;"
-    style="font-size: 10.0pt;line-height: 13.0pt;">Personal Needs and
+-   Personal Needs and
     Preferences are manually entered into the AP, and are not
-    contributed using this method.</span>
+    contributed using this method.
 -   Allocation of students to a particular session of NAP is done
     through the AP.
 -   Allocation of students to a particular NAP activity is
@@ -60,31 +59,31 @@ of band on the AP web site.
 -   AP is purged of data at the end of each assessment cycle: only
     current student records are available from it. 
 
--   <span style="font-size: 0.923em;">StudentPersonal/MostRecent
+-   StudentPersonal/MostRecent
     includes all information necessary for student registration in
-    NAPLAN, without needing to resort to StudentSchoolEnrollment.</span>
+    NAPLAN, without needing to resort to StudentSchoolEnrollment.
 
--   <span style="font-size: 0.923em;">StudentPersonal
-    records</span><span style="font-size: 0.923em;"> are only assigned
+-   StudentPersonal
+    records are only assigned
     to one school for the purposes of NAPLAN. If they need to be
     assigned to more than one school within a system, multiple
     StudentPersonal records need to be created for the same student.
     Note that the Assessment Platform will create a separate record for
     each student enrolment, which corresponds to the
-    first alternative.</span>
+    first alternative.
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-conditions:</span>
+#### Pre-conditions:
 
 -   Vendor has access to HITs
 -   Vendor has mapped the relevant SIF Objects to their
-    systems:</span>
+    systems:
     -   StudentPersonal
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span>
+#### Usecase workflow summary:
 
 1.  Join
 
-2.  <span>Provide</span>
+2.  Provide
 
 3.  Consume (Students)
 
@@ -92,59 +91,53 @@ of band on the AP web site.
 
 5.  Assurance
 
-<span data-mce-style="color: #ff6600;"
-style="color: rgb(255,102,0);">NOTE: Consume and Process occur after
-Provide in this use case!</span>
+NOTE: Consume and Process occur after
+Provide in this use case!
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Assurance:</span>
+#### Assurance:
 
 The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
--   <span>All StudentPersonal records are well-formed
-    SIF records.</span>
+-  All StudentPersonal records are well-formed
+    SIF records.
 
--   <span style="font-size: 0.923em;">None of the SIF records submitted
+-   None of the SIF records submitted
     have dependencies on any other SIF records (no
-    RefID references)</span>
+    RefID references)
 
-<span>[More...](#usecasepreconditions)</span>
----------------------------------------------
+**[More...](#usecase-preconditions-for-assurance)**
 
-3. Join school zone
--------------------
+
+### 3. Join school zone
+
 
 Join:
 
 -   SIS client registers with AP
--   <span data-mce-style="font-size: 10.0pt; line-height: 13.0pt;"
-    style="font-size: 10.0pt;line-height: 13.0pt;">AP communicates to
+-   AP communicates to
     SIS client out of band credentials for connecting to the AP
-    zone </span>
+    zone.
 
 **4. Provide authoritative data**
 
 Vendor-facing (push); HITS represents AP and is the data sink .
 
-<span> </span><span>SIS client expresses information in SIF/XML:</span>
+SIS client expresses information in SIF/XML:
 
--   SIS client obtains ACARA ID(s) for its school(s)
--   SIS client connects to AP zone (“HITS Zone 1”) 
--   SIS client authenticates to AP zone (“HITS Zone 1 Authz”)
+-   SIS client obtains ACARA ID(s) for its school(s).
+-   SIS client connects to AP zone (“HITS Zone 1”) .
+-   SIS client authenticates to AP zone (“HITS Zone 1 Authz”).
 -   AP zone authorises write access to objects in the AP zone (“HITS
-    Zone 1 Authn”, StudentPersonal)
+    Zone 1 Authn”, StudentPersonal).
 -   AP zone authorises read access to objects in the AP zone (“HITS Zone
-    1 Authn”, StudentPersonal) 
--   <span>Following is provided by the SIS client</span><span> to HITs;
-    </span>
-    1.  Post StudentPersonal to URL [http://.../S]()tudentPersonals :
+    1 Authn”, StudentPersonal) .
+-   The SIS client provides to HITS the following:    
+    - Post StudentPersonal to URL `http://.../StudentPersonals`
         all StudentPersonal records of students eligible for NAP
-        1.  The unique ACARAId of the school that each student is
-            enrolled in is included in
-            StudentPersonal/MostRecent/ACARAId
--   <span style="font-size: 0.923em;">AP associates the StudentPersonal
-    records with the school nominated in </span><span
-    style="font-size: 0.923em;">StudentPersonal/MostRecent/ACARAId</span>
+    - The unique ACARAId of the school that each student is enrolled in, included in StudentPersonal/MostRecent/ACARAId            
+-   AP associates the StudentPersonal
+    records with the school nominated in `StudentPersonal/MostRecent/ACARAId`
 -   AP assigns a different PSI to each enrolment
 
 5. Consume base data from HITS (Students)
@@ -157,31 +150,30 @@ Vendor-facing (push); HITS represents AP and is the data sink .
     -   The PSI is added to the StudentPersonal record as
         StudentPersonal/OtherIdList/OtherId\[type="NAPPlatformStudentIdentifier"\]
 
-**6. Process in 3rd party apps**
+### 6. Process in 3rd party apps
 
--    SIS client ingests the PSI identifier, by matching the student
-    records received against the student records it has sent
-    -   Matching is assumed to be done on StudentPersonal/LocalId. (TBC)
-    -   SIS clients must not assume that the StudentPersonal@RefId sent
-        will be the same as the StudentPersonal@RefId received.
+- SIS client ingests the PSI identifier, by matching the student records received against the student records it has sent
+- Matching is assumed to be done on StudentPersonal/LocalId. (TBC)
+- SIS clients must not assume that the StudentPersonal@RefId sent will be the same as the StudentPersonal@RefId received.
 
-7. Self – confirm usecase support
----------------------------------
 
-1.  1.  Validate StudentPersonal records
+### 7. Self – confirm usecase support
 
-More information
-================
+
+1.  Validate StudentPersonal records
+
+### More information
+
 
 #### What business problem does this usecase address?
 
-###### In brief:
+In brief:
 
--   Allow schools to provision StudentPersonal records to the Assessment
-    Platform (as potential candidates for NAP)
--   Enable those schools to retrieve the Platform Student Identifier
+-   Allows schools to provision StudentPersonal records to the Assessment
+    Platform (as potential candidates for NAP).
+-   Enables those schools to retrieve the Platform Student Identifier
     that the Assessment Platform associates with StudentPersonal
-    records\
+    records.
      
 
 The SIS is presumed to have limited technical capabilities. In
@@ -202,7 +194,6 @@ to support NAPLAN reporting back to the school. 
 This usecase deviates from the usual workflow of HITS: the SIS being
 tested provides data before it consumes it and processes it.
 
-#### Usecase preconditions (assurance) {#usecasepreconditions}
+#### Usecase preconditions for assurance 
 
-<span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">No
-further conditions are set on assurance</span>
+No further conditions are set on assurance.
