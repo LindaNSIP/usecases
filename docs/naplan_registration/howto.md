@@ -2,42 +2,43 @@
 
 ## How to implement NAPLAN standalone registration
 
-1. What's the business problem?
--------------------------------
+### 1. What's the business problem?
+
 
 Allow schools with a SIS to provide information about NAPLAN candidates
 and platform users (staff), and read back the Platform Student
 Identifier (PSI) assigned by the Assessment Platform.
-**[More...](#businessdriver)**
+
+**[More...](#what-business-problem-does-this-usecase-address)**
 
  
 
-2. Usecase description & Pre-conditions
----------------------------------------
+### 2. Usecase description & Pre-conditions
 
-<span>NAPLAN testing is to occur this year, through a national delivery
+
+NAPLAN testing is to occur this year, through a national delivery
 system. Around NAPLAN census time, the SIS lodges bulk information about
 its NAPLAN candidates to the Assessment Platform (AP), on behalf of one
 or more schools.  Any other information, including registration of
 students to particular NAPLAN testing events, personal needs and
 preferences, and assigning staff members and invigilators, is done out
-of band on the AP web site.</span>
+of band on the AP web site.
 
 #### Assumptions:
 
 -   SIS can both read and write SIF records.
 -   SIS manages information for an individual school, a systemic
     authority data hub, or a third party data hub.
--   <span>Quality assurance may be deferred to after records are
+-   Quality assurance may be deferred to after records are
     uploaded, through record editing permitted by the
-    AP.  </span><span> </span>
--   <span>Contact details of the school or school system administrator
-    for NAPLAN Online are known to the AP.</span>
--   <span>S<span>chool (or school system) administrator</span> has
+    AP.  
+-   Contact details of the school or school system administrator
+    for NAPLAN Online are known to the AP.
+-   School (or school system) administrator has
     access to the AP as a registered and authorised user, so that they
     can authorise SIS access, confirm the upload data, and authorise
-    other staff on the AP.</span>
--   Allocation of staff accounts for teachers in schools is done outside
+    other staff on the AP.
+-   Allocation of staff accounts for teachers in schools is done outside
     of this process. It can be based on the staff records uploaded to
     the AP, but it can also be set up before any staff records
     are uploaded.
@@ -51,8 +52,8 @@ of band on the AP web site.</span>
     contributed using this method.</span>
 -   Allocation of students to a particular session of NAP is done
     through the AP.
--   <span>Allocation of students to a particular NAP activity is
-    done through the AP.</span>
+-   Allocation of students to a particular NAP activity is
+    done through the AP.
 -   AP is tenanted: the SIS client does not have access to data outside
     its school/school system.
 
@@ -75,7 +76,7 @@ of band on the AP web site.</span>
 #### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-conditions:</span>
 
 -   Vendor has access to HITs
--   <span>Vendor has mapped the relevant SIF Objects to their
+-   Vendor has mapped the relevant SIF Objects to their
     systems:</span>
     -   StudentPersonal
 
@@ -172,7 +173,7 @@ Vendor-facing (push); HITS represents AP and is the data sink .
 More information
 ================
 
-#### Business driver - what is the problem is this usecase is trying to solve? {#businessdriver}
+#### What business problem does this usecase address?
 
 ###### In brief:
 
