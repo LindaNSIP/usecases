@@ -29,21 +29,21 @@ assessment processes in K-12 Schools.   
 -   HITs has been provisioned with School Data
 -   Vendor has mapped the relevant SIF Objects to their systems:
     
-    SchoolInfo
+    - SchoolInfo
 
-    StudentPersonal
+    - StudentPersonal
     
-    StudentSchoolEnrolment
+    - StudentSchoolEnrolment
     
-    StaffPersonal
+    - StaffPersonal
     
-    StaffAssignment
+    - StaffAssignment
     
-    TeachingGroup
+    - TeachingGroup
     
-    GradingAssignment
+    - GradingAssignment
     
-    GradingAssignmentScore
+    - GradingAssignmentScore
 
 **Note:** Some of these objects are proposed for SIF 1.4 and are
 therefore not in the SIF 1.3 schema.
