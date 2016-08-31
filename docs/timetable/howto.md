@@ -152,7 +152,7 @@ Steps:
 
  
 
-### 6. Provide authoritative data**
+### 6. Provide authoritative data
 
 Prior to providing:
 
