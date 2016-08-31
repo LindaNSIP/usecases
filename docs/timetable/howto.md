@@ -1,46 +1,22 @@
-\
 
-What you need before you start: {#DailyAttendancehow-toHITS-Whatyouneedbeforeyoustart}
-===============================
+## How to implement third party timetable provision
 
--   Apply for a HITS testing account at <info@nsip.edu.au>
--   This will give you access to your own testing environment 
--   Your testing environment will provide you with all necessary
-    authentication and access tokens to work with the HITS API.
 
-A basic knowledge of SIF REST.
+### 1. What's the business problem?
 
--   Here is [some information from the SIF
-    Association](https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx){.external-link}.
--   Here is [a short (1-day) course in developing with SIF 3
-    REST](http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online).
-
-You need to know [how to work with a usecase in
-HITS](working-use-case-hits)
-
-You need to know [how to access the HITS API](working-use-case-hits)
-
-If you get stuck: drop us a line at <info@nsip.edu.au>
-
- 
-
-3^rd^ Party Timetable Provision
-===============================
-
-1. What's the business problem?
--------------------------------
 
 Allow schools to securely provide SIS information to the Timetabling
 product of their choice, and also to allow timetable records (including
 teaching groups and scheduled activities) to be published to a
-jurisdictional data hub. **[More...](#businessdriver)**
+jurisdictional data hub. 
+
+**[More...](#what-business-problem-does-this-usecase-address)**
 
  
 
-2. Usecase description & pre-conditions
----------------------------------------
+### 2. Usecase description & pre-conditions
 
-A 3rd Party Timetabling application connects to HITS as a jurisdiction
+A third party timetabling application connects to HITS as a jurisdiction
 hub, collecting the relevant information and publishing back timetable
 records to the centralised system.
 
@@ -112,7 +88,7 @@ TimeTablingApplication (and in fact they relate to scheduling rather
 than timetabling); <span>application developers should check with the
 School Authority on whether they need to provide it.</span>
 
-<span>[More...](#usecasepreconditions)</span>
+<span>[More...](#usecase-preconditions-for-assurance)</span>
 ---------------------------------------------
 
  
@@ -186,7 +162,7 @@ guidance on queries.
 5. Process in 3^rd^ party application.
 --------------------------------------
 
-3rd Party App uses the consumed data to produce a timetable. The
+The third party app uses the consumed data to produce a timetable. The
 definition and automation of this process is out of scope of HITs.\
 Steps:
 
@@ -224,20 +200,18 @@ Prior to providing:<span> </span>
     3.  <span>Validate TeachingGroup records</span>
     4.  <span>Validate ScheduledActivity records</span>
 
- 
+### More information {#Timetablehow-toHITS-Moreinformation}
 
-More information {#Timetablehow-toHITS-Moreinformation}
-================
 
-#### What is the business problem this usecase is trying to solve? {#businessdriver}
+#### What business problem does this usecase address?
 
-###### In brief: {#Timetablehow-toHITS-Inbrief}
+In brief:
 
 -   Allow schools secure access to SIS information
 -   Allow schools to use the Timetabling product of their choice
--   Allow 3rd Party Timetabling apps automated access to base
+-   Allow third party timetabling apps automated access to base
     information
--   Allow 3rd Party Timetabling apps to publish a school's schedule to a
+-   Allow third party timetabling apps to publish a school's schedule to a
     jurisdictional hub.
 
 Schools currently use third-party timetabling applications locally to
@@ -245,21 +219,21 @@ supplement their Student Information System (SIS). The seed information
 for generating timetables is held in the School's SIS and usually
 exported locally with little security. \
 \
-As jurisdictions centralise systems, 3rd Party Vendors have the
+As jurisdictions centralise systems, third party vendors have the
 opportunity to seed their product/s from a quality assured data hub
 using automated feeds, rather than manual updates from the
-school. 3rd Party Vendors are also expected to provide information
+school. Third party vendors are also expected to provide information
 directly back to the centralised system through an automated feed,
 rather than having the information mediated through the school. 
 
-This use case shows how 3rd party attendance vendors can connect to a
+This use case shows how third party vendors can connect to a
 centralised data hub to securely access to the required information and
-publish back the Timetable records to the centralised data hub.
+publish back the timetable records to the centralised data hub.
 
-#### Usecase preconditions (assurance) {#usecasepreconditions}
+#### Usecase preconditions for assurance
 
-<span style="color: rgb(0,0,0);">The following conditions also must be
-met:</span>
+The following conditions also must be
+met:
 
 -   <span style="color: rgb(0,0,0);">Any SIF object published by the App
     must be valid against the SIF-AU 1.3 schema</span>
