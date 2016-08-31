@@ -24,29 +24,30 @@ records to the centralised system.
 
 3^rd^ Party Vendor is a current supplier of a Timetabling product in
 schools or has knowledge of Timetabling and scheduling processes in K-12
-Schools.  <span> </span>
+Schools. 
 
-#### <span style="color: rgb(51,51,51);">Pre-Conditions:</span> {#Timetablehow-toHITS-Pre-Conditions}
+#### Pre-Conditions:
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
--   Vendor has mapped the relevant SIF Objects to their systems:\
-    StudentPersonal\
-    StudentSchoolEnrolment\
-    StaffPersonal\
-    StaffAssignment\
-    RoomInfo\
-    SchoolCourseInfo (optional)\
-    TimeTableSubject\
-    <span>TimeTable</span>\
-    <span>TimeTableCell\
-    TeachingGroup\
-    ScheduledActivity (optional)</span>
+-   Vendor has mapped the relevant SIF Objects to their systems:
+    - StudentPersonal
+    - StudentSchoolEnrolment
+    - StaffPersonal
+    - StaffAssignment
+    - RoomInfo
+    - SchoolCourseInfo (optional)
+    - TimeTableSubject
+    - TimeTable
+    - TimeTableCell
+    - TeachingGroup
+    - ScheduledActivity (optional)
 
-(Here is more information on the **[Timetable Baseline
-Profile](http://kb.nsip.edu.au/download/attachments/13960399/Timetable+Baseline+Profile+v011.pdf)**.)
 
-#### <span style="color: rgb(51,51,51);">Usecase workflow summary:</span> {#Timetablehow-toHITS-Usecaseworkflowsummary}
+Here is more information on the **[Timetable Baseline
+Profile](resources/Timetable Baseline Profile v011.pdf)**.
+
+#### Usecase workflow summary:
 
 1.  Join
 
@@ -58,22 +59,15 @@ Profile](http://kb.nsip.edu.au/download/attachments/13960399/Timetable+Baseline+
 
 5.  Assurance
 
-#### <span style="color: rgb(51,51,51);">Assurance:</span> {#Timetablehow-toHITS-Assurance}
+#### Assurance:
 
-The SIF/XML data sent by the 3^rd^ Party app to the Jurisdiction Zone
-for the app must satisfy the following conditions:
+The SIF/XML data sent by the third party app to the jurisdiction zone
+for the app must be able to respond to requests for all the following records within a school:
 
--   Must be able to respond to requests for all TimeTable records within
-    a School
-
--   Must be able to respond to requests for all TimeTableCell records
-    within a School
-
--   Must be able to respond to requests for all
-    <span>TeachingGroup</span> records within a School
-
--   Must be able to respond to requests for all
-    <span>ScheduledActivity</span> records within a School (optional)
+-   TimeTable
+-   TimeTableCell
+-   TeachingGroup
+-   ScheduledActivity (optional)
 
 The SchoolCourseInfo object is only required if the Timetabling
 application will record the link between the School Course offering (as
@@ -85,110 +79,96 @@ The ScheduledActivity object is designed for student activities that do
 not involve classroom instruction, and/or that are not recurring; e.g.
 excursions. They do not need to be implemented by a
 TimeTablingApplication (and in fact they relate to scheduling rather
-than timetabling); <span>application developers should check with the
-School Authority on whether they need to provide it.</span>
+than timetabling); application developers should check with the
+school authority on whether they need to provide it.
 
-<span>[More...](#usecase-preconditions-for-assurance)</span>
----------------------------------------------
+**[More...](#usecase-preconditions-for-assurance)**
 
- 
+### 3. Join school zone.
 
-3. Join school zone.
---------------------
+-   Third party app connects to jurisdiction-established zone for the
+    school ("HITS Zone 1").
+-   Third party app authenticates to jurisdiction-established zone for
+    the school ("HITS Zone 1 Authz").
+-   Jurisdiction zone authorises read access to objects in the
+    jurisdiction zone for the school ("HITS Zone 1 Authn").
 
-<span>Join:</span>
+### 4. Consume base data from HITS.
 
--   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1")
--   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz")
--   Jurisdiction Zone authorises read access to objects in the
-    Jurisdiction Zone for the School ("HITS Zone 1 Authn")
+Vendor-facing (pull); HITS represents the Jurisdiction and is the
+data source for seed information.
 
- 
-
-4. Consume base data from HITS.
--------------------------------
-
-<span>Vendor-facing (pull); HITS represents the Jurisdiction and is the
-data source for seed information.</span>
-
--   <span>Consume:</span>
--   on the Jurisdiction-established Zone for the App, Third party app
-    accesses all StudentPersonal records which are in a
+Consume:
+On the jurisdiction-established zone for the app, third party app accesses:
+-   all StudentPersonal records which are in a
     StudentSchoolEnrollment relationship with the given School RefId
--   <span>on the Jurisdiction-established Zone for the App, Third party
-    app accesses </span>all StaffPersonal records which are in a
+-   all StaffPersonal records which are in a
     StaffAssignment relationship with the given School RefId
--   <span>on the Jurisdiction-established Zone for the App, Third party
-    app accesses </span>all RoomInfo objects linked to the given
+-   all RoomInfo objects linked to the given
     School RefId.
--   on the Jurisdiction-established Zone for the App, Third party app
-    accesses all TimeTableSubject objects linked to the given
+-   all TimeTableSubject objects linked to the given
     School RefId.
--   on the Jurisdiction-established Zone for the App, Third party app
-    accesses all SchoolCourseInfo objects linked to the given
+-   all SchoolCourseInfo objects linked to the given
     School RefId. (optional)
--   <span style="font-size: 10.0pt;line-height: 13.0pt;">Third party app
-    ingests the relevant SIF Objects.</span>
 
-\
-\[The following is a list of calls that need to be made to consume the
+Third party app ingests the relevant SIF Objects.
+
+<!---
+The following is a list of calls that need to be made to consume the
 required information – and should happen automatically. Is this possible
-in HITs?\]
+in HITs?
+--->
 
-1.  Get SchoolInfos: <span
-    style="color: rgb(0,0,255);">http://.../SchoolInfos</span>
-2.  Get StudentSchoolEnrollments: <span
-    style="color: rgb(0,0,255);">http://.../</span><span>[StudentSchoolEnrollments]()</span>
-3.  Get StudentPersonals: http://.../<span>[StudentPersonals]() (linked
+1.  Get SchoolInfos: `http://.../SchoolInfos`
+2.  Get StudentSchoolEnrollments: `http://.../StudentSchoolEnrollments`
+3.  Get StudentPersonals: `http://.../StudentPersonals` (linked
     to school via StudentSchoolEnrollment; equivalent to
-    [http://..../SchoolInfo/\\{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals]() )</span>
-4.  <span>Get StaffAssignments: http://.../StaffAssignments</span>
+    `http://..../SchoolInfo/{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals`).
+4.  Get StaffAssignments: http://.../StaffAssignments
 5.  Get StaffPersonals:
-    [http://.../S](http://hits.nsip.edu.au/SchoolInfo/%7b%7d/CalendarDates){.external-link}taffPersonals
+    `http://.../StaffPersonals`
     (linked to school via StaffAssignment; equivalent to
-    http://.../SchoolInfo/\\{REFID}/StaffAssignments/{REFID}/StaffPersonals )
-6.  Get RoomInfos:<span> [http://.../RoomInfos]()</span>
-7.  Get TimeTableSubjects: [http://.../TimeTableSubjects]()
-8.  Get SchoolCourseInfos: [http://.../SchoolCourseInfos]()
+    `http://.../SchoolInfo/{REFID}/StaffAssignments/{REFID}/StaffPersonals`).
+6.  Get RoomInfos: `http://.../RoomInfos`
+7.  Get TimeTableSubjects: `http://.../TimeTableSubjects`
+8.  Get SchoolCourseInfos: `http://.../SchoolCourseInfos`
 
 Endpoints may support additional queries for retreiving data - refer to
-**[Query-by-example or service paths?](qbe-or-service-paths)** for HITS
+**[Query-by-example or service paths?](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
  
 
-5. Process in 3^rd^ party application.
---------------------------------------
+### 5. Process in third party application.
 
 The third party app uses the consumed data to produce a timetable. The
-definition and automation of this process is out of scope of HITs.\
+definition and automation of this process is out of scope of HITs.
+
 Steps:
 
--   Third party app processes information and generates timetable
--   Third party application creates return timetabling objects specific
-    to the School
+-   Third party app processes information and generates timetable.
+-   Third party app creates return timetabling objects specific
+    to the School.
 
  
 
-**6. Provide authoritative data**
+### 6. Provide authoritative data**
 
-Prior to providing:<span> </span>
+Prior to providing:
 
-<span> </span>Third party expresses return information in SIF/XML:
+Third party expresses return information in SIF/XML:
 
--   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1")
--   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz")
--   Jurisdiction-established Zone authorises write access to objects in
-    the Jurisdiction Zone for the School ("HITS Zone 1 Authn")
--   Following is provided by the 3^rd^ Party App back to HITs;
-    1.  Post TimeTable to URL http://.../TimeTables
-    2.  Post TimeTableCell to URL http://../TimeTableCells
-    3.  Post TeachingGroup to URL http://../TeachingGroups
-    4.  Post ScheduledActivity to URL http://.../ScheduledActivitys
+-   Third party app connects to jurisdiction-established zone for the
+    School ("HITS Zone 1").
+-   Third party app authenticates to jurisdiction-established zone for
+    the School ("HITS Zone 1 Authz").
+-   Jurisdiction-established zone authorises write access to objects in
+    the jurisdiction zone for the school ("HITS Zone 1 Authn").
+-   Following is provided by the third party app back to HITS;
+    1.  Post TimeTable to URL `http://.../TimeTables`
+    2.  Post TimeTableCell to URL `http://../TimeTableCells`
+    3.  Post TeachingGroup to URL `http://../TeachingGroups`
+    4.  Post ScheduledActivity to URL `http://.../ScheduledActivitys`
 
  
 
@@ -281,9 +261,3 @@ well-formed if it satisfies the following requirements:
     deleted in</span> TeacherList, StudentList, or
     TeachingGroupPeriodList, then the entire list affected must be
     included in the object representation in the update request.</span>
-
- 
-
- 
-
- 
