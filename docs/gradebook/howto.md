@@ -177,15 +177,15 @@ Steps:
 
 Prior to providing, the third party expresses return information in SIF/XML:
 
--   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1").
--   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz").
--   Jurisdiction-established Zone authorises write access to objects in
-    the Jurisdiction Zone for the School ("HITS Zone 1 Authn").
--   Following is provided by thethird party app back to HITs;
-    1.  Post GradingAssignment to URL `http://.../GradingAssignments`
-    2.  Post GradingAssignmentScore to URL `http://../GradingAssignmentScores`
+1.   Third party app connects to jurisdiction-established zone for the
+    school ("HITS Zone 1").
+2.  Third party app authenticates to jurisdiction-established zone for
+    the school ("HITS Zone 1 Authz").
+3.  Jurisdiction-established zone authorises write access to objects in
+    the jurisdiction zone for the School ("HITS Zone 1 Authn").
+4.  The third party app posts the following back to HITS;
+    -  GradingAssignment to URL `http://.../GradingAssignments`
+    -  GradingAssignmentScore to URL `http://../GradingAssignmentScores`
 
 **Note:** The Activity object could be used instead of, or alongside,
 the GradingAssignment object to describe a classroom task, and
