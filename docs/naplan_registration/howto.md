@@ -66,8 +66,8 @@ of band on the AP web site.
 
 #### Pre-conditions:
 
--   Vendor has access to HITs
--   Vendor has mapped the relevant SIF objects to their
+-   Vendor has access to HITS.
+-   Vendor has mapped the relevant SIF object to their
     systems:
     -   StudentPersonal
 
