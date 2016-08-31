@@ -25,8 +25,8 @@ assessment processes in K-12 Schools.   
 
 #### Pre-Conditions:
 
--   Vendor has access to HITs
--   HITs has been provisioned with School Data
+-   Vendor has access to HITS
+-   HITS has been provisioned with School Data
 -   Vendor has mapped the relevant SIF Objects to their systems:
     
     - SchoolInfo
