@@ -21,7 +21,7 @@ back assessment results records to the centralised system.
 
 The third party vendor is a current supplier of a classroom
 assessment product in schools or has knowledge of classroom
-assessment processes in K-12 Schools.   
+assessment processes in K-12 Schools.
 
 #### Pre-Conditions:
 
@@ -63,10 +63,10 @@ The SIF/XML data sent by the third party app to the Jurisdiction Zone
 for the app must satisfy the following conditions:
 
 -   Must be able to provide all GradingAssignment records
-    within a School
+    within a School;
 
 -   Must be able provide all GradingAssignmentScore records
-    within a School
+    within a School.
 
 **[More...](#usecase-preconditions-for-assurance)**
 
@@ -77,11 +77,11 @@ for the app must satisfy the following conditions:
 Join:
 
 -   Third party app connects to Jurisdiction-established Zone for the
-    School ("HITS Zone 1")
+    School ("HITS Zone 1").
 -   Third party app authenticates to Jurisdiction-established Zone for
-    the School ("HITS Zone 1 Authz")
+    the School ("HITS Zone 1 Authz").
 -   Jurisdiction Zone authorises read access to objects in the
-    Jurisdiction Zone for the School ("HITS Zone 1 Authn")
+    Jurisdiction Zone for the School ("HITS Zone 1 Authn").
 
 
 ### 4. Consume base data from HITS
@@ -103,7 +103,9 @@ source for seed information.
 There are two possible ways to obtain the base information through REST
 service path calls:
 
-**A.** The first assumes that all available students, staff, and classes, in
+### Via single data dump
+
+The first assumes that all available students, staff, and classes, in
 all known schools, will be exposed to the third party application, as a
 single dump of data. This is the path recommended for HITS assurance, as
 it is simpler to fetch the data and start generating objects for
@@ -122,7 +124,9 @@ and processed, as HITS end points contain customised test data.)
 6.  Get TeachingGroups: `http://.../TeachingGroups` (linked to a
     school via SchoolInfoRefId)
 
-**B.** The second assumes, more realistically, that only certain
+### Via teaching groups
+
+The second assumes, more realistically, that only certain
 teaching groups will be exposed to the application, and that any staff
 and student records exposed should be accessed via their teaching group.
 You do not need to obtain data this way for HITS assurance: you will end
