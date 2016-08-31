@@ -90,17 +90,17 @@ Vendor-facing (pull); HITS represents the Jurisdiction and is the data
 source for seed information.
 
 -   Consume:
--   on the Jurisdiction-established Zone for the App, Third party app
-    accesses all StudentPersonal records which are in a
-    StudentSchoolEnrollment relationship with the given School RefId.
--   on the Jurisdiction-established Zone for the App, Third party app
+-   on the Jurisdiction-established zone for the app, third party app
+    accesses all StudentPersonal records which are in a
+    StudentSchoolEnrollment relationship with the given school RefId.
+-   on the jurisdiction-established zone for the app, third party app
     accesses all StaffPersonal records which are in a StaffAssignment
-    relationship with the given School RefId.
--   on the Jurisdiction-established Zone for the App, Third party app
-    accesses all TeachingGroup objects linked to the given School RefId.
--   Third party app ingests the relevant SIF Objects.
+    relationship with the given school RefId.
+-   on the jurisdiction-established zone for the app, third party app
+    accesses all TeachingGroup objects linked to the given school RefId.
+-   Third party app ingests the relevant SIF objects.
 
-There are two possible ways to obtain the Base information through REST
+There are two possible ways to obtain the base information through REST
 service path calls:
 
 **A.** The first assumes that all available students, staff, and classes, in
@@ -193,7 +193,6 @@ performance against the activity.)
 
 ### 7. Self-confirm usecase support
 
-
 1.  Validate GradingAssignment records
 2.  Validate GradingAssignmentScore records
 
@@ -222,7 +221,7 @@ classroom assessment is typically assigned to a class cohort by the
 class teacher. Class memberships can change frequently, imposing an
 additional burden on teachers who must manually update the third-party tools.
 
-As jurisdictions centralise systems, third party vendors have the
+As jurisdictions centralise systems, third party vendors have the
 opportunity to seed their product/s from a quality-assured data hub
 using automated feeds, rather than manual updates from the school. This
 allows changes such as new enrolments and changes in class membership to
@@ -243,53 +242,34 @@ centralised data hub.
 
 The following conditions also must be met:
 
--   Any SIF object published by the App must
+-   Any SIF object published by the app must
     be valid against the SIF AU 1.4 schema. Note that the
     GradingAssignment and GradingAssignmentScore objects are proposed
     for inclusion in SIF  AU1.4.
--   All SIF objects posted by the Classroom
-    Assessment App must have referential integrity. Any RefId contained
+-   All SIF objects posted by the classroom
+    assessment app must have referential integrity. Any RefId contained
     in the SIF object must refer either to a SIF object provisioned to
     the app (e.g. SchoolInfo, StudentPersonal, StaffPersonal,
     TeachingGroup), or to a SIF object that has also been posted by the
-    App to the Zone (e.g. GradingAssignmentScore referring to <span
-    data-mce-style="color: #000000;"
-    style="color: rgb(0,0,0);">GradingAssignment</span>).This condition
-    applies recursively to all additional SIF objects posted by the App.
-    The test of this condition is done only when the App indicates that
-    it has finished publishing to the Zone the objects required for
-    the test.</span>
+    app to the zone (e.g. GradingAssignmentScore referring to GradingAssignment).This condition
+    applies recursively to all additional SIF objects posted by the app.
+    The test of this condition is done only when the app indicates that
+    it has finished publishing to the zone the objects required for
+    the test.
 
-<span data-mce-style="color: #000000;" style="color: rgb(0,0,0);">For
-the purposes of validation, a new <span data-mce-style="color: #000000;"
-style="color: rgb(0,0,0);">GradingAssignment</span> object is
-well-formed if:</span>
+For the purposes of validation, a new GradingAssignment object is
+well-formed if:
 
--   1.  All mandatory elements of the <span
-        data-mce-style="color: #000000;"
-        style="color: rgb(0,0,0);">GradingAssignment</span> object are
+-   1.  All mandatory elements of the GradingAssignment object are
         provided
     2.  The TeachingGroupRefId element is provided
     3.  The SchoolInfoRefId element is provided
 
-For the purposes of validation, a new <span
-data-mce-style="color: #000000;"
-style="color: rgb(0,0,0);">GradingAssignmentScore</span> object is
+For the purposes of validation, a new GradingAssignmentScore object is
 well-formed if it satisfies the following requirements:
 
-1.  All mandatory elements of the <span data-mce-style="color: #000000;"
-    style="color: rgb(0,0,0);">GradingAssignmentScore</span> object are
-    provided
-2.  The StudentPersonalRefId element is provided
-3.  The TeachingGroupRefId element is provided
-4.  The SchoolInfoRefId element is provided
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+1.  All mandatory elements of the GradingAssignmentScore object are
+    provided.
+2.  The StudentPersonalRefId element is provided.
+3.  The TeachingGroupRefId element is provided.
+4.  The SchoolInfoRefId element is provided.
