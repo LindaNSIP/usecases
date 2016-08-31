@@ -7,6 +7,7 @@
 Allow schools to securely provide account information to the classroom
 assessment product of their choice, and also to allow assessment results
 records to be published to a jurisdictional data hub.
+
 **[More...](#what-business-problem-does-this-usecase-address)**
 
 
@@ -14,34 +15,42 @@ records to be published to a jurisdictional data hub.
 
 A third party classroom assessment application connects to HITS as a
 jurisdiction hub, collecting the relevant information and publishing
-back <span>assessment results</span> records to the centralised system.
+back assessment results records to the centralised system.
 
 #### Assumptions:
 
-The third party vendor is a current supplier of a <span>classroom
-assessment</span> product in schools or has knowledge of <span>classroom
-assessment</span> processes in K-12 Schools.   
+The third party vendor is a current supplier of a classroom
+assessment product in schools or has knowledge of classroom
+assessment processes in K-12 Schools.   
 
-#### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Pre-Conditions:</span>
+#### Pre-Conditions:
 
 -   Vendor has access to HITs
 -   HITs has been provisioned with School Data
--   Vendor has mapped the relevant SIF Objects to their systems:\
-    SchoolInfo\
-    StudentPersonal\
-    StudentSchoolEnrolment\
-    StaffPersonal\
-    StaffAssignment\
-    TeachingGroup\
-    GradingAssignment\
-    GradingAssignmentScore 
+-   Vendor has mapped the relevant SIF Objects to their systems:
+    
+    SchoolInfo
 
-((Note that some of these objects are proposed for SIF 1.4 and are
-therefore not in the SIF 1.3 schema.\
+    StudentPersonal
+    
+    StudentSchoolEnrolment
+    
+    StaffPersonal
+    
+    StaffAssignment
+    
+    TeachingGroup
+    
+    GradingAssignment
+    
+    GradingAssignmentScore
+
+**Note:** Some of these objects are proposed for SIF 1.4 and are
+therefore not in the SIF 1.3 schema.
 Here is [**a draft XSD schema for SIF
-1.4**](http://kb.nsip.edu.au/download/attachments/13960456/SIF_Message1.4_3.x_current.zip),
+1.4**](/docs/common/resources/SIF_Message1.4_3.x_current.zip),
 and here are **[draft specifications for the proposed grading
-objects](http://kb.nsip.edu.au/download/attachments/13960406/DSWG_V1.4_ChangeProposal_GradingAssignment_0.4.pdf)**
+objects](resources/DSWG_V1.4_ChangeProposal_GradingAssignment_0.4.pdf)**
 listed above.)
 
 #### <span data-mce-style="color: #333333;" style="color: rgb(51,51,51);">Usecase workflow summary:</span>
