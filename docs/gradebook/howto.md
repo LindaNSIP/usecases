@@ -25,24 +25,16 @@ assessment processes in K-12 Schools.   
 
 #### Pre-Conditions:
 
--   Vendor has access to HITS
--   HITS has been provisioned with School Data
+-   Vendor has access to HITS.
+-   HITS has been provisioned with School Data.
 -   Vendor has mapped the relevant SIF Objects to their systems:
-    
     - SchoolInfo
-
     - StudentPersonal
-    
     - StudentSchoolEnrolment
-    
     - StaffPersonal
-    
     - StaffAssignment
-    
     - TeachingGroup
-    
     - GradingAssignment
-    
     - GradingAssignmentScore
 
 **Note:** Some of these objects are proposed for SIF 1.4 and are
