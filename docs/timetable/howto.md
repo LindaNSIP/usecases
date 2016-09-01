@@ -4,15 +4,12 @@
 
 ### 1. What's the business problem?
 
-
 Allow schools to securely provide SIS information to the Timetabling
 product of their choice, and also to allow timetable records (including
 teaching groups and scheduled activities) to be published to a
 jurisdictional data hub. 
 
 **[More...](#what-business-problem-does-this-usecase-address)**
-
- 
 
 ### 2. Usecase description & pre-conditions
 
@@ -22,7 +19,7 @@ records to the centralised system.
 
 #### Assumptions: 
 
-A thord party vendor is a current supplier of a timetabling product in
+A third party vendor is a current supplier of a timetabling product in
 schools or has knowledge of timetabling and scheduling processes in K-12
 Schools.
 
@@ -43,20 +40,15 @@ Schools.
     - TeachingGroup
     - ScheduledActivity (optional)
 
-
 Here is more information on the **[Timetable Baseline
 Profile](resources/Timetable Baseline Profile v011.pdf)**.
 
 #### Usecase workflow summary:
 
 1.  Join
-
 2.  Consume
-
 3.  Process
-
 4.  Provide
-
 5.  Assurance
 
 #### Assurance:
@@ -99,6 +91,7 @@ Vendor-facing (pull); HITS represents the Jurisdiction and is the
 data source for seed information.
 
 Consume:
+
 On the jurisdiction-established zone for the app, third party app accesses:
 -   all StudentPersonal records which are in a
     StudentSchoolEnrollment relationship with the given School RefId
@@ -137,8 +130,6 @@ Endpoints may support additional queries for retreiving data - refer to
 **[Query-by-example or service paths?](/docs/common/qbe_or_service_paths.md)** for HITS
 guidance on queries.
 
- 
-
 ### 5. Process in third party application.
 
 The third party app uses the consumed data to produce a timetable. The
@@ -149,8 +140,6 @@ Steps:
 -   Third party app processes information and generates timetable.
 -   Third party app creates return timetabling objects specific
     to the School.
-
- 
 
 ### 6. Provide authoritative data
 
@@ -170,8 +159,6 @@ Third party expresses return information in SIF/XML:
     3.  Post TeachingGroup to URL `http://../TeachingGroups`
     4.  Post ScheduledActivity to URL `http://.../ScheduledActivitys`
 
- 
-
 ### 7. Self – confirm  usecase support
 
 Validate:
@@ -181,9 +168,7 @@ Validate:
 3. TeachingGroup records
 4. ScheduledActivity records
 
-
 ### More information 
-
 
 #### What business problem does this usecase address?
 
