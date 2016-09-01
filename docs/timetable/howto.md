@@ -22,14 +22,14 @@ records to the centralised system.
 
 #### Assumptions: {#Timetablehow-toHITS-Assumptions}
 
-3^rd^ Party Vendor is a current supplier of a Timetabling product in
-schools or has knowledge of Timetabling and scheduling processes in K-12
-Schools. 
+A thord party vendor is a current supplier of a timetabling product in
+schools or has knowledge of timetabling and scheduling processes in K-12
+Schools.
 
 #### Pre-Conditions:
 
--   Vendor has access to HITs
--   HITs has been provisioned with School Data
+-   Vendor has access to HITS
+-   HITS has been provisioned with school data
 -   Vendor has mapped the relevant SIF Objects to their systems:
     - StudentPersonal
     - StudentSchoolEnrolment
