@@ -111,7 +111,7 @@ On the jurisdiction-established zone for the app, third party app accesses:
 -   all SchoolCourseInfo objects linked to the given
     School RefId. (optional)
 
-Third party app ingests the relevant SIF Objects.
+Third party app ingests the relevant SIF objects.
 
 <!---
 The following is a list of calls that need to be made to consume the
