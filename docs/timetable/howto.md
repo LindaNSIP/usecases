@@ -20,7 +20,7 @@ A third party timetabling application connects to HITS as a jurisdiction
 hub, collecting the relevant information and publishing back timetable
 records to the centralised system.
 
-#### Assumptions: {#Timetablehow-toHITS-Assumptions}
+#### Assumptions: 
 
 A thord party vendor is a current supplier of a timetabling product in
 schools or has knowledge of timetabling and scheduling processes in K-12
