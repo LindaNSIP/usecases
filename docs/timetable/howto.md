@@ -106,12 +106,6 @@ On the jurisdiction-established zone for the app, third party app accesses:
 
 Third party app ingests the relevant SIF objects.
 
-<!---
-The following is a list of calls that need to be made to consume the
-required information – and should happen automatically. Is this possible
-in HITs?
---->
-
 1.  Get SchoolInfos: `http://.../SchoolInfos`
 2.  Get StudentSchoolEnrollments: `http://.../StudentSchoolEnrollments`
 3.  Get StudentPersonals: `http://.../StudentPersonals` (linked
