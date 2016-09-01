@@ -172,39 +172,43 @@ Third party expresses return information in SIF/XML:
 
  
 
-7. Self – confirm  usecase support
-----------------------------------
+### 7. Self – confirm  usecase support
 
-1.  1.  Validate <span>TimeTable records</span>
-    2.  Validate <span>TimeTableCell records </span>
-    3.  <span>Validate TeachingGroup records</span>
-    4.  <span>Validate ScheduledActivity records</span>
+Validate:
 
-### More information {#Timetablehow-toHITS-Moreinformation}
+1. TimeTable records
+2. TimeTableCell records
+3. TeachingGroup records
+4. ScheduledActivity records
+
+
+### More information 
 
 
 #### What business problem does this usecase address?
 
 In brief:
 
--   Allow schools secure access to SIS information
--   Allow schools to use the Timetabling product of their choice
--   Allow third party timetabling apps automated access to base
-    information
--   Allow third party timetabling apps to publish a school's schedule to a
+-   Allows schools secure access to SIS information.
+-   Allows schools to use the Timetabling product of their choice.
+-   Allows third party timetabling apps automated access to base
+    information.
+-   Allows third party timetabling apps to publish a school's schedule to a
     jurisdictional hub.
 
-Schools currently use third-party timetabling applications locally to
+Schools currently use third-party timetabling apps locally to
 supplement their Student Information System (SIS). The seed information
 for generating timetables is held in the School's SIS and usually
-exported locally with little security. \
-\
+exported locally with little security. 
+
+
 As jurisdictions centralise systems, third party vendors have the
 opportunity to seed their product/s from a quality assured data hub
 using automated feeds, rather than manual updates from the
 school. Third party vendors are also expected to provide information
 directly back to the centralised system through an automated feed,
 rather than having the information mediated through the school. 
+
 
 This use case shows how third party vendors can connect to a
 centralised data hub to securely access to the required information and
@@ -215,49 +219,41 @@ publish back the timetable records to the centralised data hub.
 The following conditions also must be
 met:
 
--   <span style="color: rgb(0,0,0);">Any SIF object published by the App
-    must be valid against the SIF-AU 1.3 schema</span>
--   <span style="color: rgb(0,0,0);">All SIF objects posted by the
-    Timetabling App must have referential integrity. Any RefId contained
+-   Any SIF object published by the timetabling app
+    must be valid against the SIF-AU 1.3 schema.
+-   All SIF objects posted by the
+    timetabling app must have referential integrity. Any RefId contained
     in the SIF object must refer either to a SIF object provisioned to
-    the App—e.g. SchoolInfo, StudentPersonal, RoomInfo,
-    TimeTableSubject), or to SIF object that has also been posted by the
-    App to the Zone (e.g. TimeTableCell referring to TimeTable).This
+    the App (e.g. SchoolInfo, StudentPersonal, RoomInfo,
+    TimeTableSubject) or to a SIF object that has also been posted by the
+    app to the zone (e.g. TimeTableCell referring to TimeTable). This
     condition applies recursively to all additional SIF objects posted
-    by the App. The test of this condition is done only when the App
-    indicates that it has finished publishing to the Zone the objects
-    required for the test.</span>
+    by the app. The test of this condition is done only when the app
+    indicates that it has finished publishing to the zone the objects
+    required for the test.
 
-<span style="color: rgb(0,0,0);">For the purposes of validation, a new
-TeachingGroup object is well-formed if:</span>
+For the purposes of validation, a new TeachingGroup object is well-formed if:
 
--   1.  All mandatory elements of the TeachingGroup object are provided
-    2.  The TeachingGroup contains a TeachingGroupPeriodList
-    3.  The TeachingGroupPeriodList references either
+  1.  All mandatory elements of the TeachingGroup object are provided.
+  2.  The TeachingGroup contains a TeachingGroupPeriodList.
+  3.  The TeachingGroupPeriodList references either
         TimeTableCellRefId, or a combination of RoomNumber, DayId, and
         either PeriodId or StartTime
-    4.  <span style="font-size: 10.0pt;line-height: 13.0pt;">The
-        TeachingGroup must contain a StudentList. The Students
+  4.  The TeachingGroup must contain a StudentList. The Students
         referenced in the StudentList must have StudentPersonal RefIds
-        and Names corresponding to those supplied
-        in provisioning.</span>
-    5.  The TeachingGroup must contain a TeacherList. The Teachers
+        and Names corresponding to those supplied in provisioning.
+  5.  The TeachingGroup must contain a TeacherList. The Teachers
         referenced in the TeacherList must have StaffPersonal RefIds and
         Names corresponding to those supplied in provisioning.
-    6.  The TeachingGroup must reference a SchoolInfo RefId. 
+  6.  The TeachingGroup must reference a SchoolInfo RefId. 
 
 For the purposes of validation, a new TimeTableCell object is
 well-formed if it satisfies the following requirements:
 
-1.  All mandatory elements of the TimeTableCell object are provided\
-     
-
--   <span style="font-size: 10.0pt;line-height: 13.0pt;">For the
-    purposes of validation, an update to a TeachingGroup object can be a
+-   All mandatory elements of the TimeTableCell object are provided    
+-   For the purposes of validation, an update to a TeachingGroup object can be a
     partially populated object, containing only the updated values,
-    rather than a complete object</span>
--   <span style="font-size: 10.0pt;line-height: 13.0pt;">If an update to
-    TeachingGroup involves any element <span>being added, changed, or
-    deleted in</span> TeacherList, StudentList, or
-    TeachingGroupPeriodList, then the entire list affected must be
-    included in the object representation in the update request.</span>
+    rather than a complete object.
+-   If an update to TeachingGroup involves any element being added, changed, or
+    deleted in TeacherList, StudentList, or TeachingGroupPeriodList, then the entire list affected must be
+    included in the object representation in the update request.
