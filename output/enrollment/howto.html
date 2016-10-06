@@ -41,15 +41,15 @@
                 </div>
 
                 <div class="uk-width-medium-3-4">
-<h2 id="how-to-implement-enrollment"><a href="#how-to-implement-enrollment">How to implement enrollment</a></h2>
-<h3 id="whats-the-business-problem"><a href="#whats-the-business-problem">1. What's the business problem?</a></h3>
+<h2 id="how-to-implement-enrollment">How to implement enrollment</h2>
+<h3 id="whats-the-business-problem">1. What's the business problem?</h3>
 <p>Allow schools in a school system to enrol students, saving the required information about the students to a jurisdictional data hub.</p>
 <p><strong><a href="#what-business-problem-does-this-use-case-address">More...</a></strong></p>
-<h3 id="use-case-description-pre-conditions"><a href="#use-case-description-pre-conditions">2. Use Case Description &amp; Pre-Conditions</a></h3>
+<h3 id="use-case-description-pre-conditions">2. Use Case Description &amp; Pre-Conditions</h3>
 <p>A third party SIS application connects to HITS as a jurisdiction hub, collecting the relevant information and publishing back student records to the centralised system.</p>
-<h4 id="assumptions"><a href="#assumptions">Assumptions:</a></h4>
+<h4 id="assumptions">Assumptions:</h4>
 <p>The third party vendor is a current supplier of a SIS product in schools or has knowledge of student administration processes in K-12 Schools.</p>
-<h4 id="pre-conditions"><a href="#pre-conditions">Pre-conditions:</a></h4>
+<h4 id="pre-conditions">Pre-conditions:</h4>
 <ul>
 <li>The vendor has access to HITS</li>
 <li>HITS has been provisioned with School Data</li>
@@ -63,7 +63,7 @@
 </ul></li>
 </ul>
 <p>(Here is a <strong><a href="/docs/common/resources/SIS%20Baseline%20Profile%201_3%20Draft%20Summary.pdf">summary</a></strong> and a <strong><a href="/docs/common/resources/SIS%20Baseline%20Profile%20SBP%20Jurisdiction%20Full%20Draft%20v0_3.pdf">full draft</a></strong> of the SIS Basline Profile which governs the interactions for an enrollment.)</p>
-<h4 id="usecase-workflow-summary"><a href="#usecase-workflow-summary">Usecase workflow summary:</a></h4>
+<h4 id="usecase-workflow-summary">Usecase workflow summary:</h4>
 <ol style="list-style-type: decimal">
 <li><p>Join</p></li>
 <li><p>Consume</p></li>
@@ -71,7 +71,7 @@
 <li><p>Provide</p></li>
 <li><p>Assurance</p></li>
 </ol>
-<h4 id="assurance"><a href="#assurance">Assurance:</a></h4>
+<h4 id="assurance">Assurance:</h4>
 <p>The SIF/XML data sent by the third party app to the Jurisdiction Zone for the app must satisfy the following conditions:</p>
 <ul>
 <li><p>Must be able to respond to requests for all StudentPersonal records within a School.</p></li>
@@ -80,18 +80,18 @@
 <li><p>Must be able to respond to requests for all StudentSchoolEnrollment records within a School.</p>
 <p><strong><a href="#usecase-preconditions-for-assurance">More...</a></strong></p></li>
 </ul>
-<h3 id="join-required-to-school-zone"><a href="#join-required-to-school-zone">3. Join required to School Zone</a></h3>
+<h3 id="join-required-to-school-zone">3. Join required to School Zone</h3>
 <p>Join:</p>
 <ul>
 <li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;).</li>
 <li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;).</li>
 <li>Jurisdiction Zone authorises read access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;).</li>
 </ul>
-<h3 id="consume-base-data-from-hits."><a href="#consume-base-data-from-hits.">4. Consume base data from HITS.</a></h3>
+<h3 id="consume-base-data-from-hits.">4. Consume base data from HITS.</h3>
 <p>Vendor-facing (pull); HITS represents the Jurisdiction and is the data source for seed information.</p>
 <p>Consume: - on the Jurisdiction-established Zone for the app, third party app accesses the SchoolInfo object corresponding to their school. - Third party app ingests the relevant SIF Objects.</p>
 <p>Get SchoolInfos: http://.../SchoolInfos - This step may be skipped if the Third party app if the SchoolInfo RefId is already known. - The query mechanism is specific to the hub, but retrieval is unlikely to be automatic; it is likeliest for the school to do a manual query on the school name, using one of the established SIF query mechanisms, or else retrieve all SchoolInfo records from the hub and choose the the right record.</p>
-<h3 id="process---processes-in-third-party-application."><a href="#process---processes-in-third-party-application.">5. Process - processes in third party application.</a></h3>
+<h3 id="process---processes-in-third-party-application.">5. Process - processes in third party application.</h3>
 <p>Third party app creates student enrollments for students enrolling in the given school.</p>
 <p>Steps:</p>
 <ol style="list-style-type: decimal">
@@ -100,7 +100,7 @@
 <li>Third party app creates StudentContactPersonal records.</li>
 <li>Third party app creates at least one StudentContactRelationship record for each StudentContactPersonal record, and at least one for each StudentPersonal record.</li>
 </ol>
-<h3 id="provide-authoritative-data"><a href="#provide-authoritative-data">6. Provide authoritative data</a></h3>
+<h3 id="provide-authoritative-data">6. Provide authoritative data</h3>
 <p>Prior to providing: </p>
 <ul>
 <li><p>Third party expresses return information in SIF/XML:</p></li>
@@ -112,18 +112,19 @@
 <li>Post StudentPersonal to URL <a href="">http://.../StudentPersonals</a></li>
 <li>Post StudentSchoolEnrollment to URL <a href="">http://../StudentSchoolEnrollments</a></li>
 <li>Post StudentContactPersonal to URL <a href="">http://../StudentContactPersonals</a></li>
-<li>Post StudentContactRelationship to URL <a href="">http://../StudentContactRelationships</a><br />  </li>
+<li>Post StudentContactRelationship to URL <a href="">http://../StudentContactRelationships</a><br />
+ </li>
 </ol></li>
 </ul>
-<h3 id="assurance-selfconfirmation-of-use-case-support"><a href="#assurance-selfconfirmation-of-use-case-support">7. Assurance: Self–confirmation of use case support</a></h3>
+<h3 id="assurance-selfconfirmation-of-use-case-support">7. Assurance: Self–confirmation of use case support</h3>
 <ol style="list-style-type: decimal">
 <li>Validate StudentPersonal records</li>
 <li>Validate StudentSchoolEnrollment records</li>
 <li>Validate StudentContactPersonal records</li>
 <li>Validate StudentContactRelationship records</li>
 </ol>
-<h3 id="more-information"><a href="#more-information">More information</a></h3>
-<h4 id="what-business-problem-does-this-use-case-address"><a href="#what-business-problem-does-this-use-case-address">What business problem does this Use Case address?</a></h4>
+<h3 id="more-information">More information</h3>
+<h4 id="what-business-problem-does-this-use-case-address">What business problem does this Use Case address?</h4>
 <p>In brief, this process:</p>
 <ul>
 <li>Allows schools secure access to SIS information.</li>
@@ -149,7 +150,7 @@
 <li><strong>3.3.4.4 Change to StudentContact Relationship info:</strong> update StudentContactRelationship</li>
 <li><strong>3.3.4.5 Remove a StudentContact from a student:</strong> delete StudentContactRelationship record</li>
 </ul>
-<h4 id="usecase-preconditions-for-assurance"><a href="#usecase-preconditions-for-assurance">Usecase preconditions for assurance</a></h4>
+<h4 id="usecase-preconditions-for-assurance">Usecase preconditions for assurance</h4>
 <p>As this use case applies to school systems, the enrollment records needs to identify the school being enrolled into. This is done with the established SIF mechanism of referencing a SchoolInfo RefId. The master for the SchoolInfo object is the jurisdiction hub, and the third party SIS is meant to retrieve the relevant SchoolInfo object from the hub, in order to reference it correctly.</p>
 <p>The following conditions also must be met:</p>
 <ul>
