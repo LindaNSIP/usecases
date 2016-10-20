@@ -1,5 +1,5 @@
-Introduction
-Purpose: intended business outcomes
+#### Introduction
+#### Purpose: intended business outcomes
 
 At an individual level, at school level: To track the extent to which students are meeting their obligation to attend school, and to signal the need for intervention where this is not the case.
 
