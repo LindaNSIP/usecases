@@ -86,56 +86,47 @@ instances of this use case.
 
 ##### Data collection
 
-1.  Specific to use case instance; recommend primary purpose only
+<!--- provide suggested answers below where possible, according to the privacy framework questions document referenced above --->
 
-2.  StudentPersonal, StudentDailyAttendance, StudentAttendanceSummary, StudentAttendanceTimeList.
-    Highly sensitive demographic or personal information within Student
-    Personal is not required.
+1.  Data use primary or secondary? Explicit consent?
 
-3.  Specific to use case instance; recommend No
+2.  What SIF data required by vendor?
+
+3.  Third party collection (eg cookies)?
 
 ##### Data storage and access
 
-1.  Information should be stored in same State/Territory as it was
-    sourced, given sensitivity 
+1.  Data stored where? (in locale, Australia?)
 
-2.  Some protection needed, given sensitivity; at minimum
-    password access.
+2.  How is stored data protected (Encryption? Method?)
 
-3.  Specific to use case instance; if on cloud, tenancy access
-    must apply.
+3.  How stored? If cloud, how segregated?
 
-4.  Specific to use case instance; recommend Yes
+4.  Physical server security?
 
-5.  Specific to use case instance; recommend SSL/TLS per SIF protocol
+5.  Protection of data in transit (eg SSL)?
 
-6.  Homeroom teacher, principal, other teachers of the student on
-    as-needs basis.
+6.  Who can access?
 
-    1.  Access should be logged.
+   * Logged?
 
-    2.  Specific to use case instance
+   * Employee only?
 
-    3.  Specific to use case instance
+   * When/how?
 
-    4.  Working with children check recommended
+   * Background checks?
 
-    5.  Analytics may be subcontracted; if they are, anonymisation
-        recommended
+   * Subcontract? (eg analytics)
 
-    6.  Specific to use case instance
+   * Authenticating callers, reset access, account create/delete?
 
 ##### Data and Metadata Retention
 
-1.  Specific to use case instance
+1.  Data management and disposal?
 
-2.  Data should be retained for entire school year, to allow revision of
-    annual report. Data may be deleted after end of school year; data
-    must be deleted at termination of contract, or on request by school.
-    Protocol for deletion request must be agreed to by school.
+2.  Is data deletion scheduled, end of contract, on school request?
 
-3.  Copy of information MAY be provided by vendor to school; not strong
-    requirement
+3.  Copy of all information on request?
 
 4.  On termination of contract, all data must be returned to school and
     deleted from vendor systems
