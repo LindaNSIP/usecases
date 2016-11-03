@@ -1,19 +1,3 @@
-## Technical implementation 
-
-
-### Before you start 
-
--   Are you using the SIF Common Framework? It's a supported open source
-    offering which can vastly simplify your SIF 3 development effort.\
-    Try out the open source
-    [Java](https://github.com/nsip/sif3-framework-java) or
-    [.NET](https://github.com/nsip/sif3-framework-dotnet) framework. You
-    may also find helpful this guide to using the framework with HITS.
-
--   Apply for a HITS testing account at <info@nsip.edu.au>. This will
-    give you access to your own testing environment, which provides all necessary authentication and access tokens to
-    work with the HITS API.
-
 ### 1. Business problem
 
 
