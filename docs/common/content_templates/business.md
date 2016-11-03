@@ -34,17 +34,11 @@ level.
 
 ##### Timeliness
 
-
-
 ##### Quality
-
-
 
 #### Are there national and local definitions? 
 
 ##### National
-
-
 
 ##### School system
 
@@ -54,16 +48,9 @@ level.
 
 ##### National 
 
-
-
 ##### School system
 
-
-
-
 ##### School
-
-
 
 #### Localisation
 
@@ -166,44 +153,8 @@ instances of this use case.
 
 ##### Unit record level
 
-At Unit Record level, the most sensitive attributes being transmitted
-are:
-
--   StudentPersonal: Sex and Indigenous Status (Medium)
-
--   StudentDailyAttendance: AttendanceCode, AttendanceNote (Extreme)
-
 ##### Aggregate level
-
-At the aggregate level, the objects are of low sensitivity: no
-identifying information is passed along, and individual absence reasons
-are suppressed.
 
 #### Privacy implications
 
-Absence information is associated with fully identified students. The
-reasons why an individual student is absent may be embarrassing and need
-to be kept private, especially if described in detail. Thus data
-exchange between attendance applications and the school SMS must be
-tightly secured. The school should ensure that the data gathered
-by attendance applications cannot be compromised, or viewed by
-unauthorised parties outside the school, and should be stored
-accordingly.
-
-Typically any aggregation of attendance data is done by the school
-authority and not the student. That means that the data being passed
-from the school to the school system is as sensitive as the information
-passed from the attendance applications to the school SMS, with the
-possible exception of attendance reason details. Highly sensitive
-information about students is exchanged between schools and school
-systems routinely; so no additional safeguards should need to be put in
-place for attendance data.
-
-The data passed on for attendance reporting is aggregated and
-deidentified, and does not include any breakdown of reasons for absence.
-This data does not present serious privacy implications.
-
-Any unit data passed to education researchers must be deidentified, and
-the demographic cohorts of students passed on must be large enough that
-individual student identity may be recovered.
 
