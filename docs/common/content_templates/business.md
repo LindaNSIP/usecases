@@ -1,5 +1,4 @@
-Business implementation 
--------------------------
+## Business implementation 
 
 This section deals with implementation questions at the business rules
 level.
@@ -8,54 +7,14 @@ level.
 
 #### Description of the data (entity types)
 
-**StudentPersonal** records identify the students whose attendance is
-being tracked. Demographic attributes of the students may be required in
-order to provide reports correlating those attributes. The nationally
-required attributes are: geolocation, sector, sex, year level,
-indigenous status. 
-
-Attendance records track the attendance of students in school at various
-levels of granularity:
-
--   **StudentPeriodAttendance **tracks  attendance at the level of
-    individual periods for individual students. Period attendance is out
-    of scope of this use case.
-
--   **StudentAttendanceTimeList** tracks attendance at the level of
-    parts of the day for individual students.
-
--   **StudentDailyAttendance** tracks attendance at the level of the
-    day for individual students (with fractions to quantify
-    partial attendance).
-
--   **StudentAttendanceSummary** tracks attendance at the level of a
-    half year or year for individual students
-
--   **SystemAttendanceSummary** (not a SIF object) tracks attendance at
-    the level of a half year or year across a cohort of students, at the
-    level of individual schools or a school system.
-
 #### Data relationships
 
-&lt;diagram&gt;
+<!--- DIAGRAM HERE --->
 
 #### Authoritative source
 
-The authoritative source for StudentPersonal is the school SMS.
-
-The authoritative source for attendance unit records are the attendance
-tracking applications deployed in schools. This information is stored in
-the SMS, from where it is propagated on. 
 
 #### Stakeholders
-
--   School: Attendance package vendor, school IT staff, home group
-    teacher, school principal
-
--   School system: school system IT staff, school system operations
-    staff, school system business owners
-
--   National:  reporting group
 
 #### Downstream destinations
 
@@ -67,60 +26,25 @@ the SMS, from where it is propagated on. 
 
 #### Data recipients at unit level
 
--   School systems (where present)
-
--   Education researchers (deidentified)
 
 #### Data recipients at aggregate level
 
--   Australian government. The reports generated based on this data
-    includes:
-
-<!-- -->
-
--   -    National Education Agreement (NEA) performance report(s)
-
-<!-- -->
-
--   -   National Report on Schooling in Australia
-
-    -   National Indigenous Reform Agreement (NIRA)
-
-    -   Report on Government Services (ROGS)
-
-    -   School-level attendance data on the My School website. 
 
 #### Data quality and timeliness
 
 ##### Timeliness
 
-The Australian government census of attendance data is annual,
-aggregated over Semester 1.
 
-School systems that undertake censuses of attendance gather data at
-least annually.
-
-Schools require daily attendance promptly, but not necessarily
-immediately. It has been acceptable in the past for attendance systems
-to deliver attendance results with a delay of a few days, in batch form.
-In particular, the justification for absences may be edited as more
-information is available in the days following the absence.
 
 ##### Quality
 
-There is some tolerance of error in the national-level aggregate
-reports, as the attendance census is meant to be indicative, and applied
-at aggregate level.
+
 
 #### Are there national and local definitions? 
 
 ##### National
 
-National definitions for attendance are provided in the *National
-Standards for Student Attendance Data Reporting*, published by ACARA.
-These have been introduced in 2014, to enable nationally comparable
-attendance rates, by imposing uniform calculation practices and data
-collection.
+
 
 ##### School system
 
@@ -130,80 +54,30 @@ collection.
 
 ##### National 
 
-The national reporting requirements calculate attendance for full-time
-students only at state/territory level. (If a student attends multiple
-schools in a state, their attendance can be split pro rata between those
-schools.) 
 
-Attendance is calculated as the ratio of full-time equivalent of
-student-days to the total number of possible student days.
-
-Schools are only included in attendance reporting if they fall within
-the NSSC definition of a school: their major activity is providing
-education, and students can enrol in the school for a minimum of four
-continuous weeks.
-
-Part-day absences are to be reported as either 0.5 or to two decimal
-places, depending on individual school arrangements.
-
-The National Standards define 19 categories of absence, whether each
-should be counted as absences for attendance reporting, and whether the
-absence should be included in the possible school day count.
 
 ##### School system
 
-Students enrolled full time at state level but across multiple schools
-in the same sector are excluded from Qld government, all Catholic and
-independent schools. 
 
-School systems typically have absence categories that do not coincide
-with the national absence categories. All school systems need to provide
-mappings from their local categories to the national categories. Not all
-national absence categories are applicable locally.
 
-Schools have the option of providing school systems with data in
-aggregated form, instead of unit records. Typically schools will opt to
-provide unit records, as they do not have the internal capability to
-perform the aggregations at the different levels required for systemic
-and national reporting. 
-
-VIC and WA report part-day absences consistently as 0.5.
-
-School systems will vary as to whether they require schools to calculate
-the percentages of attendance for part-day attendance, or whether they
-will undertake those calculations centrally. If the former is the case,
-then an object like StudentDailyAttendance is adequate. If the latter is
-the case, then schools must provide all times in and out for a student
-during the day; in that case, an object like StudentAttendanceTimeList
-is required.
-
-School systems will vary as to whether attendance is reported by schools
-only by exception (the school only submits records for days when the
-student has been absent), or completely (both presences and absences).
-NSW DEC for example requires the latter. 
-
-School systems will normalise attendance results received from different
-attendance packages, so that they can be aggregated and compared
-consistently.
 
 ##### School
 
-In the absence of a school system, individual non-systemic schools have
-to comply with the requirements of national reporting on their own.
+
 
 #### Localisation
 
-&lt;local rules for data exchange, self inserted by school systems
-authorities and others who have localised versions of this use case&gt;
+<!--- local rules for data exchange, self inserted by school systems 
+authorities and others who have localised versions of this use case --->
 
 ### How are data sources accessed?
 
-&lt;list how data sources area accessed&gt;
+<!--- list how data sources area accessed --->
 
 ### What are the privacy implications of this data exchange?
 
 Consider the questions on [this
-page](file:///C:\display\SIFOG\Privacy+framework+questions) in
+page](/docs/common/privacy_framework_questions.md) in
 establishing privacy measures. Many are specific to your local
 configuration, but some questions and answers will be common to all
 instances of this use case.
