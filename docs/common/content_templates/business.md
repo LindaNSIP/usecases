@@ -1,5 +1,3 @@
-## Business implementation 
-
 This section deals with implementation questions at the business rules
 level.
 
