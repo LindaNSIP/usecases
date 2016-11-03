@@ -124,43 +124,43 @@ instances of this use case.
 
 1.  Data management and disposal?
 
-2.  Is data deletion scheduled, end of contract, on school request?
+2.  Is data deletion:
+ 
+   * scheduled or end of contract?
+   
+   * On school request? Protocol
 
-3.  Copy of all information on request?
+3.  Copy of all info to record level on request?
 
-4.  On termination of contract, all data must be returned to school and
-    deleted from vendor systems
+4.  On end of contract, data returned/deleted?
 
 ##### Development and Change Management Process
 
-1.  Provider should follow standardised processes for code change
-    management
+1.  Standard procedures for server code management?
 
-2.  Specific to use case instance
+2.  Processes audited?
 
-3.  Provider should notify school of changes in information handling
+3.  Notify school of critical changes?
 
 ##### Audits and Standards
 
-1.  Provider must allow security & privacy audit by school 
+1.  Can school/system audit records?
 
-2.  Provider should have security operations externally audited
+2.  External audit of provider?
 
-3.  Provider should comply with external standard
+3.  Security standard compliance?
 
 ##### Test and Development Environments
 
-1.  Live student data should not be used in non-production environments
+1.  Live data in non-production environments?
 
-2.  Non-production environments need not be as secure as production
+2.  Non-production environment security?
 
 ##### Data Breach, Incident Investigation and Response
 
-1.  At minimum, school informed immediately, will require escalation
-    from principal
+1.  Data breach process?
 
-2.  Vendor must have logging capability agreed with school, including
-    making logs available to school and police
+2.  Security investigation and log monitoring?
 
 ####  Key data elements privacy settings (Links)
 
