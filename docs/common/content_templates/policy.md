@@ -1,8 +1,7 @@
-Policy context
---------------
+## Policy context
 
-### \
-Introduction
+
+### Introduction
 
 ### Purpose: intended business outcomes
 
