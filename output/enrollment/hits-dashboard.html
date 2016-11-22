@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html  dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+        <link rel="stylesheet" href="uikit.css">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.25.0/css/uikit.gradient.css">-->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="uikit.js"></script>
+        <script src="scripts.js"></script>
+        <script src="jquery.sticky-kit.js "></script>
+
+        <meta name="generator" content="pandoc-uikit" />
+                        <title></title>
+        <style type="text/css">code{white-space: pre;}</style>
+                                                        </head>
+
+    <body>
+
+
+        <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+            
+            <div class="uk-grid" data-uk-grid-margin >          
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-overflow-container" data-uk-sticky="{top:25,media: 768}">
+                        <div class="uk-panel uk-panel-box menu-begin" >
+
+                                                        <ul>
+                            <li><a href="#how-to-implement-basic-daily-attendance">How to implement basic daily attendance</a><ul>
+                            <li><a href="#what-you-need-before-you-start">What you need before you start:</a></li>
+                            <li><a href="#how-to-implement-enrollment">How to implement enrollment</a></li>
+                            </ul></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-medium-3-4">
+<h1 id="how-to-implement-basic-daily-attendance">How to implement basic daily attendance</h1>
+<h2 id="what-you-need-before-you-start">What you need before you start:</h2>
+<p>To use the Hub Testing Integration System (HITS), you'll need the following:</p>
+<ul>
+<li>A HITS testing account - apply at <a href="mailto:info@nsip.edu.au">info@nsip.edu.au</a></li>
+<li>This will give you access to your own testing environment </li>
+<li>Your testing environment will provide you with all necessary authentication and access tokens to work with the HITS API.</li>
+</ul>
+<p>You'll also need a basic knowledge of SIF REST:</p>
+<ul>
+<li>Here is <a href="https://www.sifassociation.org/Resources/Developer-Resources/SIF-3-0/Pages/SIF-3.0-Infrastructure.aspx">some information from the SIF Association</a>.</li>
+<li>Here is <a href="http://kb.nsip.edu.au/display/SATWI/SIF+3+Bootcamp+online">a short (1-day) course in developing with SIF 3 REST</a>.</li>
+</ul>
+<p>You need to know <a href="working_use_case_hits.md">how to work with a usecase in HITS and access the HITS API</a></p>
+<p>If you get stuck: drop us a line at <a href="mailto:info@nsip.edu.au">info@nsip.edu.au</a></p>
+<h2 id="how-to-implement-enrollment">How to implement enrollment</h2>
+<h3 id="whats-the-business-problem">1. What's the business problem?</h3>
+<p>Allow schools in a school system to enrol students, saving the required information about the students to a jurisdictional data hub.</p>
+<p><strong><a href="#what-business-problem-does-this-use-case-address">More...</a></strong></p>
+<h3 id="use-case-description-pre-conditions">2. Use Case Description &amp; Pre-Conditions</h3>
+<p>A third party SIS application connects to HITS as a jurisdiction hub, collecting the relevant information and publishing back student records to the centralised system.</p>
+<h4 id="assumptions">Assumptions:</h4>
+<p>The third party vendor is a current supplier of a SIS product in schools or has knowledge of student administration processes in K-12 Schools.</p>
+<h4 id="pre-conditions">Pre-conditions:</h4>
+<ul>
+<li>The vendor has access to HITS</li>
+<li>HITS has been provisioned with School Data</li>
+<li><p>The vendor has mapped the relevant SIF Objects to their systems:</p>
+<ul>
+<li><p>StudentPersonal</p></li>
+<li><p>SchoolInfo</p></li>
+<li><p>StudentSchoolEnrolment</p></li>
+<li><p>StudentContactPersonal</p></li>
+<li><p>StudentContactRelationship</p></li>
+</ul></li>
+</ul>
+<p>(Here is a <strong><a href="/docs/common/resources/SIS%20Baseline%20Profile%201_3%20Draft%20Summary.pdf">summary</a></strong> and a <strong><a href="/docs/common/resources/SIS%20Baseline%20Profile%20SBP%20Jurisdiction%20Full%20Draft%20v0_3.pdf">full draft</a></strong> of the SIS Basline Profile which governs the interactions for an enrollment.)</p>
+<h4 id="usecase-workflow-summary">Usecase workflow summary:</h4>
+<ol style="list-style-type: decimal">
+<li><p>Join</p></li>
+<li><p>Consume</p></li>
+<li><p>Process</p></li>
+<li><p>Provide</p></li>
+<li><p>Assurance</p></li>
+</ol>
+<h4 id="assurance">Assurance:</h4>
+<p>The SIF/XML data sent by the third party app to the Jurisdiction Zone for the app must satisfy the following conditions:</p>
+<ul>
+<li><p>Must be able to respond to requests for all StudentPersonal records within a School.</p></li>
+<li><p>Must be able to respond to requests for all StudentContactPersonal records within a School.</p></li>
+<li><p>Must be able to respond to requests for all StudentContactRelationship records within a School.</p></li>
+<li><p>Must be able to respond to requests for all StudentSchoolEnrollment records within a School.</p>
+<p><strong><a href="#usecase-preconditions-for-assurance">More...</a></strong></p></li>
+</ul>
+<h3 id="join-required-to-school-zone">3. Join required to School Zone</h3>
+<p>Join:</p>
+<ul>
+<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;).</li>
+<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;).</li>
+<li>Jurisdiction Zone authorises read access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;).</li>
+</ul>
+<h3 id="consume-base-data-from-hits.">4. Consume base data from HITS.</h3>
+<p>Vendor-facing (pull); HITS represents the Jurisdiction and is the data source for seed information.</p>
+<p>Consume: - on the Jurisdiction-established Zone for the app, third party app accesses the SchoolInfo object corresponding to their school. - Third party app ingests the relevant SIF Objects.</p>
+<p>Get SchoolInfos: http://.../SchoolInfos - This step may be skipped if the Third party app if the SchoolInfo RefId is already known. - The query mechanism is specific to the hub, but retrieval is unlikely to be automatic; it is likeliest for the school to do a manual query on the school name, using one of the established SIF query mechanisms, or else retrieve all SchoolInfo records from the hub and choose the the right record.</p>
+<h3 id="process---processes-in-third-party-application.">5. Process - processes in third party application.</h3>
+<p>Third party app creates student enrollments for students enrolling in the given school.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>Third party app creates StudentPersonal records.</li>
+<li>Third party app creates StudentSchoolEnrollment records, one for each StudentPersonal record. StudentSchoolEnrollment/SchoolInfoRefId is populated with the SchoolInfo RefId for the current school that has been retrieved from HITS.</li>
+<li>Third party app creates StudentContactPersonal records.</li>
+<li>Third party app creates at least one StudentContactRelationship record for each StudentContactPersonal record, and at least one for each StudentPersonal record.</li>
+</ol>
+<h3 id="provide-authoritative-data">6. Provide authoritative data</h3>
+<p>Prior to providing: </p>
+<ul>
+<li><p>Third party expresses return information in SIF/XML:</p></li>
+<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;).</li>
+<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;).</li>
+<li>Jurisdiction-established Zone authorises write access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;).</li>
+<li>Following is provided by the third party app back to HITS;
+<ol style="list-style-type: decimal">
+<li>Post StudentPersonal to URL <a href="">http://.../StudentPersonals</a></li>
+<li>Post StudentSchoolEnrollment to URL <a href="">http://../StudentSchoolEnrollments</a></li>
+<li>Post StudentContactPersonal to URL <a href="">http://../StudentContactPersonals</a></li>
+<li>Post StudentContactRelationship to URL <a href="">http://../StudentContactRelationships</a><br />
+ </li>
+</ol></li>
+</ul>
+<h3 id="assurance-selfconfirmation-of-use-case-support">7. Assurance: Self–confirmation of use case support</h3>
+<ol style="list-style-type: decimal">
+<li>Validate StudentPersonal records</li>
+<li>Validate StudentSchoolEnrollment records</li>
+<li>Validate StudentContactPersonal records</li>
+<li>Validate StudentContactRelationship records</li>
+</ol>
+<h3 id="more-information">More information</h3>
+<h4 id="what-business-problem-does-this-use-case-address">What business problem does this Use Case address?</h4>
+<p>In brief, this process:</p>
+<ul>
+<li>Allows schools secure access to SIS information.</li>
+<li>Allows schools to use the SIS product of their choice.</li>
+<li>Allows third party SIS apps to publish a school's student enrollments to a jurisdictional hub.</li>
+</ul>
+<p>The use case described here satisfies the following scenarios in the SIS Baseline Profile (SBP): </p>
+<ul>
+<li><strong>3.1.2 Future Enrollment:</strong> StudentSchoolEnrollment/TimeFrame is set to F (future)</li>
+<li><strong>3.1.4 New Current Enrollment:</strong> StudentSchoolEnrollment/TimeFrame is set to C (current)</li>
+<li><strong>3.3.4.1 New Student Contact and Relationship</strong></li>
+<li><strong>3.3.4.2 New Relationship added to a Current Contact</strong></li>
+</ul>
+<p>The use case described above can be straightforwardly extended with update operations to satisfy the following scenarios in the SBP:</p>
+<ul>
+<li><strong>3.1.3 Future to Current Enrollment:</strong> StudentSchoolEnrollment/TimeFrame is updated from F (future) to C (current)</li>
+<li><strong>3.1.5 Year End Rollover:</strong> StudentSchoolEnrollment/TimeFrame is updated from C (current) to H (historical); new StudentSchoolEnrollment is created with StudentSchoolEnrollment/TimeFrame set to C (current)</li>
+<li><strong>3.1.6 Exit School:</strong> StudentSchoolEnrollment/TimeFrame is updated from C (current) to H (historical)</li>
+<li><strong>3.1.7 Change Campus:</strong> StudentSchoolEnrollment/TimeFrame is updated from C (current) to H (historical), with RecordClosureReason set to CampusExit and ExitType set to &quot;Transfer campus of the same school&quot;; new StudentSchoolEnrollment is created with StudentSchoolEnrollment/TimeFrame set to C (current) and EntryType set to &quot;Transfer from a different campus of the same school&quot;</li>
+<li><strong>3.1.8 Mid-year Promotion/Demotion:</strong> StudentSchoolEnrollment/YearLevel and StudentSchoolEnrollment/PromotionInfo/PromotionStatus is updated; StudentPersonal/YearLevel is updated</li>
+<li><strong>3.1.9 Change in Personal Details:</strong> update StudentPersonal</li>
+<li><strong>3.3.4.3 Change to a StudentContact Personal information:</strong> update StudentContactPersonal</li>
+<li><strong>3.3.4.4 Change to StudentContact Relationship info:</strong> update StudentContactRelationship</li>
+<li><strong>3.3.4.5 Remove a StudentContact from a student:</strong> delete StudentContactRelationship record</li>
+</ul>
+<h4 id="usecase-preconditions-for-assurance">Usecase preconditions for assurance</h4>
+<p>As this use case applies to school systems, the enrollment records needs to identify the school being enrolled into. This is done with the established SIF mechanism of referencing a SchoolInfo RefId. The master for the SchoolInfo object is the jurisdiction hub, and the third party SIS is meant to retrieve the relevant SchoolInfo object from the hub, in order to reference it correctly.</p>
+<p>The following conditions also must be met:</p>
+<ul>
+<li>Any SIF object published by the App must be valid against the SIF AU 1.3 schema</li>
+<li>Any SIF object published by the App should confirm to the SBP profile of the SIF-AU schema specific to the given scenarios (including both the black elements, and the blue elements intended for national reporting). In particular:
+<ul>
+<li>The use of several elements is upgraded from optional to strongly recommended</li>
+<li>FamilyName, GivenName, MiddleName are used instead of FullName for students, and are strongly recommended for student contacts</li>
+<li>StudentPersonal/PersonInfo/Demographics/Sex is mandatory</li>
+<li>StudentPersonal/PersonInfo/Demographics/BirthDate is mandatory</li>
+<li>StudentSchoolEnrollment/YearLevel is mandatory</li>
+</ul></li>
+<li>All SIF objects posted by the App must have referential integrity. Any RefId contained in the SIF object must refer either to a SIF object provisioned to the App — for example SchoolInfo, or to a SIF object that has also been posted by the App to the Zone (e.g. StudentSchoolEnrollment referring to StudentPersonal, StudentContactRelationship referring to StudentContactPersonal).This condition applies recursively to all additional SIF objects posted by the App. The test of this condition is done only when the App indicates that it has finished publishing to the Zone the objects required for the test.</li>
+</ul>                    
+                </div>
+            </div>
+            
+            <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+        </div>
+    </body>
+</html>
