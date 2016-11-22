@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html  dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+        <link rel="stylesheet" href="uikit.css">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.25.0/css/uikit.gradient.css">-->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="uikit.js"></script>
+        <script src="scripts.js"></script>
+        <script src="jquery.sticky-kit.js "></script>
+
+        <meta name="generator" content="pandoc-uikit" />
+                        <title></title>
+        <style type="text/css">code{white-space: pre;}</style>
+                                                        </head>
+
+    <body>
+
+
+        <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+            
+            <div class="uk-grid" data-uk-grid-margin >          
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-overflow-container" data-uk-sticky="{top:25,media: 768}">
+                        <div class="uk-panel uk-panel-box menu-begin" >
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-medium-3-4">
+<h3 id="business-problem">1. Business problem</h3>
+<p>Allow jurisdictions to retrieve information about the NAPLAN test constructs for the current cycle, and about the performance of their students in the current cycle, in order to determine the level of education attainment of their students and to generate expected reporting to schools.</p>
+<h3 id="usecase-description-and-pre-conditions">2. Usecase description and pre-conditions</h3>
+<p>A Jurisdiction client connects to HITS as a National Assessment hub, collecting the relevant information about student assessments and performance under NAPLAN, and gathering it back to jurisdiction applications for further processing.</p>
+<h4 id="assumptions">Assumptions</h4>
+<ul>
+<li><p>Information about the students taking part in the NAPLAN assessment has already been provided to the National Assessment hub. The workflow for this is captured in the NAPLAN Registration use case. The workflow for this use case assumes that the information is already available, either because a client has carried out the NAPLAN Registration workflow, or that the client will accept StudentPersonal records prepopulated on the HITs server.</p></li>
+<li><p>The students have already undertaken all the NAPLAN assessment for this year's, and the responses they have provided have been captured in the National Assessment hub.</p></li>
+<li><p>The assessment results have already been processed post-assessment, and all required information is available for jurisdictions from the National Assessment hub. This includes scaling of scored results, and deriving the national and jurisdiction averages for each test.</p></li>
+<li><p>The source of truth about the jurisdiction schools involved in NAPLAN assessment is not the National Assessment hub, but the Australian Schools List. The assessment results data includes ACARA Ids for schools, which reference the records held in the Australian Schools List.</p></li>
+<li><p>Jurisdictions need to access information about the NAPLAN test structure as well as the test results: the former helps contextualise and interpret the latter. Information about the NAPLAN test structure is available under SIF modelling in two separate models: a single codeframe object per test, which contains all testlets, test items, rubrics and stimuli accessible through the test; and separate test, testlet and test item objects, which are referenced individually from the student test results object. The use case assumes that the code frame object will be consumed prior to testing, and the individual testlet and test item objects will be consumed alongside the test results.</p></li>
+</ul>
+<h4 id="pre-conditions">Pre-conditions</h4>
+<ul>
+<li><p>Jurisdiction has access to HITs</p></li>
+<li><p>HITs has been provisioned with School Data. Note that HITs can act as a proxy for the Australian Schools List; but jurisdictions should be planning on integrating with the Australian Schools List directly</p></li>
+<li><p>HITS has been provisioned with Student Data, whether by the Jurisdiction client (through the NAP Registration Use case), or as pregenerated data within HITS</p></li>
+<li><p>Vendor has mapped the relevant SIF Objects to their systems:</p></li>
+<li>StudentPersonal</li>
+<li>SchoolInfo</li>
+<li>NAPCodeFrame</li>
+<li>NAPStudentScoreSummary</li>
+<li>NAPTest</li>
+<li>NAPTestlet</li>
+<li>NAPTestItem</li>
+<li>NAPStudentEventLink</li>
+<li><p>NAPStudentResponseSet</p></li>
+</ul>
+<h4 id="usecase-workflow-summary">Usecase workflow summary</h4>
+<ol style="list-style-type: decimal">
+<li><p>Join</p></li>
+<li><p>Consume (Codeframe)</p></li>
+<li><p>Consume (Results)</p></li>
+</ol>
+<p>Note that this is not the usual workflow under HITs of Produce–Consume or Consume–Produce. This is a Consume-only workflow: the Produce component of the workflow is already captured under the NAP Registration use case.</p>
+<p>Any processing of the NAPLAN results is out of scope of this use case, since it depends on jurisdiction-speific setup. Note that NSIP will offer some support to jurisdictions for processing NAP results, throughh its NIAS toolkit.</p>
+<h4 id="assurance">Assurance</h4>
+<p>As there is no Produce component to the workflow, there is also no Assurance component. Any processing of NAPLAN results will be specific to the jurisdiction’s database setup, and will need to be undertaken within the jurisdiction: it is out of scope of this use case.</p>
+<h3 id="join-required-school-zone">3. Join required School Zone</h3>
+<ul>
+<li>Jurisdiction client connects to Nationally established Zone for the Jurisdiction, which emulates the data tenancy for the Jurisdiction on the National Assessment Platform (&quot;HITS Zone 1&quot;)</li>
+<li>Jurisdiction client authenticates to Nationally established Zone for the Jurisdiction (&quot;HITS Zone 1 Authz&quot;)</li>
+<li>Nationally established Zone authorises read access to objects in the Nationally established Zone for the Jurisdiction (&quot;HITS Zone 1 Authn&quot;)</li>
+</ul>
+<h3 id="consume-base-data">4. Consume base data</h3>
+<p>Client-facing (pull); HITS represents the National Assessment hub and is the data source for seed information.</p>
+<p>Consume:</p>
+<ul>
+<li>The Jurisdiction client accesses all SchoolInfo records corresponding to schools within the jurisdiction. These records will be referenced by assessment records within the National Assessment hub; but their source of truth is the Australian Schools List, and jurisdictions are expected to source them there.</li>
+<li>The Jurisdiction client accesses all StudentPersonal records corresponding to students within the jurisdiction. If the Jurisdiction has performed the NAP Registration use case, it has already provided this information in the same format; but the client still needs to retrieve these records, in order to access accurate RefIds for the StudentPersonal records, as well as the Student Platform Identifier values assigned by the Assessment Platform.</li>
+<li>The Jurisdiction client accesses all NAPCodeFrame records corresponding to NAPLAN assessment undertaken by students for this NAP cycle.</li>
+<li>The Jurisdiction client accesses all NAP results records corresponding to NAPLAN assessment undertaken by students for this NAP cycle. That includes: all NAPTest records; all NAPStudentEventLink and NAPStudentResponseSet records corresponding to a StudentPersonal record from the jurisdiction; all NAPStudentScoreSummary records corresponding to a SchoolInfo record from the jurisdiction; and all NAPTestlet and NAPTestItem records corresponding to a NAPTest record.</li>
+</ul>
+<p>The following is a list of calls that need to be made to consume the required information:</p>
+<ol style="list-style-type: decimal">
+<li>Get SchoolInfos - http://.../SchoolInfos (from the Australian Schools List)</li>
+<li>Get StudentPersonals - http://.../StudentPersonals (HITS should determine the URLs eg http://hits.nsip.edu.au/StudentPersonals - access this information from your Dashboard.)</li>
+<li>Get NAPCodeFrames - http://.../NAPCodeFrames</li>
+<li>Get NAPTests - http://.../NAPTests</li>
+<li>Get NAPTestlets - http://.../NAPTestlets</li>
+<li>Get NAPTestItems - http://.../NAPTestIitems</li>
+<li>Get NAPStudentEventLinks - http://.../NAPStudentEventLinks</li>
+<li>Get NAPStudentResponseSets - http://.../NAPStudentResponseSets</li>
+</ol>
+<h3 id="more-information">More information</h3>
+<h4 id="what-is-the-business-problem-this-usecase-addresses">What is the business problem this usecase addresses?</h4>
+<p><strong>Assurance pre-conditions</strong></p>
+<p>The following conditions also must be met:</p>
+<p>N/A</p>                    
+                </div>
+            </div>
+            
+            <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+        </div>
+    </body>
+</html>
