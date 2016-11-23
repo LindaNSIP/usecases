@@ -2,6 +2,8 @@
 
 ### Introduction
 
+Introductory text
+
 ### Purpose: intended business outcomes
 
 At an individual level, at school level: To track the extent to which
@@ -54,9 +56,7 @@ sectors.  
 
  ![Image of data exchange](/docs/basic_daily_attendance/images/daily attendance data flow.png)
 
- 
-
-### Business rules summary 
+ ### Business rules summary 
 
 Attendance for national reporting is calculated as the ratio of
 full-time equivalent of student-days to the total number of possible
