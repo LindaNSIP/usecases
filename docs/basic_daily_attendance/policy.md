@@ -52,8 +52,7 @@ sectors.  
 
 ### Data exchange summary
 
- ![](media/image1.tmp){width="5.208333333333333in"
-height="9.64586942257218in"}
+ ![Image of data exchange](/docs/basic_daily_attendance/images/daily attendance data flow.png)
 
  
 
