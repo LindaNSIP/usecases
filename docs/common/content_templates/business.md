@@ -3,7 +3,11 @@ level.
 
 ###  What data is exchanged? 
 
-#### Description of the data (entity types)
+#### Description of the data relevant at a horizontal level (for school day-to-day business) (entity types)
+ADDED
+
+#### Description of the data relevant for vertical reporting (entity types)
+ADDED
 
 #### Data relationships
 
@@ -30,9 +34,15 @@ level.
 
 #### Data quality and timeliness
 
-##### Timeliness
+##### Timeliness for local use
 
-##### Quality
+##### Timeliness for vertical reporting
+ADDED
+
+##### Quality for local use
+
+##### Quality for vertical reporting
+ADDED
 
 #### Are there national and local definitions? 
 
@@ -55,9 +65,21 @@ level.
 <!--- local rules for data exchange, self inserted by school systems 
 authorities and others who have localised versions of this use case --->
 
+##### At local level
+ADDED
+
+##### For vertical reporting
+ADDED
+
 ### How are data sources accessed?
 
 <!--- list how data sources area accessed --->
+
+##### At local level
+ADDED
+
+##### For vertical reporting
+ADDED
 
 ### What are the privacy implications of this data exchange?
 
@@ -66,6 +88,12 @@ page](/docs/common/privacy_framework_questions.md) in
 establishing privacy measures. Many are specific to your local
 configuration, but some questions and answers will be common to all
 instances of this use case.
+
+#### At local level
+ADDED
+
+#### For vertical reporting
+ADDED
 
 #### Privacy framework questions
 
