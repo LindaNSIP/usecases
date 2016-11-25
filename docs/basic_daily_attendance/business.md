@@ -5,8 +5,7 @@ level.
 
 ###  What data is exchanged? 
 
-#### Description of the data (entity types)
-
+#### Description of the data relevant at a horizontal level (for school day-to-day business) 
 **StudentPersonal** records identify the students whose attendance is
 being tracked. Demographic attributes of the students may be required in
 order to provide reports correlating those attributes. The nationally
@@ -27,8 +26,13 @@ levels of granularity:
     day for individual students (with fractions to quantify
     partial attendance).
 
--   **StudentAttendanceSummary** tracks attendance at the level of a
+-   **StudentAttendanceSummary** tracks attendance of a student at the level of a
     half year or year for individual students
+
+#### Description of the data relevant for vertical reporting (entity types)
+
+Vertical reporting involves reporting of the attendance for a cohort of students, 
+which can be established by aggregating across the foregoing objects:
 
 -   **SystemAttendanceSummary** (not a SIF object) tracks attendance at
     the level of a half year or year across a cohort of students, at the
