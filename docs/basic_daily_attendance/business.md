@@ -95,13 +95,7 @@ the SMS, from where it is propagated on. 
 
 #### Data quality and timeliness
 
-##### Timeliness
-
-The Australian government census of attendance data is annual,
-aggregated over Semester 1.
-
-School systems that undertake censuses of attendance gather data at
-least annually.
+##### Timeliness for local use
 
 Schools require daily attendance promptly, but not necessarily
 immediately. It has been acceptable in the past for attendance systems
@@ -109,11 +103,26 @@ to deliver attendance results with a delay of a few days, in batch form.
 In particular, the justification for absences may be edited as more
 information is available in the days following the absence.
 
-##### Quality
+##### Timeliness for vertical reporting
+
+The Australian government census of attendance data is annual,
+aggregated over Semester 1.
+
+School systems that undertake censuses of attendance gather data at
+least annually.
+
+##### Quality for local use
+
+Attendance data is important for tracking both student welfare and student achievement,
+so schools require it to be of high quality, even if that is at the expense
+of timeliness.
+
+##### Quality for vertical reporting
 
 There is some tolerance of error in the national-level aggregate
 reports, as the attendance census is meant to be indicative, and applied
 at aggregate level.
+
 
 #### Are there national and local definitions? 
 
@@ -199,9 +208,19 @@ to comply with the requirements of national reporting on their own.
 &lt;local rules for data exchange, self inserted by school systems
 authorities and others who have localised versions of this use case&gt;
 
+##### At local level
+
+##### For vertical reporting
+
+
 ### How are data sources accessed?
 
 &lt;list how data sources area accessed&gt;
+
+#### At local level
+
+#### For vertical reporting
+
 
 ### What are the privacy implications of this data exchange?
 
@@ -210,6 +229,11 @@ page](file:///C:\display\SIFOG\Privacy+framework+questions) in
 establishing privacy measures. Many are specific to your local
 configuration, but some questions and answers will be common to all
 instances of this use case.
+
+#### At local level
+
+#### For vertical reporting
+
 
 #### Privacy framework questions
 
@@ -319,6 +343,8 @@ are suppressed.
 
 #### Privacy implications
 
+##### At local level
+
 Absence information is associated with fully identified students. The
 reasons why an individual student is absent may be embarrassing and need
 to be kept private, especially if described in detail. Thus data
@@ -336,6 +362,8 @@ possible exception of attendance reason details. Highly sensitive
 information about students is exchanged between schools and school
 systems routinely; so no additional safeguards should need to be put in
 place for attendance data.
+
+##### For vertical reporting
 
 The data passed on for attendance reporting is aggregated and
 deidentified, and does not include any breakdown of reasons for absence.
