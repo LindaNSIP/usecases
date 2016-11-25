@@ -17,18 +17,20 @@ larger scale intervention in those areas.
 
 ### Context: business motivation
 
+At the student and school level: 
 Schools are required to meet their duty of care obligation to students,
 by ensuring that they are attending school unless there are compelling
 reasons for them not to.
 
+Tracking Attendance is used for a variety of operational, accountability
+and strategic purposes, and for educational research.
+
+At an aggregate level, at school system and national level: 
 Failure of students to attend school without justification is a major
 indicator of students being at risk of not completing their education.
 Government departments have a responsibility to detect such risk and
 intervene as appropriate, both at an individual level, and at an
 aggregate level (targeting schools or socioeconomic groups). 
-
-Tracking Attendance is used for a variety of operational, accountability
-and strategic purposes, and for educational research.
 
 ### Authorising environment-Legislation, agreement etc
 
