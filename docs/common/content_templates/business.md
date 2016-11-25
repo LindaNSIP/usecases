@@ -184,3 +184,8 @@ ADDED
 #### Privacy implications
 
 
+###### At local level
+ADDED
+
+###### For vertical reporting
+ADDED
