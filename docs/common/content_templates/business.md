@@ -19,6 +19,7 @@ ADDED
 #### Stakeholders
 
 #### Downstream destinations
+_REMOVE: Is redundant with Data Recipients immediately afterwards._
 
 ##### National 
 
