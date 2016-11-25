@@ -1,3 +1,5 @@
+_Note: the technical template does not currently cover national-level vertical reporting, which is not done through SIF. This may change in future versions._
+
 ### 1. Business problem
 
 
