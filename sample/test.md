@@ -5,7 +5,7 @@
 ### 1. What's the business problem?
 
 
-<---! this is a comments --->
+<!--- this is a comment --->
 
 Allow schools to securely provide SIS information to the Attendance
 product of their choice, and also to allow school attendance records to
