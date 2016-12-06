@@ -17,7 +17,7 @@ print STDERR "$infile -> $outfile\n";
 
 mkpath $outdir;
 
-system "pandoc $infile -o $outfile --template sample/pandoc/standalone.html --toc --toc-depth=2";
+system "pandoc $infile -o $outfile --template template/materialize/template/template.html --toc --toc-depth=2";
 
 $outfile =~ s/html$/docx/;
 system "pandoc $infile -o $outfile --reference-docx=sample/pandoc/template.docx --toc --toc-depth=2";
