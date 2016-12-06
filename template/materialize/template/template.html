@@ -14,7 +14,8 @@
 <body>
     <!-- navbar and header -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="index.html">Attendance</a></li>
+        <!-- TODO see other section too -->
+        <li><a href="#!">Attendance</a></li>
         <li><a href="#!">Finance</a></li>
         <li><a href="#!">Gradebook</a></li>
         <li><a href="#!">NAPLAN registration</a></li>
@@ -45,12 +46,16 @@
             <div class="uk-grid" data-uk-grid-margin>
                 <div class="uk-width-1-1">
                     <h1 class="header center orange-text">$title$</h1>
+                    <h2 class="center">$subtitle$</h2>
                     $if(date)$
-                    <h3 class="uk-heading-large">$date$</p></h3>
+                      <h3 class="uk-heading-large">$date$</p></h3>
                     $endif$
                     $for(author)$
-                    <p class="uk-text-large">$author$</p>
+                      <p class="uk-text-large">$author$</p>
                     $endfor$
+                    $if(abstract)$
+                      <p class="light">$abstract$</p>
+                    $endif$
                 </div>
             </div>
             $endif$
