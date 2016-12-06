@@ -7,6 +7,8 @@
 
 <!--- this is a comment --->
 
+![Cat](/images/cat_back.jpg)
+
 Allow schools to securely provide SIS information to the Attendance
 product of their choice, and also to allow school attendance records to
 be published to a jurisdictional data hub.
