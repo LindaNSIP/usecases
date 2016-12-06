@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>National Use Cases - Attendance:Policy</title>
+    <title></title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../lib/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -14,7 +14,7 @@
 <body>
     <!-- navbar and header -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="index.html">Attendance</a></li>    
+        <li><a href="index.html">Attendance</a></li>
         <li><a href="#!">Finance</a></li>
         <li><a href="#!">Gradebook</a></li>
         <li><a href="#!">NAPLAN registration</a></li>
@@ -55,88 +55,163 @@
         <div class="section">
             <!-- <h4>Introduction</h4> -->
             <div class="divider"></div>
-            <h5>Purpose: intended business outcomes</h5>
-            <p class="light flow-text">
-                At an individual level, at school level: To track the extent to which students are meeting their obligation to attend school, and to signal the need for intervention where this is not the case.
-            </p>
 
-            <p class="light flow-text">
-                At an aggregate level, at school system and national level: To flag to education providers and government the schools and areas where attendance expectations are not being met, and to signal the need for larger scale intervention in those areas.
-            </p>
-            <br>
-
-            <div class="divider"></div>
-            <h5>Context: business motivation</h5>
-            <p class="light flow-text">
-                Schools are required to meet their duty of care obligation to students, by ensuring that they are attending school unless there are compelling reasons for them not to.
-            </p>
-            <p class="light flow-text">
-                Failure of students to attend school without justification is a major indicator of students being at risk of not completing their education.
-            </p>
-            <p class="light flow-text">
-                Government departments have a responsibility to detect such risk and intervene as appropriate, both at an individual level, and at an aggregate level (targeting schools or socioeconomic groups).
-            </p>
-            <p class="light flow-text">
-                Tracking Attendance is used for a variety of operational, accountability and strategic purposes, and for educational research.
-            </p>
-            <br>
-
-            <div class="divider"></div>
-            <h5>Authorising environment-Legislation, Agreements etc</h5>
-            <p class="light flow-text">
-                Education providers in each state and jurisdiction are required by law to determine the whereabouts of each student on each school day. There is also a legal obligation on guardians to ensure that students under their care attend school. 
-            </p>
-
-            <p class="light flow-text">
-                The National Education Agreement of COAG identifies student attendance rates as a key measure of engagement, and as a performance indicator in the National Education Reform Agreement (NERA), the National Indigenous Reform Agreement (NIRA), the Report on Government Services (ROGS) and the Measurement Framework for Schooling in Australia. 
-            </p>
-
-            <p class="light flow-text">
-                Compliance with federal reporting requirements is a precondition for ongoing funding support to schools from the government.
-            </p>
-            <br>
             
-            <div class="divider"></div>
-            <h5>Governance, oversight: business accountability</h5>
-            <p class="light flow-text">
-                National standards for attendance are prepared by the Student Attendance Data subgroup of ACARA, with representation from all jurisdictions and sectors.
-            </p>
-            <br>
-            
-            <div class="divider"></div>
-            <h5>Data exchange summary</h5>
-            <p class="light flow-text">
-                <img class="responsive-img" src="images/data_flow.png">
-            </p>
-            <br>
-            
-            <div class="divider"></div>
-            <h5>Business rules summary</h5>
-            <p class="light flow-text">
-                Attendance for national reporting is calculated as the ratio of full-time equivalent of student-days to the total number of possible student days. There are 19 categories of absence defined nationally, with decisions for each as to how they are to be considered in the absence calculation. 
-            </p>
+            <div class="uk-grid" data-uk-grid-margin >
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-overflow-container" data-uk-sticky="{top:25,media: 768}">
+                        <div class="uk-panel uk-panel-box menu-begin" >
 
-            <p class="light flow-text">
-                There is variation between school authorities as to : 
-                <ol class="light flow-text">
-                    <li>The granularity of absence (0.5 vs two decimal places)</li>
-                    <li>The categories of absence recognised</li>
-                    <li>Whether attendance is tracked for students enrolled in multiple schools in the same sector</li>
-                    <li>Whether time fractions for attendance are calculated at the school or centrally (based on detailed in-and-out times)</li>
-                    <li>Whether attendance is reported by exception, or including both attendances and absences.</li>
-                </ol>
-            </p>
-            <br>
+                                                        <ul>
+                            <li><a href="#how-to-implement-gradebook">How to implement gradebook</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
 
-            <div class="divider"></div>
-            <h5>Privacy considerations summary</h5>
-            <p class="light flow-text">
-                Attendance data gathered at the school level, and passed on to school systems, is extremely sensitive (reasons for absence); data storage and transfer needs to be handled appropriately. 
-            </p>
-            <p class="light flow-text">
-                The aggregated attendance data passed on to government agencies is of low sensitivity; no special safeguards are called for.
-            </p>
-            <br>
+                <div class="uk-width-medium-3-4">
+<h2 id="how-to-implement-gradebook">How to implement gradebook</h2>
+<h3 id="whats-the-business-problem">1. What's the business problem?</h3>
+<p>Allow schools to securely provide account information to the classroom assessment product of their choice, and also to allow assessment results records to be published to a jurisdictional data hub.</p>
+<p><strong><a href="#what-business-problem-does-this-usecase-address">More...</a></strong></p>
+<h3 id="usecase-description-pre-conditions">2. Usecase description &amp; pre-conditions</h3>
+<p>A third party classroom assessment application connects to HITS as a jurisdiction hub, collecting the relevant information and publishing back assessment results records to the centralised system.</p>
+<h4 id="assumptions">Assumptions:</h4>
+<p>The third party vendor is a current supplier of a classroom assessment product in schools or has knowledge of classroom assessment processes in K-12 Schools.</p>
+<h4 id="pre-conditions">Pre-Conditions:</h4>
+<ul>
+<li>Vendor has access to HITS.</li>
+<li>HITS has been provisioned with School Data.</li>
+<li>Vendor has mapped the relevant SIF Objects to their systems:
+<ul>
+<li>SchoolInfo</li>
+<li>StudentPersonal</li>
+<li>StudentSchoolEnrolment</li>
+<li>StaffPersonal</li>
+<li>StaffAssignment</li>
+<li>TeachingGroup</li>
+<li>GradingAssignment</li>
+<li>GradingAssignmentScore</li>
+</ul></li>
+</ul>
+<p><strong>Note:</strong> Some of these objects are proposed for SIF 1.4 and are therefore not in the SIF 1.3 schema. Here is <a href="/docs/common/resources/SIF_Message1.4_3.x_current.zip"><strong>a draft XSD schema for SIF 1.4</strong></a>, and here are <strong><a href="resources/DSWG_V1.4_ChangeProposal_GradingAssignment_0.4.pdf">draft specifications for the proposed grading objects</a></strong> listed above.)</p>
+<h4 id="usecase-workflow-summary">Usecase workflow summary:</h4>
+<ol style="list-style-type: decimal">
+<li><p>Join</p></li>
+<li><p>Consume</p></li>
+<li><p>Process</p></li>
+<li><p>Provide</p></li>
+<li><p>Assurance</p></li>
+</ol>
+<h4 id="assurance">Assurance:</h4>
+<p>The SIF/XML data sent by the third party app to the Jurisdiction Zone for the app must satisfy the following conditions:</p>
+<ul>
+<li><p>Must be able to provide all GradingAssignment records within a School;</p></li>
+<li><p>Must be able provide all GradingAssignmentScore records within a School.</p></li>
+</ul>
+<p><strong><a href="#usecase-preconditions-for-assurance">More...</a></strong></p>
+<h3 id="join-school-zone.">3. Join school zone.</h3>
+<p>Join:</p>
+<ul>
+<li>Third party app connects to Jurisdiction-established Zone for the School (&quot;HITS Zone 1&quot;).</li>
+<li>Third party app authenticates to Jurisdiction-established Zone for the School (&quot;HITS Zone 1 Authz&quot;).</li>
+<li>Jurisdiction Zone authorises read access to objects in the Jurisdiction Zone for the School (&quot;HITS Zone 1 Authn&quot;).</li>
+</ul>
+<h3 id="consume-base-data-from-hits">4. Consume base data from HITS</h3>
+<p>Vendor-facing (pull); HITS represents the Jurisdiction and is the data source for seed information.</p>
+<ul>
+<li>Consume:</li>
+<li>on the Jurisdiction-established zone for the app, third party app accesses all StudentPersonal records which are in a StudentSchoolEnrollment relationship with the given school RefId.</li>
+<li>on the jurisdiction-established zone for the app, third party app accesses all StaffPersonal records which are in a StaffAssignment relationship with the given school RefId.</li>
+<li>on the jurisdiction-established zone for the app, third party app accesses all TeachingGroup objects linked to the given school RefId.</li>
+<li>Third party app ingests the relevant SIF objects.</li>
+</ul>
+<p>There are two possible ways to obtain the base information through REST service path calls:</p>
+<h4 id="via-single-data-dump">Via single data dump</h4>
+<p>The first assumes that all available students, staff, and classes, in all known schools, will be exposed to the third party application, as a single dump of data. This is the path recommended for HITS assurance, as it is simpler to fetch the data and start generating objects for validation.  (This is useful to prove that the objects can be consumed and processed, as HITS end points contain customised test data.)</p>
+<ol style="list-style-type: decimal">
+<li>Get SchoolInfos: <code>http://.../SchoolInfos</code></li>
+<li>Get StudentSchoolEnrollments: <code>http://.../StudentSchoolEnrollments</code></li>
+<li>Get StudentPersonals: <code>http://.../StudentPersonals</code> (linked to school via StudentSchoolEnrollment; equivalent to <code>http://..../SchoolInfo/{REFID}/StudentSchoolEnrollments/{REFID}/StudentPersonals</code>)</li>
+<li>Get StaffAssignments: <code>http://.../StaffAssignments</code></li>
+<li>Get StaffPersonals: <code>http://.../StaffPersonals</code> (linked to school via StaffAssignment; equivalent to <code>http://.../SchoolInfo/{REFID}/StaffAssignments/{REFID}/StaffPersonals</code>)</li>
+<li>Get TeachingGroups: <code>http://.../TeachingGroups</code> (linked to a school via SchoolInfoRefId)</li>
+</ol>
+<h4 id="via-teaching-groups">Via teaching groups</h4>
+<p>The second assumes, more realistically, that only certain teaching groups will be exposed to the application, and that any staff and student records exposed should be accessed via their teaching group. You do not need to obtain data this way for HITS assurance: you will end up getting the same data, since at this stage endpoints are customised for the user. But you should be prepared to consume data from SIF APIs in the following way for production environment where the end point contains more than one school's data:</p>
+<ol style="list-style-type: decimal">
+<li>Get SchoolInfos: <code>http://.../SchoolInfos</code></li>
+<li>Get TeachingGroups: <code>http://.../TeachingGroups</code></li>
+<li>Get StudentPersonals: <code>http://.../TeachingGroups/{REFID}/StudentPersonals</code> (Calls to StudentSchoolEnrollment are unnecessary; note that the same student record may appear under two different teaching groups)</li>
+<li>Get StaffPersonals: <code>http://.../TeachingGroups/{REFID}/StaffPersonals</code> (Calls to StaffAssignment are unnecessary; note that the same staff record may appear under two different teaching groups. )</li>
+</ol>
+<p>Endpoints may support additional queries for retreiving data - refer to <strong><a href=".docs/common/qbe_or_service_paths.md">Query-by-example or service paths?</a></strong> for HITS guidance on queries.</p>
+<h3 id="processes-in-third-party-application">5. Processes in third party application</h3>
+<p>The third party app uses the consumed data to produce descriptions of classroom assignments, and records of assignment results. The definition and automation of this process is out of scope of HITs.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>Third party app processes information and generates accounts for staff and students, organised by teaching group.</li>
+<li>Staff uses third party app to create classroom assessment tasks.</li>
+<li>Staff uses third party app to assign classroom assessment tasks to students in a teaching group.</li>
+<li>Students use third party app to perform classroom assessment tasks.</li>
+<li>Third party app creates descriptions of the classroom assessment tasks created.</li>
+<li>Third party app creates descriptions of the results that students achieved when performing the classroom assessment tasks.</li>
+</ol>
+<h3 id="provide-authoritative-data">6. Provide authoritative data</h3>
+<p>Prior to providing, the third party expresses return information in SIF/XML:</p>
+<ol style="list-style-type: decimal">
+<li>Third party app connects to jurisdiction-established zone for the school (&quot;HITS Zone 1&quot;).</li>
+<li>Third party app authenticates to jurisdiction-established zone for the school (&quot;HITS Zone 1 Authz&quot;).</li>
+<li>Jurisdiction-established zone authorises write access to objects in the jurisdiction zone for the School (&quot;HITS Zone 1 Authn&quot;).</li>
+<li>The third party app posts the following back to HITS;
+<ul>
+<li>GradingAssignment to URL <code>http://.../GradingAssignments</code></li>
+<li>GradingAssignmentScore to URL <code>http://../GradingAssignmentScores</code></li>
+</ul></li>
+</ol>
+<p><strong>Note:</strong> The Activity object could be used instead of, or alongside, the GradingAssignment object to describe a classroom task, and gives much more information about the pedagogical context of the task. However although Activity/Points provides the possible score of the task, SIF does not contain an object giving individual students' performance against the activity.)  </p>
+<h3 id="self-confirm-usecase-support">7. Self-confirm usecase support</h3>
+<ol style="list-style-type: decimal">
+<li>Validate GradingAssignment records</li>
+<li>Validate GradingAssignmentScore records</li>
+</ol>
+<h3 id="more-information">More information</h3>
+<h4 id="what-business-problem-does-this-usecase-address">What business problem does this usecase address?</h4>
+<p>In brief:</p>
+<ul>
+<li>Allows schools secure access to SIS information.</li>
+<li>Allows schools to use the classroom assessment product of their choice.</li>
+<li>Allows third party classroom assessment apps automated access to base information, including class membership.</li>
+<li>Allows third party classroom assessment apps to publish assessment results records to a jurisdictional hub.</li>
+</ul>
+<p>Schools currently use third-party classroom assessment locally for formative assessment. The seed information for generating accounts on third party apps is held in the School's Student Information System (SIS), and is usually exported locally to the third party apps with little security. There is an added complication: both student and class membership data are required as seed information, since classroom assessment is typically assigned to a class cohort by the class teacher. Class memberships can change frequently, imposing an additional burden on teachers who must manually update the third-party tools.</p>
+<p>As jurisdictions centralise systems, third party vendors have the opportunity to seed their product/s from a quality-assured data hub using automated feeds, rather than manual updates from the school. This allows changes such as new enrolments and changes in class membership to be reflected promptly and accurately in the third party applications. Third party vendors are also expected to provide information directly back to the centralised system through an automated feed, rather than having the information mediated through the school. This enables not only more secure and efficient transfer of information, but also the possibility of extracting business intelligence across the assessment results of multiple schools stored in the same hub. </p>
+<p>This use case shows how third party classroom assessment vendors can connect to a centralised data hub to securely access to the required information and publish back the assessment result records to the centralised data hub.</p>
+<h4 id="usecase-preconditions-for-assurance">Usecase preconditions for assurance</h4>
+<p>The following conditions also must be met:</p>
+<ul>
+<li>Any SIF object published by the app must be valid against the SIF AU 1.4 schema. Note that the GradingAssignment and GradingAssignmentScore objects are proposed for inclusion in SIF  AU1.4.</li>
+<li>All SIF objects posted by the classroom assessment app must have referential integrity. Any RefId contained in the SIF object must refer either to a SIF object provisioned to the app (e.g. SchoolInfo, StudentPersonal, StaffPersonal, TeachingGroup), or to a SIF object that has also been posted by the app to the zone (e.g. GradingAssignmentScore referring to GradingAssignment).This condition applies recursively to all additional SIF objects posted by the app. The test of this condition is done only when the app indicates that it has finished publishing to the zone the objects required for the test.</li>
+</ul>
+<p>For the purposes of validation, a new GradingAssignment object is well-formed if:</p>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>All mandatory elements of the GradingAssignment object are provided</li>
+<li>The TeachingGroupRefId element is provided</li>
+<li>The SchoolInfoRefId element is provided</li>
+</ol></li>
+</ul>
+<p>For the purposes of validation, a new GradingAssignmentScore object is well-formed if it satisfies the following requirements:</p>
+<ol style="list-style-type: decimal">
+<li>All mandatory elements of the GradingAssignmentScore object are provided.</li>
+<li>The StudentPersonalRefId element is provided.</li>
+<li>The TeachingGroupRefId element is provided.</li>
+<li>The SchoolInfoRefId element is provided.</li>
+</ol>
+                </div>
+            </div>
+
         </div>
         <br>
         <br>
