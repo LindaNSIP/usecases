@@ -7,8 +7,10 @@
 
 <!--- this is a comment --->
 
+![Cat](https://github.com/nsip/usecases/blob/master/sample/images/cat_back.jpg)
+
 Allow schools to securely provide SIS information to the Attendance
-product of their choice, and also to allow school attendance records to
+product of their choice, and also to allow school attendance recor ds to
 be published to a jurisdictional data hub.
 
 **[More...](#what-business-problem-does-this-use-case-address)**
