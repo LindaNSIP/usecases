@@ -9,6 +9,9 @@
 
 ![Cat](https://github.com/nsip/usecases/blob/master/sample/images/cat_back.jpg)
 
+> We're living the future so
+> the present is our past.
+
 Allow schools to securely provide SIS information to the Attendance
 product of their choice, and also to allow school attendance recor ds to
 be published to a jurisdictional data hub.
